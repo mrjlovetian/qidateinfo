@@ -10,11 +10,11 @@
 
 @interface FileManager : NSObject
 
-+ (instancetype)shareManager
++ (instancetype)shareManager;
 
-- (void)saveImage:(UIImage *)image imageName:(NSString *)imageName complete(void(^)(NSString *imageUrl))completeBlock;
+- (void)saveImage:(UIImage *)image imageName:(NSString *)imageName complete:(void(^)(NSString *imageUrl))completeBlock;
 
-- (void)saveFile:(NSString *)file fileName:(NSString *)fileName complete(void(^)(NSString *fileUrl))completeBlock;
+- (void)saveFile:(NSString *)file fileName:(NSString *)fileName complete:(void(^)(NSString *fileUrl))completeBlock;
 
 - (NSString *)readFile;
 

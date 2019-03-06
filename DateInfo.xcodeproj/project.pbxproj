@@ -13,6 +13,9 @@
 		0A38B8F6222BAA1200ADD2A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A38B8F4222BAA1200ADD2A2 /* LaunchScreen.storyboard */; };
 		0A38B8F9222BAA1200ADD2A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B8F8222BAA1200ADD2A2 /* main.m */; };
 		0A38B903222BAA1300ADD2A2 /* DateInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B902222BAA1300ADD2A2 /* DateInfoTests.m */; };
+		0AFB36012230172F001DD940 /* RiJiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FA2230172F001DD940 /* RiJiModel.m */; };
+		0AFB36022230172F001DD940 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FD2230172F001DD940 /* FileManager.m */; };
+		0AFB36032230172F001DD940 /* LanguageManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB36002230172F001DD940 /* LanguageManger.m */; };
 		E589DDE724E5CF6EC4E6F275 /* libPods-DateInfoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD980E8879E2F304A686B226 /* libPods-DateInfoTests.a */; };
 		FA8412F51BB3D103EB29C748 /* libPods-DateInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7454348BDCB4AD6F14DAA7 /* libPods-DateInfo.a */; };
 /* End PBXBuildFile section */
@@ -40,6 +43,12 @@
 		0A38B8FE222BAA1300ADD2A2 /* DateInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A38B902222BAA1300ADD2A2 /* DateInfoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateInfoTests.m; sourceTree = "<group>"; };
 		0A38B904222BAA1300ADD2A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AFB35F92230172F001DD940 /* RiJiModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiJiModel.h; sourceTree = "<group>"; };
+		0AFB35FA2230172F001DD940 /* RiJiModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiJiModel.m; sourceTree = "<group>"; };
+		0AFB35FC2230172F001DD940 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		0AFB35FD2230172F001DD940 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		0AFB35FF2230172F001DD940 /* LanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageManager.h; sourceTree = "<group>"; };
+		0AFB36002230172F001DD940 /* LanguageManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageManger.m; sourceTree = "<group>"; };
 		6CD1ADE3617331DBD65A1A6B /* Pods-DateInfoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateInfoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateInfoTests/Pods-DateInfoTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6C04EFD44FAD3BCA420F761 /* Pods-DateInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateInfo/Pods-DateInfo.debug.xcconfig"; sourceTree = "<group>"; };
 		AD980E8879E2F304A686B226 /* libPods-DateInfoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DateInfoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +100,9 @@
 		0A38B8E8222BAA1100ADD2A2 /* DateInfo */ = {
 			isa = PBXGroup;
 			children = (
+				0AFB35FB2230172F001DD940 /* FileManager */,
+				0AFB35FE2230172F001DD940 /* LanguageManager */,
+				0AFB35F82230172F001DD940 /* RiModel */,
 				0A38B8E9222BAA1100ADD2A2 /* AppDelegate.h */,
 				0A38B8EA222BAA1100ADD2A2 /* AppDelegate.m */,
 				0A38B8EC222BAA1100ADD2A2 /* ViewController.h */,
@@ -110,6 +122,33 @@
 				0A38B904222BAA1300ADD2A2 /* Info.plist */,
 			);
 			path = DateInfoTests;
+			sourceTree = "<group>";
+		};
+		0AFB35F82230172F001DD940 /* RiModel */ = {
+			isa = PBXGroup;
+			children = (
+				0AFB35F92230172F001DD940 /* RiJiModel.h */,
+				0AFB35FA2230172F001DD940 /* RiJiModel.m */,
+			);
+			path = RiModel;
+			sourceTree = "<group>";
+		};
+		0AFB35FB2230172F001DD940 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				0AFB35FC2230172F001DD940 /* FileManager.h */,
+				0AFB35FD2230172F001DD940 /* FileManager.m */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		0AFB35FE2230172F001DD940 /* LanguageManager */ = {
+			isa = PBXGroup;
+			children = (
+				0AFB35FF2230172F001DD940 /* LanguageManager.h */,
+				0AFB36002230172F001DD940 /* LanguageManger.m */,
+			);
+			path = LanguageManager;
 			sourceTree = "<group>";
 		};
 		519CAAB705064059A57297F9 /* Pods */ = {
@@ -361,7 +400,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A38B8EE222BAA1100ADD2A2 /* ViewController.m in Sources */,
+				0AFB36032230172F001DD940 /* LanguageManger.m in Sources */,
+				0AFB36012230172F001DD940 /* RiJiModel.m in Sources */,
 				0A38B8F9222BAA1200ADD2A2 /* main.m in Sources */,
+				0AFB36022230172F001DD940 /* FileManager.m in Sources */,
 				0A38B8EB222BAA1100ADD2A2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

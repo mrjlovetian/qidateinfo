@@ -1,8 +1,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define HXLocalizableString(key, tbl, comment)\
-[[LanguageManager shareManager] getKeyStr:(key) pathStr:(tbl)]
+#define HXLocalizableString(key, tbl, comment) [[LanguageManager shareManager] getKeyStr:(key) pathStr:(tbl)]
 
 @interface LanguageManager : NSObject
 
