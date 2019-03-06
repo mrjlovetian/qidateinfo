@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "FileManager.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,18 @@
     self.window.rootViewController = rootNav;
     [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
+
+
+    NSArray *array = @[@{"date":@"20190304", @"datas":@[
+        @{@"title":@"rizhi", @"content":@"content", @"images":@[@"imageUrl"], @"voices":@[@"voiceUrl"], @"videos":@[@"videoUrl"], @"date":@"20190306", @"index":@"1"},
+         @{@"title":@"rizhi3", @"content":@"content3", @"images":@[@"imageUrl"], @"voices":@[@"voiceUrl"], @"videos":@[@"videoUrl"], @"date":@"20190307", @"index":@"2"}
+    ]}, @{@"date":@"20190306", @"datas":@[
+         @{@"title":@"rizhi", @"content":@"content", @"images":@[@"imageUrl"], @"voices":@[@"voiceUrl"], @"videos":@[@"videoUrl"], @"date":@"20190306", @"index":@"1"}
+    ]}];
+
+    NSArray *infoArray = [NSArray yy_modelArrayWithClass:RiZhi.class json:array];
+    NSString *jsonStr = [infoArray yy_modelToJSONString];
+    [FileManager sha]
     return YES;
 }
 
