@@ -4,6 +4,12 @@
 target 'DateInfo' do
   pod 'FSCalendar'
   pod 'YYModel', '~> 1.0.4'
+  pod 'YYText', '~> 1.0.7'
+  pod 'Masonry', '~> 1.1.0'
+  pod 'MRJTool'
+  pod 'IQKeyboardManager'
+  pod 'TZImagePickerController'
+  pod 'MWPhotoBrowser'
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 

@@ -11,6 +11,7 @@
 #import "FileManager.h"
 #import <YYModel.h>
 #import "RiModel/RiJiModel.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
 
 @interface AppDelegate ()
 
@@ -27,17 +28,22 @@
     [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
 
-
-    NSArray *array = @[@{@"date":@"20190304", @"datas":@[
-        @{@"title":@"rizhi", @"content":@"content", @"images":@[@"imageUrl"], @"voices":@[@"voiceUrl"], @"videos":@[@"videoUrl"], @"date":@"20190306", @"index":@"1"},
-         @{@"title":@"rizhi3", @"content":@"content3", @"images":@[@"imageUrl"], @"voices":@[@"voiceUrl"], @"videos":@[@"videoUrl"], @"date":@"20190307", @"index":@"2"}
-    ]}, @{@"date":@"20190306", @"datas":@[
-         @{@"title":@"rizhi", @"content":@"content", @"images":@[@"imageUrl"], @"voices":@[@"voiceUrl"], @"videos":@[@"videoUrl"], @"date":@"20190306", @"index":@"1"}
-    ]}];
-
-    NSArray *infoArray = [NSArray yy_modelArrayWithClass:RiJiInfo.class json:array];
-    NSString *jsonStr = [infoArray yy_modelToJSONString];
-    [FileManager shareManager];
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+    [[IQKeyboardManager sharedManager] registerTextFieldViewClass:YYTextView.class didBeginEditingNotificationName:YYTextViewTextDidBeginEditingNotification didEndEditingNotificationName:YYTextViewTextDidEndEditingNotification];
+    
+//    NSArray *array = @[@{@"date":@"20190304", @"datas":@[
+//        @{@"title":@"rizhi", @"content":@"content", @"images":@[@"imageUrl"], @"voices":@[@"voiceUrl"], @"videos":@[@"videoUrl"], @"date":@"20190306", @"index":@"1"},
+//         @{@"title":@"rizhi3", @"content":@"content3", @"images":@[@"imageUrl"], @"voices":@[@"voiceUrl"], @"videos":@[@"videoUrl"], @"date":@"20190307", @"index":@"2"}
+//    ]}, @{@"date":@"20190306", @"datas":@[
+//         @{@"title":@"rizhi", @"content":@"content", @"images":@[@"imageUrl"], @"voices":@[@"voiceUrl"], @"videos":@[@"videoUrl"], @"date":@"20190306", @"index":@"1"}
+//    ]}];
+//
+//    NSArray *infoArray = [NSArray yy_modelArrayWithClass:RiJiInfo.class json:array];
+//    NSString *jsonStr = [infoArray yy_modelToJSONString];
+    NSArray *arrr = [NSArray yy_modelArrayWithClass:RiJiInfo.class json:[[FileManager shareManager] readFileNameForKey:@"mrjdata"]];
+    [[[UIAlertView alloc] initWithTitle:@"" message:[arrr yy_modelToJSONString] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+    ;
     return YES;
 }
 

@@ -13,9 +13,17 @@
 		0A38B8F6222BAA1200ADD2A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A38B8F4222BAA1200ADD2A2 /* LaunchScreen.storyboard */; };
 		0A38B8F9222BAA1200ADD2A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B8F8222BAA1200ADD2A2 /* main.m */; };
 		0A38B903222BAA1300ADD2A2 /* DateInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B902222BAA1300ADD2A2 /* DateInfoTests.m */; };
+		0A8A67892233EB12001D270B /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A677D2233EB10001D270B /* NSDate+Utilities.m */; };
+		0A8A678A2233EB12001D270B /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A677E2233EB11001D270B /* NSDate+Formatter.m */; };
+		0A8A678B2233EB12001D270B /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67812233EB11001D270B /* NSDate+Extension.m */; };
+		0A8A678C2233EB12001D270B /* NSDate+CupertinoYankee.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67832233EB11001D270B /* NSDate+CupertinoYankee.m */; };
+		0A8A678D2233EB12001D270B /* NSDate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67852233EB11001D270B /* NSDate+Reporting.m */; };
+		0A8A678E2233EB12001D270B /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67882233EB12001D270B /* NSDate+InternetDateTime.m */; };
+		0A8A679122340ACB001D270B /* ShowRijiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A679022340ACB001D270B /* ShowRijiViewController.m */; };
 		0AFB36012230172F001DD940 /* RiJiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FA2230172F001DD940 /* RiJiModel.m */; };
 		0AFB36022230172F001DD940 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FD2230172F001DD940 /* FileManager.m */; };
 		0AFB36032230172F001DD940 /* LanguageManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB36002230172F001DD940 /* LanguageManger.m */; };
+		0AFB36062233B28A001DD940 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB36052233B28A001DD940 /* EditViewController.m */; };
 		E589DDE724E5CF6EC4E6F275 /* libPods-DateInfoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD980E8879E2F304A686B226 /* libPods-DateInfoTests.a */; };
 		FA8412F51BB3D103EB29C748 /* libPods-DateInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7454348BDCB4AD6F14DAA7 /* libPods-DateInfo.a */; };
 /* End PBXBuildFile section */
@@ -43,12 +51,29 @@
 		0A38B8FE222BAA1300ADD2A2 /* DateInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A38B902222BAA1300ADD2A2 /* DateInfoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateInfoTests.m; sourceTree = "<group>"; };
 		0A38B904222BAA1300ADD2A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A8A677D2233EB10001D270B /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		0A8A677E2233EB11001D270B /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
+		0A8A677F2233EB11001D270B /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		0A8A67802233EB11001D270B /* NSDate+CupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CupertinoYankee.h"; sourceTree = "<group>"; };
+		0A8A67812233EB11001D270B /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		0A8A67822233EB11001D270B /* NSDate+Reporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Reporting.h"; sourceTree = "<group>"; };
+		0A8A67832233EB11001D270B /* NSDate+CupertinoYankee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CupertinoYankee.m"; sourceTree = "<group>"; };
+		0A8A67842233EB11001D270B /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
+		0A8A67852233EB11001D270B /* NSDate+Reporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Reporting.m"; sourceTree = "<group>"; };
+		0A8A67862233EB11001D270B /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		0A8A67872233EB12001D270B /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		0A8A67882233EB12001D270B /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		0A8A678F22340ACB001D270B /* ShowRijiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowRijiViewController.h; sourceTree = "<group>"; };
+		0A8A679022340ACB001D270B /* ShowRijiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowRijiViewController.m; sourceTree = "<group>"; };
 		0AFB35F92230172F001DD940 /* RiJiModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiJiModel.h; sourceTree = "<group>"; };
 		0AFB35FA2230172F001DD940 /* RiJiModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiJiModel.m; sourceTree = "<group>"; };
 		0AFB35FC2230172F001DD940 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		0AFB35FD2230172F001DD940 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		0AFB35FF2230172F001DD940 /* LanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageManager.h; sourceTree = "<group>"; };
 		0AFB36002230172F001DD940 /* LanguageManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageManger.m; sourceTree = "<group>"; };
+		0AFB36042233B28A001DD940 /* EditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		0AFB36052233B28A001DD940 /* EditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		0AFB36072233BC68001DD940 /* Header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.pch; sourceTree = "<group>"; };
 		6CD1ADE3617331DBD65A1A6B /* Pods-DateInfoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateInfoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateInfoTests/Pods-DateInfoTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6C04EFD44FAD3BCA420F761 /* Pods-DateInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateInfo/Pods-DateInfo.debug.xcconfig"; sourceTree = "<group>"; };
 		AD980E8879E2F304A686B226 /* libPods-DateInfoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DateInfoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +125,7 @@
 		0A38B8E8222BAA1100ADD2A2 /* DateInfo */ = {
 			isa = PBXGroup;
 			children = (
+				0A8A677C2233EA8F001D270B /* DateTool */,
 				0AFB35FB2230172F001DD940 /* FileManager */,
 				0AFB35FE2230172F001DD940 /* LanguageManager */,
 				0AFB35F82230172F001DD940 /* RiModel */,
@@ -107,10 +133,15 @@
 				0A38B8EA222BAA1100ADD2A2 /* AppDelegate.m */,
 				0A38B8EC222BAA1100ADD2A2 /* ViewController.h */,
 				0A38B8ED222BAA1100ADD2A2 /* ViewController.m */,
+				0AFB36042233B28A001DD940 /* EditViewController.h */,
+				0AFB36052233B28A001DD940 /* EditViewController.m */,
+				0A8A678F22340ACB001D270B /* ShowRijiViewController.h */,
+				0A8A679022340ACB001D270B /* ShowRijiViewController.m */,
 				0A38B8F2222BAA1200ADD2A2 /* Assets.xcassets */,
 				0A38B8F4222BAA1200ADD2A2 /* LaunchScreen.storyboard */,
 				0A38B8F7222BAA1200ADD2A2 /* Info.plist */,
 				0A38B8F8222BAA1200ADD2A2 /* main.m */,
+				0AFB36072233BC68001DD940 /* Header.pch */,
 			);
 			path = DateInfo;
 			sourceTree = "<group>";
@@ -122,6 +153,25 @@
 				0A38B904222BAA1300ADD2A2 /* Info.plist */,
 			);
 			path = DateInfoTests;
+			sourceTree = "<group>";
+		};
+		0A8A677C2233EA8F001D270B /* DateTool */ = {
+			isa = PBXGroup;
+			children = (
+				0A8A67802233EB11001D270B /* NSDate+CupertinoYankee.h */,
+				0A8A67832233EB11001D270B /* NSDate+CupertinoYankee.m */,
+				0A8A67872233EB12001D270B /* NSDate+Extension.h */,
+				0A8A67812233EB11001D270B /* NSDate+Extension.m */,
+				0A8A67842233EB11001D270B /* NSDate+Formatter.h */,
+				0A8A677E2233EB11001D270B /* NSDate+Formatter.m */,
+				0A8A677F2233EB11001D270B /* NSDate+InternetDateTime.h */,
+				0A8A67882233EB12001D270B /* NSDate+InternetDateTime.m */,
+				0A8A67822233EB11001D270B /* NSDate+Reporting.h */,
+				0A8A67852233EB11001D270B /* NSDate+Reporting.m */,
+				0A8A67862233EB11001D270B /* NSDate+Utilities.h */,
+				0A8A677D2233EB10001D270B /* NSDate+Utilities.m */,
+			);
+			name = DateTool;
 			sourceTree = "<group>";
 		};
 		0AFB35F82230172F001DD940 /* RiModel */ = {
@@ -321,6 +371,10 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DateInfo/Pods-DateInfo-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/MWPhotoBrowser/MWPhotoBrowser.bundle,
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
@@ -400,11 +454,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A38B8EE222BAA1100ADD2A2 /* ViewController.m in Sources */,
+				0A8A678D2233EB12001D270B /* NSDate+Reporting.m in Sources */,
 				0AFB36032230172F001DD940 /* LanguageManger.m in Sources */,
 				0AFB36012230172F001DD940 /* RiJiModel.m in Sources */,
+				0A8A678C2233EB12001D270B /* NSDate+CupertinoYankee.m in Sources */,
+				0A8A67892233EB12001D270B /* NSDate+Utilities.m in Sources */,
+				0AFB36062233B28A001DD940 /* EditViewController.m in Sources */,
 				0A38B8F9222BAA1200ADD2A2 /* main.m in Sources */,
+				0A8A678B2233EB12001D270B /* NSDate+Extension.m in Sources */,
 				0AFB36022230172F001DD940 /* FileManager.m in Sources */,
 				0A38B8EB222BAA1100ADD2A2 /* AppDelegate.m in Sources */,
+				0A8A678A2233EB12001D270B /* NSDate+Formatter.m in Sources */,
+				0A8A678E2233EB12001D270B /* NSDate+InternetDateTime.m in Sources */,
+				0A8A679122340ACB001D270B /* ShowRijiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +619,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8NGS85AAV;
+				GCC_PREFIX_HEADER = /Users/mrj/Desktop/Project/DateInfo/DateInfo/Header.pch;
 				INFOPLIST_FILE = DateInfo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -576,6 +639,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8NGS85AAV;
+				GCC_PREFIX_HEADER = /Users/mrj/Desktop/Project/DateInfo/DateInfo/Header.pch;
 				INFOPLIST_FILE = DateInfo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
