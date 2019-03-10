@@ -130,6 +130,7 @@
     RiJiModel *model = [RiJiModel new];
     model.title = self.titleTextField.text;
     model.content = self.contentTextView.text;
+    model.dateTime = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSinceNow]];
     
     NSString *today = [[NSDate date] formatYMD];
     

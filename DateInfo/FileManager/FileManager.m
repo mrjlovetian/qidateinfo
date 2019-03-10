@@ -22,14 +22,15 @@ static FileManager *manager;
     if (![fileManager fileExistsAtPath:path]) {
         [fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
     }
+    
     for (int i = 0; i < images.count; i++) {
         NSString *imageName = imageNames[i];
         UIImage *image = images[i];
         NSString *newImagePath = [imagePath stringByAppendingPathComponent:imageName];
-        path = [path stringByAppendingPathComponent:imageName];
+        NSString *writeImagePath = [path stringByAppendingPathComponent:imageName];
         if (![fileManager fileExistsAtPath:newImagePath]) {
             NSData *imageData = UIImagePNGRepresentation(image);
-            [imageData writeToFile:path atomically:YES];
+            [imageData writeToFile:writeImagePath atomically:YES];
         }
         [imagesFilePath addObject:newImagePath];
     }

@@ -21,4 +21,6 @@
 @property (nonatomic, copy)NSArray *videos;
 @property (nonatomic, copy)NSArray *voices;
 
+@property (nonatomic, assign)CGFloat height;
+
 @end

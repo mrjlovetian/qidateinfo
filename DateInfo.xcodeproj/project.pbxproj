@@ -20,6 +20,8 @@
 		0A8A678D2233EB12001D270B /* NSDate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67852233EB11001D270B /* NSDate+Reporting.m */; };
 		0A8A678E2233EB12001D270B /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67882233EB12001D270B /* NSDate+InternetDateTime.m */; };
 		0A8A679122340ACB001D270B /* ShowRijiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A679022340ACB001D270B /* ShowRijiViewController.m */; };
+		0ABC48E0223530F600799B4A /* RijiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC48DF223530F600799B4A /* RijiCell.m */; };
+		0ADC844B223525A400A18C8C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC844A223525A400A18C8C /* TestViewController.m */; };
 		0AFB36012230172F001DD940 /* RiJiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FA2230172F001DD940 /* RiJiModel.m */; };
 		0AFB36022230172F001DD940 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FD2230172F001DD940 /* FileManager.m */; };
 		0AFB36032230172F001DD940 /* LanguageManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB36002230172F001DD940 /* LanguageManger.m */; };
@@ -65,6 +67,10 @@
 		0A8A67882233EB12001D270B /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
 		0A8A678F22340ACB001D270B /* ShowRijiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowRijiViewController.h; sourceTree = "<group>"; };
 		0A8A679022340ACB001D270B /* ShowRijiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowRijiViewController.m; sourceTree = "<group>"; };
+		0ABC48DE223530F600799B4A /* RijiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RijiCell.h; sourceTree = "<group>"; };
+		0ABC48DF223530F600799B4A /* RijiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RijiCell.m; sourceTree = "<group>"; };
+		0ADC8449223525A400A18C8C /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		0ADC844A223525A400A18C8C /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		0AFB35F92230172F001DD940 /* RiJiModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiJiModel.h; sourceTree = "<group>"; };
 		0AFB35FA2230172F001DD940 /* RiJiModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiJiModel.m; sourceTree = "<group>"; };
 		0AFB35FC2230172F001DD940 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
@@ -137,6 +143,10 @@
 				0AFB36052233B28A001DD940 /* EditViewController.m */,
 				0A8A678F22340ACB001D270B /* ShowRijiViewController.h */,
 				0A8A679022340ACB001D270B /* ShowRijiViewController.m */,
+				0ABC48DE223530F600799B4A /* RijiCell.h */,
+				0ABC48DF223530F600799B4A /* RijiCell.m */,
+				0ADC8449223525A400A18C8C /* TestViewController.h */,
+				0ADC844A223525A400A18C8C /* TestViewController.m */,
 				0A38B8F2222BAA1200ADD2A2 /* Assets.xcassets */,
 				0A38B8F4222BAA1200ADD2A2 /* LaunchScreen.storyboard */,
 				0A38B8F7222BAA1200ADD2A2 /* Info.plist */,
@@ -456,12 +466,14 @@
 				0A38B8EE222BAA1100ADD2A2 /* ViewController.m in Sources */,
 				0A8A678D2233EB12001D270B /* NSDate+Reporting.m in Sources */,
 				0AFB36032230172F001DD940 /* LanguageManger.m in Sources */,
+				0ABC48E0223530F600799B4A /* RijiCell.m in Sources */,
 				0AFB36012230172F001DD940 /* RiJiModel.m in Sources */,
 				0A8A678C2233EB12001D270B /* NSDate+CupertinoYankee.m in Sources */,
 				0A8A67892233EB12001D270B /* NSDate+Utilities.m in Sources */,
 				0AFB36062233B28A001DD940 /* EditViewController.m in Sources */,
 				0A38B8F9222BAA1200ADD2A2 /* main.m in Sources */,
 				0A8A678B2233EB12001D270B /* NSDate+Extension.m in Sources */,
+				0ADC844B223525A400A18C8C /* TestViewController.m in Sources */,
 				0AFB36022230172F001DD940 /* FileManager.m in Sources */,
 				0A38B8EB222BAA1100ADD2A2 /* AppDelegate.m in Sources */,
 				0A8A678A2233EB12001D270B /* NSDate+Formatter.m in Sources */,

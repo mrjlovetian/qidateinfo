@@ -10,4 +10,8 @@
 
 @implementation RiJiModel
 
+- (CGFloat)height {
+    return 0;
+}
+
 @end

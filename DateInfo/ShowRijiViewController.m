@@ -10,6 +10,8 @@
 #import "FileManager/FileManager.h"
 #import "RiModel/RiJiModel.h"
 #import <MWPhotoBrowser.h>
+#import "TestViewController.h"
+#import "RijiCell.h"
 
 @interface ShowRijiViewController () <UITableViewDelegate, UITableViewDataSource, MWPhotoBrowserDelegate>
 
@@ -29,7 +31,10 @@
     [self.view addSubview:self.tableView];
     NSString *file = [[FileManager shareManager] readFileNameForKey:@"mrjdata"];
     [self.dataSources addObjectsFromArray:[NSArray yy_modelArrayWithClass:RiJiInfo.class json:file]];
+    self.tableView.estimatedRowHeight = 150;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView reloadData];
+    
 }
 
 #pragma mark MWPhotoBrowserDelegate
@@ -43,6 +48,12 @@
 
 #pragma mark UITableViewDelegate
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    RiJiInfo *info = self.dataSources[indexPath.section];
+    RiJiModel *model = info.datas[indexPath.row];
+    return [RijiCell hetightForModel:model];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSMutableArray *arr = [NSMutableArray arrayWithCapacity:1];
     RiJiInfo *info = [self.dataSources objectAtIndex:indexPath.section];
@@ -53,7 +64,6 @@
         [arr addObject:photo];
     }
     self.photos = arr;
-    
     MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
     [self.navigationController pushViewController:browser animated:YES];
 }
@@ -71,14 +81,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identif = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identif];
+    RijiCell *cell = [tableView dequeueReusableCellWithIdentifier:identif];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:identif];
+        cell = [[RijiCell alloc] initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:identif];
     }
     RiJiInfo *info =  [_dataSources objectAtIndex:indexPath.section];
     RiJiModel *model = info.datas[indexPath.row];
-    cell.textLabel.text = model.title;
-    cell.detailTextLabel.text = model.content;
+    cell.rijiModel = model;
     return cell;
 }
 
@@ -88,6 +97,9 @@
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.estimatedRowHeight = 100;
+        _tableView.rowHeight = UITableViewAutomaticDimension;
+        _tableView.tableFooterView = [UIView new];
     }
     return _tableView;
 }
