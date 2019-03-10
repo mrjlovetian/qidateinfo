@@ -89,7 +89,10 @@
 //        if (rijiModel.images.count < 3) {
 //            return titleHeight + contentHeight + 40 + ImageHeight;
 //        }
-        return titleHeight + contentHeight + 40 +  (rijiModel.images.count/3 + 1)*MoreImageHeight;
+        if (rijiModel.images.count%3 == 0) {
+            return titleHeight + contentHeight + 40 +  (rijiModel.images.count/3)*MoreImageHeight;
+        }
+        return titleHeight + contentHeight + 40 +  (rijiModel.images.count/3 +1)*MoreImageHeight;
     }
     return titleHeight + contentHeight + 30;
 }
@@ -111,11 +114,11 @@
         make.height.mas_equalTo(contentHeight);
     }];
     
-    if (_rijiModel.images.count == 0) {
-        [self.contentLab mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.bottom.mas_equalTo(self.contentView).mas_offset(-10);
-        }];
-    }
+//    if (_rijiModel.images.count == 0) {
+//        [self.contentLab mas_updateConstraints:^(MASConstraintMaker *make) {
+//            make.bottom.mas_equalTo(self.contentView).mas_offset(-10);
+//        }];
+//    }
     
     
     [self showImageView];
@@ -209,11 +212,11 @@
             make.top.mas_equalTo(self.contentLab.mas_bottom).mas_offset(20 + (i/3)*iamgeWidth);
             make.width.height.mas_equalTo(iamgeWidth);
         }];
-        if (i+1 == self.rijiModel.images.count) {
-            [imageView mas_updateConstraints:^(MASConstraintMaker *make) {
-                make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-10);
-            }];
-        }
+//        if (i+1 == self.rijiModel.images.count) {
+//            [imageView mas_updateConstraints:^(MASConstraintMaker *make) {
+//                make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-10);
+//            }];
+//        }
         [imageView sd_setImageWithURL:[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@%@", [[FileManager shareManager] getMianPath], _rijiModel.images[i]]]];
     }
     return;
