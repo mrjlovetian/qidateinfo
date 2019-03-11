@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "FileManager.h"
-#import <YYModel.h>
+#import "YYModel.h"
 #import "RiModel/RiJiModel.h"
 #import <IQKeyboardManager/IQKeyboardManager.h>
 

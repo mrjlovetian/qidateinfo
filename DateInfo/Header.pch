@@ -10,7 +10,7 @@
 #define Header_h
 
 #import <MRJTool/Macro.h>
-#import <YYModel.h>
-#import <YYText.h>
+#import "YYModel.h"
+#import "YYText.h"
 
 #endif /* Header_h */

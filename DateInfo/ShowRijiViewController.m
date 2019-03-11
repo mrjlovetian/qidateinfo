@@ -9,7 +9,7 @@
 #import "ShowRijiViewController.h"
 #import "FileManager/FileManager.h"
 #import "RiModel/RiJiModel.h"
-#import <MWPhotoBrowser.h>
+#import "MWPhotoBrowser.h"
 #import "TestViewController.h"
 #import "RijiCell.h"
 

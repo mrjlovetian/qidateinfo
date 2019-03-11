@@ -26,8 +26,8 @@
 		0AFB36022230172F001DD940 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FD2230172F001DD940 /* FileManager.m */; };
 		0AFB36032230172F001DD940 /* LanguageManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB36002230172F001DD940 /* LanguageManger.m */; };
 		0AFB36062233B28A001DD940 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB36052233B28A001DD940 /* EditViewController.m */; };
-		E589DDE724E5CF6EC4E6F275 /* libPods-DateInfoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD980E8879E2F304A686B226 /* libPods-DateInfoTests.a */; };
-		FA8412F51BB3D103EB29C748 /* libPods-DateInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7454348BDCB4AD6F14DAA7 /* libPods-DateInfo.a */; };
+		C8F846AA26317E6C0AA02DF3 /* Pods_DateInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CFC9E3B60C1AB77E5AA1F2 /* Pods_DateInfo.framework */; };
+		E584CFB93D2F2A6CE2464D0C /* Pods_DateInfoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAFF6CE54CFF8062C9EE63A /* Pods_DateInfoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,9 +82,9 @@
 		0AFB36072233BC68001DD940 /* Header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.pch; sourceTree = "<group>"; };
 		6CD1ADE3617331DBD65A1A6B /* Pods-DateInfoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateInfoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateInfoTests/Pods-DateInfoTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6C04EFD44FAD3BCA420F761 /* Pods-DateInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateInfo/Pods-DateInfo.debug.xcconfig"; sourceTree = "<group>"; };
-		AD980E8879E2F304A686B226 /* libPods-DateInfoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DateInfoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4CFC9E3B60C1AB77E5AA1F2 /* Pods_DateInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2150E9CD53743B9A60E9B1 /* Pods-DateInfoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateInfoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateInfoTests/Pods-DateInfoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BF7454348BDCB4AD6F14DAA7 /* libPods-DateInfo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DateInfo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBAFF6CE54CFF8062C9EE63A /* Pods_DateInfoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateInfoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BB700E4E665E3E8AC92E33 /* Pods-DateInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateInfo/Pods-DateInfo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8412F51BB3D103EB29C748 /* libPods-DateInfo.a in Frameworks */,
+				C8F846AA26317E6C0AA02DF3 /* Pods_DateInfo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E589DDE724E5CF6EC4E6F275 /* libPods-DateInfoTests.a in Frameworks */,
+				E584CFB93D2F2A6CE2464D0C /* Pods_DateInfoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,8 +225,8 @@
 		5AEB786F129D16462C99B2A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BF7454348BDCB4AD6F14DAA7 /* libPods-DateInfo.a */,
-				AD980E8879E2F304A686B226 /* libPods-DateInfoTests.a */,
+				B4CFC9E3B60C1AB77E5AA1F2 /* Pods_DateInfo.framework */,
+				CBAFF6CE54CFF8062C9EE63A /* Pods_DateInfoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -383,7 +383,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DateInfo/Pods-DateInfo-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-				$PODS_CONFIGURATION_BUILD_DIR/MWPhotoBrowser/MWPhotoBrowser.bundle,
+				"$PODS_CONFIGURATION_BUILD_DIR/MWPhotoBrowser/MWPhotoBrowser.bundle",
 				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -426,11 +426,36 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DateInfo/Pods-DateInfo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/StarWars/StarWars.framework",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MWPhotoBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarWars.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

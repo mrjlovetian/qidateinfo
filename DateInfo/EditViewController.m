@@ -7,14 +7,14 @@
 //
 
 #import "EditViewController.h"
-#import <YYText.h>
-#import <YYModel.h>
-#import <Masonry.h>
-#import <IQKeyboardManager.h>
+#import "YYText.h"
+#import "YYModel.h"
+#import "Masonry.h"
+#import "IQKeyboardManager.h"
 #import "RiModel/RiJiModel.h"
 #import "FileManager/FileManager.h"
 #import "NSDate+Extension.h"
-#import <TZImagePickerController.h>
+#import "TZImagePickerController.h"
 
 @interface EditViewController ()<TZImagePickerControllerDelegate>
 
