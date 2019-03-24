@@ -37,18 +37,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    
+    self.view.backgroundColor = FlatMint;
+
     [self.view addSubview:self.titleTextField];
     [self.view addSubview:self.contentTextView];
     [self.view addSubview:self.addImageView];
     
     UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [addBtn setTitle:@"+" forState:UIControlStateNormal];
+    [addBtn setTitle:@"添加" forState:UIControlStateNormal];
     [addBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-    [addBtn addTarget:self action:@selector(addRiji) forControlEvents:UIControlEventTouchUpInside];
-    addBtn.frame = CGRectMake(0, 110, 40, 40);
+    [addBtn addTarget:self action:@selector(addRiji:) forControlEvents:UIControlEventTouchUpInside];
+    addBtn.frame = CGRectMake(0, 0, 60, 40);
     UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithCustomView:addBtn];
     self.navigationItem.rightBarButtonItem = barItem;
     
@@ -126,11 +125,18 @@
     [self presentViewController:vc animated:YES completion:nil];
 }
 
-- (void)addRiji {
+- (void)addRiji:(UIButton *)btn {
+    btn.enabled = NO;
     RiJiModel *model = [RiJiModel new];
     model.title = self.titleTextField.text;
     model.content = self.contentTextView.text;
     model.dateTime = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSinceNow]];
+    
+    if ([self.titleTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0 && [self.contentTextView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0 && self.dataSources.count == 0) {
+        
+        [TSMessage showNotificationWithTitle:@"内容错误" subtitle:@"至少添加一项内容吧" type:(TSMessageNotificationTypeError)];
+        return;
+    }
     
     NSString *today = [[NSDate date] formatYMD];
     
@@ -138,7 +144,6 @@
         NSLog(@"----------.........%@", imageUrls);
         model.images = imageUrls;
     }];
-    
     
     
     NSMutableArray *datasArr = [NSMutableArray arrayWithCapacity:1];
@@ -164,6 +169,10 @@
     NSString *content = [datasArr yy_modelToJSONString];
     [[FileManager shareManager] saveFile:content fileName:@"riji" complete:^(NSString *fileUrl) {
         [[FileManager shareManager] saveFileName:fileUrl ForKey:@"mrjdata"];
+        [TSMessage showNotificationWithTitle:@"添加成功" subtitle:@"可以到日志列表看看今天新增的日志哦" type:(TSMessageNotificationTypeSuccess)];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.navigationController popViewControllerAnimated:YES];
+        });
     }];
 }
 

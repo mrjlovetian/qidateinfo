@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = FlatMint;
     self.dataSources = [NSMutableArray arrayWithCapacity:1];
     
     [self.view addSubview:self.tableView];
@@ -94,11 +94,12 @@
 #pragma mark UI
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - NavBarHeight)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.estimatedRowHeight = 100;
         _tableView.rowHeight = UITableViewAutomaticDimension;
+        _tableView.backgroundColor = FlatMint;
         _tableView.tableFooterView = [UIView new];
     }
     return _tableView;

@@ -13,6 +13,11 @@ target 'DateInfo' do
   pod 'MWPhotoBrowser'
   pod 'YYImage', '~> 1.0.4'
   pod 'StarWars', '~> 2.0'
+  pod 'CYLTabBarController'
+  pod 'ChameleonFramework'
+  pod 'YYCategories'
+#  pod 'TSMessages'
+#  pod 'HexColors'
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 

@@ -12,5 +12,8 @@
 #import <MRJTool/Macro.h>
 #import "YYModel.h"
 #import "YYText.h"
+#import "Chameleon.h"
+#import "YYCategories.h"
+#import "TSMessage.h"
 
 #endif /* Header_h */

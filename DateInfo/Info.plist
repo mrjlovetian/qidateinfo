@@ -20,6 +20,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCalendarsUsageDescription</key>
+	<string>LoveQi</string>
 	<key>NSCameraUsageDescription</key>
 	<string>允许info访问您的相机</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
