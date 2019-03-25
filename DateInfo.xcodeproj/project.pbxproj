@@ -47,6 +47,10 @@
 		0AD204442247BE780064F4E8 /* NotificationBackgroundWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD204302247BE780064F4E8 /* NotificationBackgroundWarning.png */; };
 		0AD204452247BE780064F4E8 /* NotificationButtonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD204312247BE780064F4E8 /* NotificationButtonBackground.png */; };
 		0AD204482247C17A0064F4E8 /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD204472247C17A0064F4E8 /* HexColor.m */; };
+		0AD2044A224911480064F4E8 /* date.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AD20449224911480064F4E8 /* date.json */; };
+		0AD2044D22491DAD0064F4E8 /* RijiYearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2044C22491DAD0064F4E8 /* RijiYearViewController.m */; };
+		0AD2045022491E360064F4E8 /* RijiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2044F22491E360064F4E8 /* RijiManager.m */; };
+		0AD20453224922E00064F4E8 /* RijiMonthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD20452224922E00064F4E8 /* RijiMonthViewController.m */; };
 		0ADC844B223525A400A18C8C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC844A223525A400A18C8C /* TestViewController.m */; };
 		0AFB36012230172F001DD940 /* RiJiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FA2230172F001DD940 /* RiJiModel.m */; };
 		0AFB36022230172F001DD940 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FD2230172F001DD940 /* FileManager.m */; };
@@ -130,6 +134,13 @@
 		0AD204312247BE780064F4E8 /* NotificationButtonBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotificationButtonBackground.png; sourceTree = "<group>"; };
 		0AD204462247C17A0064F4E8 /* HexColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HexColor.h; sourceTree = "<group>"; };
 		0AD204472247C17A0064F4E8 /* HexColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HexColor.m; sourceTree = "<group>"; };
+		0AD20449224911480064F4E8 /* date.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = date.json; sourceTree = "<group>"; };
+		0AD2044B22491DAD0064F4E8 /* RijiYearViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RijiYearViewController.h; sourceTree = "<group>"; };
+		0AD2044C22491DAD0064F4E8 /* RijiYearViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RijiYearViewController.m; sourceTree = "<group>"; };
+		0AD2044E22491E360064F4E8 /* RijiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RijiManager.h; sourceTree = "<group>"; };
+		0AD2044F22491E360064F4E8 /* RijiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RijiManager.m; sourceTree = "<group>"; };
+		0AD20451224922E00064F4E8 /* RijiMonthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RijiMonthViewController.h; sourceTree = "<group>"; };
+		0AD20452224922E00064F4E8 /* RijiMonthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RijiMonthViewController.m; sourceTree = "<group>"; };
 		0ADC8449223525A400A18C8C /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		0ADC844A223525A400A18C8C /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		0AFB35F92230172F001DD940 /* RiJiModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiJiModel.h; sourceTree = "<group>"; };
@@ -209,10 +220,17 @@
 				0AFB36052233B28A001DD940 /* EditViewController.m */,
 				0A8A678F22340ACB001D270B /* ShowRijiViewController.h */,
 				0A8A679022340ACB001D270B /* ShowRijiViewController.m */,
+				0AD2044B22491DAD0064F4E8 /* RijiYearViewController.h */,
+				0AD2044C22491DAD0064F4E8 /* RijiYearViewController.m */,
+				0AD20451224922E00064F4E8 /* RijiMonthViewController.h */,
+				0AD20452224922E00064F4E8 /* RijiMonthViewController.m */,
 				0ABC48DE223530F600799B4A /* RijiCell.h */,
 				0ABC48DF223530F600799B4A /* RijiCell.m */,
 				0ADC8449223525A400A18C8C /* TestViewController.h */,
 				0ADC844A223525A400A18C8C /* TestViewController.m */,
+				0AD2044E22491E360064F4E8 /* RijiManager.h */,
+				0AD2044F22491E360064F4E8 /* RijiManager.m */,
+				0AD20449224911480064F4E8 /* date.json */,
 				0A38B8F2222BAA1200ADD2A2 /* Assets.xcassets */,
 				0A38B8F4222BAA1200ADD2A2 /* LaunchScreen.storyboard */,
 				0A38B8F7222BAA1200ADD2A2 /* Info.plist */,
@@ -464,6 +482,7 @@
 				0AD204412247BE780064F4E8 /* NotificationBackgroundWarningIcon.png in Resources */,
 				0A38B8F6222BAA1200ADD2A2 /* LaunchScreen.storyboard in Resources */,
 				0AD204452247BE780064F4E8 /* NotificationButtonBackground.png in Resources */,
+				0AD2044A224911480064F4E8 /* date.json in Resources */,
 				0AD204432247BE780064F4E8 /* NotificationBackgroundErrorIcon@2x.png in Resources */,
 				0AD204372247BE780064F4E8 /* NotificationBackgroundSuccess@2x.png in Resources */,
 				0AD2043E2247BE780064F4E8 /* NotificationBackgroundSuccessIcon@2x.png in Resources */,
@@ -664,6 +683,7 @@
 				0AFB36012230172F001DD940 /* RiJiModel.m in Sources */,
 				0AD204322247BE780064F4E8 /* TSMessageView.m in Sources */,
 				0A8A678C2233EB12001D270B /* NSDate+CupertinoYankee.m in Sources */,
+				0AD2045022491E360064F4E8 /* RijiManager.m in Sources */,
 				0A8A67892233EB12001D270B /* NSDate+Utilities.m in Sources */,
 				0ACCD7C32247AE3600CC7E0D /* LunarFormatter.m in Sources */,
 				0AFB36062233B28A001DD940 /* EditViewController.m in Sources */,
@@ -674,12 +694,14 @@
 				0ADC844B223525A400A18C8C /* TestViewController.m in Sources */,
 				0AFB36022230172F001DD940 /* FileManager.m in Sources */,
 				0A38B8EB222BAA1100ADD2A2 /* AppDelegate.m in Sources */,
+				0AD2044D22491DAD0064F4E8 /* RijiYearViewController.m in Sources */,
 				0AD204342247BE780064F4E8 /* TSMessage.m in Sources */,
 				0ACCD7CF2247B41100CC7E0D /* UIImage+ImageEffects.m in Sources */,
 				0ACCD7D02247B41100CC7E0D /* SetViewController.m in Sources */,
 				0A8A678A2233EB12001D270B /* NSDate+Formatter.m in Sources */,
 				0A8A678E2233EB12001D270B /* NSDate+InternetDateTime.m in Sources */,
 				0A8A679122340ACB001D270B /* ShowRijiViewController.m in Sources */,
+				0AD20453224922E00064F4E8 /* RijiMonthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

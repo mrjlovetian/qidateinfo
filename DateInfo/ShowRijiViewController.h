@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ShowRijiViewController : UIViewController
+@property (nonatomic, strong)NSArray *rijiDayArr;
 
 @end
 

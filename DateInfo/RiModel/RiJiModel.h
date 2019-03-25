@@ -2,14 +2,30 @@
 #import <Foundation/Foundation.h>
 
 @class RiJiModel;
+@class RiJiMonth;
+@class RiJiDay;
 
-@interface RiJiInfo : NSObject
+
+@interface RiJiYear : NSObject
+
+@property (nonatomic, copy)NSString *year;
+@property (nonatomic, copy)NSArray<RiJiModel *> *datas;
+
+@end
+
+@interface RiJiMonth : NSObject
+
+@property (nonatomic, copy)NSString *month;
+@property (nonatomic, copy)NSArray<RiJiModel *> *datas;
+
+@end
+
+@interface RiJiDay : NSObject
 
 @property (nonatomic, copy)NSString *date;
 @property (nonatomic, copy)NSArray<RiJiModel *> *datas;
 
 @end
-
 
 @interface RiJiModel : NSObject
 

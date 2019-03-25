@@ -15,6 +15,7 @@
 #import "FileManager/FileManager.h"
 #import "NSDate+Extension.h"
 #import "TZImagePickerController.h"
+#import "RijiManager.h"
 
 @interface EditViewController ()<TZImagePickerControllerDelegate>
 
@@ -127,10 +128,10 @@
 
 - (void)addRiji:(UIButton *)btn {
     btn.enabled = NO;
-    RiJiModel *model = [RiJiModel new];
-    model.title = self.titleTextField.text;
-    model.content = self.contentTextView.text;
-    model.dateTime = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSinceNow]];
+    RiJiModel *rijiModel = [RiJiModel new];
+    rijiModel.title = self.titleTextField.text;
+    rijiModel.content = self.contentTextView.text;
+    rijiModel.dateTime = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSinceNow]];
     
     if ([self.titleTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0 && [self.contentTextView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0 && self.dataSources.count == 0) {
         
@@ -139,31 +140,68 @@
     }
     
     NSString *today = [[NSDate date] formatYMD];
+    NSInteger year = [[NSDate date] year];
+    NSInteger month = [[NSDate date] month];
     
     [[FileManager shareManager] saveImages:self.imageArr imageName:self.imageNameArr complete:^(NSArray<NSString *> *imageUrls) {
         NSLog(@"----------.........%@", imageUrls);
-        model.images = imageUrls;
+        rijiModel.images = imageUrls;
     }];
     
     
     NSMutableArray *datasArr = [NSMutableArray arrayWithCapacity:1];
-    [datasArr addObjectsFromArray:[NSArray yy_modelArrayWithClass:RiJiInfo.class json:[[FileManager shareManager] readFileNameForKey:@"mrjdata"]]];
+    
+    [datasArr addObjectsFromArray:[RijiManager shareRijiManager].rijiArr];
     NSMutableArray *modelarr = [NSMutableArray arrayWithCapacity:1];
-    BOOL hasModel = NO;
-    for (RiJiInfo *temInfo in datasArr) {
-        if ([temInfo.date isEqualToString:today] && temInfo.datas && temInfo.datas.count > 0) {
-            [modelarr addObjectsFromArray:temInfo.datas];
-            [modelarr addObject:model];
-            temInfo.datas = modelarr;
-            hasModel = YES;
+    
+    
+    BOOL hasDay = NO;
+    BOOL hasMonth = NO;
+    BOOL hasYear = NO;
+    RiJiDay *rijiDay = nil;
+    RiJiMonth *rijiMonth = nil;
+    RiJiYear *rijiYear = nil;
+    for (RiJiYear *rijiYear in datasArr) {
+        if ([rijiYear.year integerValue] == year && rijiYear.datas && rijiYear.datas.count > 0) {
+            for (RiJiMonth *rijiMonth in rijiYear.datas) {
+                if ([rijiMonth.month integerValue] == month && rijiMonth.datas && rijiMonth.datas.count > 0) {
+                    for (RiJiDay *rijiDay in rijiMonth.datas) {
+                        if ([rijiDay.date isEqualToString:today] && rijiDay.datas && rijiDay.datas.count > 0) {
+                            [modelarr addObjectsFromArray:rijiDay.datas];
+                            [modelarr addObject:rijiModel];
+                            rijiDay.datas = modelarr;
+                            hasDay = YES;
+                            break;
+                        }
+                    }
+                    if (!hasDay) {
+                        rijiDay = [RiJiDay new];
+                        rijiDay.datas = @[rijiModel];
+                    }
+                    hasMonth = YES;
+                    break;
+                }
+            }
+            if (!hasMonth) {
+                rijiMonth = [RiJiMonth new];
+                rijiMonth.datas = @[rijiDay];
+            }
+            hasYear = YES;
             break;
         }
     }
-    if (!hasModel) {
-        RiJiInfo *info = [RiJiInfo new];
-        info.date = today;
-        info.datas = @[model];
-        [datasArr addObject:info];
+    
+    if (!hasYear) {
+        rijiYear = [RiJiYear new];
+        rijiMonth = [RiJiMonth new];
+        rijiDay = [RiJiDay new];
+        rijiYear.datas = @[rijiMonth];
+        rijiYear.year = [NSString stringWithFormat:@"%ld", (long)year];
+        rijiMonth.datas = @[rijiDay];
+        rijiMonth.month = [NSString stringWithFormat:@"%ld", (long)month];
+        rijiDay.datas = @[rijiModel];
+        rijiDay.date = today;
+        [datasArr addObject:rijiYear];
     }
     
     NSString *content = [datasArr yy_modelToJSONString];

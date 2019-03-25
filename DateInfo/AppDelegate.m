@@ -12,10 +12,11 @@
 #import "YYModel.h"
 #import "RiModel/RiJiModel.h"
 #import <IQKeyboardManager/IQKeyboardManager.h>
-#import "ShowRijiViewController.h"
+#import "RijiYearViewController.h"
 #import "SetViewController.h"
 #import "CYLTabBarController.h"
 #import "BaseNavViewController.h"
+#import "RijiManager.h"
 
 @interface AppDelegate ()
 
@@ -33,6 +34,7 @@
     [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
 
+    [RijiManager shareRijiManager];
     [IQKeyboardManager sharedManager].enable = YES;
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     [[IQKeyboardManager sharedManager] registerTextFieldViewClass:YYTextView.class didBeginEditingNotificationName:YYTextViewTextDidBeginEditingNotification didEndEditingNotificationName:YYTextViewTextDidEndEditingNotification];
@@ -73,7 +75,7 @@
     BaseNavViewController *firstNavigationController = [[BaseNavViewController alloc]
                                                         initWithRootViewController:firstViewController];
     
-    ShowRijiViewController *secondViewController = [[ShowRijiViewController alloc] init];
+    RijiYearViewController *secondViewController = [[RijiYearViewController alloc] init];
     BaseNavViewController *secondNavigationController = [[BaseNavViewController alloc]
                                                          initWithRootViewController:secondViewController];
     SetViewController *threeViewController = [[SetViewController alloc] init];

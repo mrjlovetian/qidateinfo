@@ -1,6 +1,14 @@
 #import "RiJiModel.h"
 
-@implementation RiJiInfo
+@implementation RiJiModel
+
+- (CGFloat)height {
+    return 0;
+}
+
+@end
+
+@implementation RiJiDay
 
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{@"datas" : [RiJiModel class]};
@@ -8,10 +16,17 @@
 
 @end
 
-@implementation RiJiModel
+@implementation RiJiMonth
 
-- (CGFloat)height {
-    return 0;
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"datas" : [RiJiDay class]};
+}
+
+@end
+
+@implementation RiJiYear
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"datas" : [RiJiMonth class]};
 }
 
 @end

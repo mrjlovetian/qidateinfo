@@ -16,7 +16,6 @@
 @interface ShowRijiViewController () <UITableViewDelegate, UITableViewDataSource, MWPhotoBrowserDelegate>
 
 @property (nonatomic, strong)UITableView *tableView;
-@property (nonatomic, strong)NSMutableArray *dataSources;
 @property (nonatomic, copy)NSArray *photos;
 
 @end
@@ -26,11 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = FlatMint;
-    self.dataSources = [NSMutableArray arrayWithCapacity:1];
     
     [self.view addSubview:self.tableView];
-    NSString *file = [[FileManager shareManager] readFileNameForKey:@"mrjdata"];
-    [self.dataSources addObjectsFromArray:[NSArray yy_modelArrayWithClass:RiJiInfo.class json:file]];
     self.tableView.estimatedRowHeight = 150;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView reloadData];
@@ -49,14 +45,14 @@
 #pragma mark UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    RiJiInfo *info = self.dataSources[indexPath.section];
+    RiJiDay *info = self.rijiDayArr[indexPath.section];
     RiJiModel *model = info.datas[indexPath.row];
     return [RijiCell hetightForModel:model];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSMutableArray *arr = [NSMutableArray arrayWithCapacity:1];
-    RiJiInfo *info = [self.dataSources objectAtIndex:indexPath.section];
+    RiJiDay *info = [self.rijiDayArr objectAtIndex:indexPath.section];
     RiJiModel *model = [info.datas objectAtIndex:indexPath.row];
     for (NSString *imageUrl in model.images) {
         NSURL *url = [[NSURL alloc] initFileURLWithPath:[NSString stringWithFormat:@"%@%@", [[FileManager shareManager] getMianPath] , imageUrl]];
@@ -71,12 +67,12 @@
 #pragma mark UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.dataSources.count;
+    return self.rijiDayArr.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    RiJiInfo *info = self.dataSources[section];
-    return info.datas.count;
+    RiJiDay *rijiDay = self.rijiDayArr[section];
+    return rijiDay.datas.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -85,16 +81,16 @@
     if (!cell) {
         cell = [[RijiCell alloc] initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:identif];
     }
-    RiJiInfo *info =  [_dataSources objectAtIndex:indexPath.section];
-    RiJiModel *model = info.datas[indexPath.row];
-    cell.rijiModel = model;
+    RiJiDay *rijiDay =  [self.rijiDayArr objectAtIndex:indexPath.section];
+    RiJiModel *rijiModel = rijiDay.datas[indexPath.row];
+    cell.rijiModel = rijiModel;
     return cell;
 }
 
 #pragma mark UI
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - NavBarHeight)];
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.estimatedRowHeight = 100;
