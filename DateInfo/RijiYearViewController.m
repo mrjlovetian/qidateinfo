@@ -22,25 +22,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"日志";
+    self.navigationController.navigationBar.translucent = NO;
     [self.view addSubview:self.tableView];
     // Do any additional setup after loading the view.
 }
 
 #pragma mark UITableViewDelegate
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 40.0;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    RiJiDay *info = self.rijiDayArr[indexPath.section];
-//    RiJiModel *model = info.datas[indexPath.row];
-//    return [RijiCell hetightForModel:model];
     return 48.0;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     RiJiYear *rijiYear = [RijiManager shareRijiManager].rijiArr[indexPath.section];
     RiJiMonth *rijiMonth = rijiYear.datas[indexPath.row];
     ShowRijiViewController *vc = [ShowRijiViewController new];
     vc.rijiDayArr = rijiMonth.datas;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    RiJiYear *rijiYear = [RijiManager shareRijiManager].rijiArr[section];
+    UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
+    titleLab.text = [NSString stringWithFormat:@"\t%@年", rijiYear.year];
+    titleLab.backgroundColor = [UIColor whiteColor];
+    return titleLab;
 }
 
 #pragma mark UITableViewDataSource

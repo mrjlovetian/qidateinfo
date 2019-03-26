@@ -25,7 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = FlatMint;
-    
     [self.view addSubview:self.tableView];
     self.tableView.estimatedRowHeight = 150;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -44,13 +43,30 @@
 
 #pragma mark UITableViewDelegate
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 40.0;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.rijiDayArr.count;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    RiJiDay *info = self.rijiDayArr[indexPath.section];
-    RiJiModel *model = info.datas[indexPath.row];
+    RiJiDay *rijiDay = self.rijiDayArr[indexPath.section];
+    RiJiModel *model = rijiDay.datas[indexPath.row];
     return [RijiCell hetightForModel:model];
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    RiJiDay *rijiDay = self.rijiDayArr[section];
+    UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
+    titleLab.text = [NSString stringWithFormat:@"\t%@", rijiDay.date];
+    titleLab.backgroundColor = [UIColor whiteColor];
+    return titleLab;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSMutableArray *arr = [NSMutableArray arrayWithCapacity:1];
     RiJiDay *info = [self.rijiDayArr objectAtIndex:indexPath.section];
     RiJiModel *model = [info.datas objectAtIndex:indexPath.row];
@@ -65,10 +81,6 @@
 }
 
 #pragma mark UITableViewDataSource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.rijiDayArr.count;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     RiJiDay *rijiDay = self.rijiDayArr[section];

@@ -15,5 +15,6 @@
 #import "Chameleon.h"
 #import "YYCategories.h"
 #import "TSMessage.h"
+#import <Masonry/Masonry.h>
 
 #endif /* Header_h */

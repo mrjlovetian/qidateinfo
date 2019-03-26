@@ -37,7 +37,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"新增日志";
     self.view.backgroundColor = FlatMint;
 
     [self.view addSubview:self.titleTextField];
@@ -60,7 +60,7 @@
     [self.titleTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(10);
         make.right.mas_equalTo(-10);
-        make.top.mas_equalTo(NavBarHeight+10);
+        make.top.mas_equalTo(10);
         make.height.mas_equalTo(40);
     }];
     
@@ -176,7 +176,12 @@
                     }
                     if (!hasDay) {
                         rijiDay = [RiJiDay new];
+                        rijiDay.date = today;
                         rijiDay.datas = @[rijiModel];
+                        NSMutableArray *dayArr = [NSMutableArray arrayWithCapacity:1];
+                        [dayArr addObjectsFromArray:rijiMonth.datas];
+                        [dayArr addObject:rijiDay];
+                        rijiMonth.datas = dayArr;
                     }
                     hasMonth = YES;
                     break;
@@ -184,7 +189,12 @@
             }
             if (!hasMonth) {
                 rijiMonth = [RiJiMonth new];
+                rijiMonth.month = [NSString stringWithFormat:@"%ld", month];
                 rijiMonth.datas = @[rijiDay];
+                NSMutableArray *monthArr = [NSMutableArray arrayWithCapacity:1];
+                [monthArr addObjectsFromArray:rijiYear.datas];
+                [monthArr addObject:rijiDay];
+                rijiYear.datas = monthArr;
             }
             hasYear = YES;
             break;

@@ -12,18 +12,19 @@
 #import <EventKit/EventKit.h>
 #import "LunarFormatter.h"
 #import "NSDate+Extension.h"
+#import "MRJCalendarWeekdayView.h"
 
-@interface ViewController () <FSCalendarDelegate, FSCalendarDataSource>
+@interface ViewController () <FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance>
 
 @property (nonatomic, strong)FSCalendar *calendar;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @property (strong, nonatomic) NSDate *minimumDate;
 @property (strong, nonatomic) NSDate *maximumDate;
 @property (strong, nonatomic) NSCache *cache;
-@property (strong, nonatomic) NSDate *selectDate;
 
 @property (strong, nonatomic) LunarFormatter *lunarFormatter;
 @property (strong, nonatomic) NSArray<EKEvent *> *events;
+@property (strong, nonatomic) NSDictionary *holiyDay;
 
 @end
 
@@ -32,6 +33,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = FlatMint;
+    self.navigationController.navigationBar.translucent = NO;
+     self.title = @"日子";
     
     UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [addBtn setTitle:@"+" forState:UIControlStateNormal];
@@ -49,27 +52,40 @@
     UIBarButtonItem *todayBtnItem = [[UIBarButtonItem alloc] initWithCustomView:todayBtn];
     self.navigationItem.rightBarButtonItems = @[barItem, todayBtnItem];
     
+    MRJCalendarWeekdayView *weekHeaderView = [[MRJCalendarWeekdayView alloc] initWithFrame:CGRectMake(0, 40, ScreenWidth, 40.0)];
+    [weekHeaderView configureAppearance];
     FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight/3*2)];
     calendar.dataSource = self;
+    calendar.headerHeight = 40.0;
+    calendar.weekdayHeight = 40.0;
     calendar.delegate = self;
+
+    calendar.appearance.headerDateFormat = @"YYYY 年 MM 月";
+    [calendar.calendarWeekdayView removeFromSuperview];
+    [calendar addSubview:weekHeaderView];
     [self.view addSubview:calendar];
+    [calendar selectDate:[NSDate date]];
     self.calendar = calendar;
     
     self.dateFormatter = [[NSDateFormatter alloc] init];
     self.dateFormatter.dateFormat = @"yyyy-MM-dd";
     
-    self.minimumDate = [self.dateFormatter dateFromString:@"2016-02-03"];
-    self.maximumDate = [self.dateFormatter dateFromString:@"2021-04-10"];
+    self.minimumDate = [self.dateFormatter dateFromString:@"1994-10-03"];
+    self.maximumDate = [self.dateFormatter dateFromString:@"2099-12-31"];
     self.lunarFormatter = [[LunarFormatter alloc] init];
     [self loadCalendarEvents];
     [self.calendar reloadData];
     
-    self.selectDate = [NSDate date];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"holiday" ofType:@"json"];
+    NSData *data = [[NSData data] initWithContentsOfFile:path];
+    self.holiyDay = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)addRiji {
-    if ([[self.selectDate formatYMD] isEqualToString:[[NSDate date] formatYMD]]) {
+    if ([[self.calendar.selectedDate formatYMD] isEqualToString:[[NSDate date] formatYMD]]) {
         UIViewController *vc = [[NSClassFromString(@"EditViewController") alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
         return;
@@ -92,6 +108,13 @@
 }
 
 - (NSString *)calendar:(FSCalendar *)calendar subtitleForDate:(NSDate *)date {
+    NSString *dateStr = [date stringWithFormat:@"MM-dd"];
+    if ([self.holiyDay objectForKey:@"holiday"] && ([date year] == [[NSDate date] year])) {
+        if ([[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr]) {
+            return [[[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr] objectForKey:@"name"];
+        }
+    }
+    
     EKEvent *event = [self eventsForDate:date].firstObject;
     if (event) {
         return event.title;
@@ -103,7 +126,6 @@
 
 - (void)calendar:(FSCalendar *)calendar didSelectDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition {
     NSLog(@"did select %@",[self.dateFormatter stringFromDate:date]);
-    self.selectDate = date;
 }
 
 - (void)calendarCurrentPageDidChange:(FSCalendar *)calendar {
@@ -174,6 +196,39 @@
         [self.cache setObject:[NSNull null] forKey:date];
     }
     return filteredEvents;
+}
+
+#pragma mark - <FSCalendarDelegateAppearance>
+
+//- (nullable UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance titleDefaultColorForDate:(NSDate *)date olorForDate:(NSDate *)date {
+//    NSString *dateStr = [date stringWithFormat:@"MM-dd"];
+//    if ([self.holiyDay objectForKey:@"holiday"] && ([date year] == [[NSDate date] year])) {
+//        if ([[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr]) {
+//            if ([[[[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr] objectForKey:@"holiday"] boolValue]) {
+//                return [UIColor blueColor];
+//            }
+//            return [UIColor redColor];
+//        }
+//    }
+//    return appearance.selectionColor;
+//}
+
+/**
+ * Asks the delegate for day text color in selected state for the specific date.
+ */
+- (nullable UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance subtitleDefaultColorForDate:(NSDate *)date{
+    NSString *dateStr = [date stringWithFormat:@"MM-dd"];
+    if ([self.holiyDay objectForKey:@"holiday"] && ([date year] == [[NSDate date] year])) {
+        if ([[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr]) {
+            if ([[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr]) {
+                if ([[[[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr] objectForKey:@"holiday"] boolValue]) {
+                    return [UIColor blueColor];
+                }
+                return [UIColor redColor];
+            }
+        }
+    }
+    return [UIColor colorWithHexString:@"333333"];
 }
 
 @end
