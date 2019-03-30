@@ -16,5 +16,10 @@
 #import "YYCategories.h"
 #import "TSMessage.h"
 #import <Masonry/Masonry.h>
+#import "LEETheme.h"
+
+///014D41
+#define MAINCOLOR [UIColor colorWithHexString:@"0d5561"]
+#define TWOCOLOR [UIColor colorWithHexString:@"4F726C"]
 
 #endif /* Header_h */

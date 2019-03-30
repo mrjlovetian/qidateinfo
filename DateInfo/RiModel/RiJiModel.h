@@ -32,6 +32,7 @@
 @property (nonatomic, copy)NSString *title;
 @property (nonatomic, copy)NSString *content;
 @property (nonatomic, copy)NSString *dateTime;
+@property (nonatomic, copy)NSString *dateStr;
 @property (nonatomic, copy)NSString *index;
 @property (nonatomic, copy)NSArray *images;
 @property (nonatomic, copy)NSArray *videos;

@@ -9,6 +9,7 @@
 #import "SetViewController.h"
 #import "ParallaxHeaderView.h"
 #import "ShouWenzhanViewController.h"
+#import "AboutViewController.h"
 
 @interface SetViewController () <UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate>
 
@@ -22,7 +23,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-//    self.navigationController.delegate = self;
     self.navigationController.navigationBarHidden = YES;
 }
 
@@ -35,21 +35,27 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithHexString:@"014D41"];
     self.title = @"设置";
-    self.dataSource = @[@"主题切换", @"字体切换", @"意见反馈", @"关于"];
+    self.dataSource = @[@"随机散文", @"意见反馈", @"关于", @"当前版本"];
     [self.view addSubview:self.tableView];
-    UIImage *image = [UIImage imageNamed:@"04.PNG"];
+    UIImage *image = [UIImage imageNamed:@"02.JPG"];
     self.headerView = [ParallaxHeaderView parallaxHeaderViewWithImage:image forSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 200)];
     self.tableView.tableHeaderView = self.headerView;
-    // Do any additional setup after loading the view.
 }
 
 #pragma mark UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    ShouWenzhanViewController *vc = [ShouWenzhanViewController new];
-    [self presentViewController:vc animated:YES completion:^{
+    if (indexPath.row == 0) {
+        ShouWenzhanViewController *vc = [ShouWenzhanViewController new];
+        [self presentViewController:vc animated:YES completion:^{
+            
+        }];
+    } else if (indexPath.row == 1) {
         
-    }];
+    } else if (indexPath.row == 2) {
+        AboutViewController *vc = [AboutViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 #pragma mark UITableViewDataSource
@@ -65,7 +71,21 @@
     }
     cell.textLabel.text = self.dataSource[indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.backgroundColor = [UIColor colorWithHexString:@"014D41"];
+    cell.lee_theme.LeeAddBackgroundColor(@"main", MAINCOLOR);
+    cell.textLabel.textColor = [UIColor whiteColor];
+    
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(15, cell.frame.size.height - 0.5, ScreenWidth - 30, 0.4)];
+    lineView.backgroundColor = [UIColor whiteColor];
+    [cell addSubview:lineView];
+    if (indexPath.row == 3) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        UILabel *versionLab = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth/2.0, 0, ScreenWidth/2.0 - 30, cell.frame.size.height)];
+        versionLab.text = [UIApplication sharedApplication].appVersion;
+        versionLab.textColor = [UIColor whiteColor];
+        versionLab.font = [UIFont systemFontOfSize:14.0];
+        versionLab.textAlignment = NSTextAlignmentRight;
+        [cell addSubview:versionLab];
+    }
     return cell;
 }
 
@@ -83,7 +103,8 @@
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.backgroundColor = [UIColor colorWithHexString:@"014D41"];
+        _tableView.lee_theme.LeeAddBackgroundColor(@"main", MAINCOLOR);
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.tableFooterView = [UIView new];
     }
     return _tableView;

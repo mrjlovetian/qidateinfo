@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A38B8EB222BAA1100ADD2A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B8EA222BAA1100ADD2A2 /* AppDelegate.m */; };
-		0A38B8EE222BAA1100ADD2A2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B8ED222BAA1100ADD2A2 /* ViewController.m */; };
+		0A38B8EE222BAA1100ADD2A2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B8ED222BAA1100ADD2A2 /* RootViewController.m */; };
 		0A38B8F3222BAA1200ADD2A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A38B8F2222BAA1200ADD2A2 /* Assets.xcassets */; };
 		0A38B8F6222BAA1200ADD2A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A38B8F4222BAA1200ADD2A2 /* LaunchScreen.storyboard */; };
 		0A38B8F9222BAA1200ADD2A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B8F8222BAA1200ADD2A2 /* main.m */; };
@@ -23,7 +23,13 @@
 		0A8A679122340ACB001D270B /* ShowRijiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A679022340ACB001D270B /* ShowRijiViewController.m */; };
 		0A8A938C224F58870007A1C3 /* book.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A8A938A224F58870007A1C3 /* book.json */; };
 		0A8A938D224F58870007A1C3 /* say.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A8A938B224F58870007A1C3 /* say.json */; };
-		0AB00217224E5EED0000B8E2 /* WenzhanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB00216224E5EED0000B8E2 /* WenzhanManager.m */; };
+		0A8A9394224F5C5C0007A1C3 /* WenzhanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A9392224F5C5C0007A1C3 /* WenzhanManager.m */; };
+		0A8A9398224F5E130007A1C3 /* LaunchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A9397224F5E130007A1C3 /* LaunchImageView.m */; };
+		0A8A939B224F8BE80007A1C3 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A939A224F8BE80007A1C3 /* AboutViewController.m */; };
+		0A8A939E224F8FA50007A1C3 /* JumpDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A939C224F8FA40007A1C3 /* JumpDateView.m */; };
+		0A8A93A1224F90520007A1C3 /* BtnColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93A0224F90520007A1C3 /* BtnColumnView.m */; };
+		0A8A93A4224FAAF60007A1C3 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93A3224FAAF60007A1C3 /* ImageCell.m */; };
+		0A8A93A7224FBDE90007A1C3 /* RijiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93A6224FBDE90007A1C3 /* RijiDetailViewController.m */; };
 		0ABC48E0223530F600799B4A /* RijiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC48DF223530F600799B4A /* RijiCell.m */; };
 		0ACCD7C32247AE3600CC7E0D /* LunarFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACCD7C12247AE3600CC7E0D /* LunarFormatter.m */; };
 		0ACCD7C62247B3C900CC7E0D /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACCD7C52247B3C900CC7E0D /* BaseNavViewController.m */; };
@@ -83,8 +89,8 @@
 		0A38B8E6222BAA1100ADD2A2 /* DateInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A38B8E9222BAA1100ADD2A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A38B8EA222BAA1100ADD2A2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0A38B8EC222BAA1100ADD2A2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0A38B8ED222BAA1100ADD2A2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0A38B8EC222BAA1100ADD2A2 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		0A38B8ED222BAA1100ADD2A2 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		0A38B8F2222BAA1200ADD2A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A38B8F5222BAA1200ADD2A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A38B8F7222BAA1200ADD2A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,8 +116,20 @@
 		0A8A679022340ACB001D270B /* ShowRijiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowRijiViewController.m; sourceTree = "<group>"; };
 		0A8A938A224F58870007A1C3 /* book.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = book.json; sourceTree = "<group>"; };
 		0A8A938B224F58870007A1C3 /* say.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = say.json; sourceTree = "<group>"; };
-		0AB00215224E5EED0000B8E2 /* WenzhanManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WenzhanManager.h; sourceTree = "<group>"; };
-		0AB00216224E5EED0000B8E2 /* WenzhanManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WenzhanManager.m; sourceTree = "<group>"; };
+		0A8A9392224F5C5C0007A1C3 /* WenzhanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WenzhanManager.m; sourceTree = "<group>"; };
+		0A8A9393224F5C5C0007A1C3 /* WenzhanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WenzhanManager.h; sourceTree = "<group>"; };
+		0A8A9396224F5E130007A1C3 /* LaunchImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchImageView.h; sourceTree = "<group>"; };
+		0A8A9397224F5E130007A1C3 /* LaunchImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchImageView.m; sourceTree = "<group>"; };
+		0A8A9399224F8BE80007A1C3 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		0A8A939A224F8BE80007A1C3 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		0A8A939C224F8FA40007A1C3 /* JumpDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpDateView.m; sourceTree = "<group>"; };
+		0A8A939D224F8FA50007A1C3 /* JumpDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpDateView.h; sourceTree = "<group>"; };
+		0A8A939F224F90520007A1C3 /* BtnColumnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtnColumnView.h; sourceTree = "<group>"; };
+		0A8A93A0224F90520007A1C3 /* BtnColumnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtnColumnView.m; sourceTree = "<group>"; };
+		0A8A93A2224FAAF60007A1C3 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
+		0A8A93A3224FAAF60007A1C3 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		0A8A93A5224FBDE90007A1C3 /* RijiDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RijiDetailViewController.h; sourceTree = "<group>"; };
+		0A8A93A6224FBDE90007A1C3 /* RijiDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RijiDetailViewController.m; sourceTree = "<group>"; };
 		0ABC48DE223530F600799B4A /* RijiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RijiCell.h; sourceTree = "<group>"; };
 		0ABC48DF223530F600799B4A /* RijiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RijiCell.m; sourceTree = "<group>"; };
 		0ACCD7C12247AE3600CC7E0D /* LunarFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunarFormatter.m; sourceTree = "<group>"; };
@@ -224,6 +242,11 @@
 		0A38B8E8222BAA1100ADD2A2 /* DateInfo */ = {
 			isa = PBXGroup;
 			children = (
+				0A8A9395224F5DFC0007A1C3 /* LaunchImage */,
+				0A8A9391224F5B6D0007A1C3 /* Base */,
+				0A8A9390224F5B590007A1C3 /* AppDelegate */,
+				0A8A938F224F5B500007A1C3 /* Riji */,
+				0A8A938E224F5B440007A1C3 /* Wenzhan */,
 				0AD204172247BE6C0064F4E8 /* Third */,
 				0ACCD7C72247B41000CC7E0D /* set */,
 				0ACCD7C02247AE2B00CC7E0D /* LunarFormatter */,
@@ -231,34 +254,10 @@
 				0AFB35FB2230172F001DD940 /* FileManager */,
 				0AFB35FE2230172F001DD940 /* LanguageManager */,
 				0AFB35F82230172F001DD940 /* RiModel */,
-				0A38B8E9222BAA1100ADD2A2 /* AppDelegate.h */,
-				0A38B8EA222BAA1100ADD2A2 /* AppDelegate.m */,
-				0ACCD7C42247B3C900CC7E0D /* BaseNavViewController.h */,
-				0ACCD7C52247B3C900CC7E0D /* BaseNavViewController.m */,
-				0A38B8EC222BAA1100ADD2A2 /* ViewController.h */,
-				0A38B8ED222BAA1100ADD2A2 /* ViewController.m */,
-				0AD20454224A63CC0064F4E8 /* MRJCalendarWeekdayView.h */,
-				0AD20455224A63CC0064F4E8 /* MRJCalendarWeekdayView.m */,
-				0AFB36042233B28A001DD940 /* EditViewController.h */,
-				0AFB36052233B28A001DD940 /* EditViewController.m */,
-				0A8A678F22340ACB001D270B /* ShowRijiViewController.h */,
-				0A8A679022340ACB001D270B /* ShowRijiViewController.m */,
-				0AD2044B22491DAD0064F4E8 /* RijiYearViewController.h */,
-				0AD2044C22491DAD0064F4E8 /* RijiYearViewController.m */,
-				0ABC48DE223530F600799B4A /* RijiCell.h */,
-				0ABC48DF223530F600799B4A /* RijiCell.m */,
+				0A38B8EC222BAA1100ADD2A2 /* RootViewController.h */,
+				0A38B8ED222BAA1100ADD2A2 /* RootViewController.m */,
 				0ADC8449223525A400A18C8C /* TestViewController.h */,
 				0ADC844A223525A400A18C8C /* TestViewController.m */,
-				0AD2044E22491E360064F4E8 /* RijiManager.h */,
-				0AD2044F22491E360064F4E8 /* RijiManager.m */,
-				0A5218C9224E523100256157 /* ShouWenzhanViewController.h */,
-				0A5218CA224E523100256157 /* ShouWenzhanViewController.m */,
-				0AB00215224E5EED0000B8E2 /* WenzhanManager.h */,
-				0AB00216224E5EED0000B8E2 /* WenzhanManager.m */,
-				0A8A938A224F58870007A1C3 /* book.json */,
-				0A8A938B224F58870007A1C3 /* say.json */,
-				0AD20457224A6D700064F4E8 /* holiday.json */,
-				0AD20449224911480064F4E8 /* date.json */,
 				0A38B8F2222BAA1200ADD2A2 /* Assets.xcassets */,
 				0A38B8F4222BAA1200ADD2A2 /* LaunchScreen.storyboard */,
 				0A38B8F7222BAA1200ADD2A2 /* Info.plist */,
@@ -296,6 +295,71 @@
 			name = DateTool;
 			sourceTree = "<group>";
 		};
+		0A8A938E224F5B440007A1C3 /* Wenzhan */ = {
+			isa = PBXGroup;
+			children = (
+				0A8A9393224F5C5C0007A1C3 /* WenzhanManager.h */,
+				0A8A9392224F5C5C0007A1C3 /* WenzhanManager.m */,
+				0A5218C9224E523100256157 /* ShouWenzhanViewController.h */,
+				0A5218CA224E523100256157 /* ShouWenzhanViewController.m */,
+			);
+			path = Wenzhan;
+			sourceTree = "<group>";
+		};
+		0A8A938F224F5B500007A1C3 /* Riji */ = {
+			isa = PBXGroup;
+			children = (
+				0A8A939D224F8FA50007A1C3 /* JumpDateView.h */,
+				0A8A939C224F8FA40007A1C3 /* JumpDateView.m */,
+				0A8A939F224F90520007A1C3 /* BtnColumnView.h */,
+				0A8A93A0224F90520007A1C3 /* BtnColumnView.m */,
+				0AD2044E22491E360064F4E8 /* RijiManager.h */,
+				0AD2044F22491E360064F4E8 /* RijiManager.m */,
+				0AFB36042233B28A001DD940 /* EditViewController.h */,
+				0AFB36052233B28A001DD940 /* EditViewController.m */,
+				0A8A93A2224FAAF60007A1C3 /* ImageCell.h */,
+				0A8A93A3224FAAF60007A1C3 /* ImageCell.m */,
+				0A8A678F22340ACB001D270B /* ShowRijiViewController.h */,
+				0A8A679022340ACB001D270B /* ShowRijiViewController.m */,
+				0AD2044B22491DAD0064F4E8 /* RijiYearViewController.h */,
+				0AD2044C22491DAD0064F4E8 /* RijiYearViewController.m */,
+				0ABC48DE223530F600799B4A /* RijiCell.h */,
+				0ABC48DF223530F600799B4A /* RijiCell.m */,
+				0AD20454224A63CC0064F4E8 /* MRJCalendarWeekdayView.h */,
+				0AD20455224A63CC0064F4E8 /* MRJCalendarWeekdayView.m */,
+				0A8A93A5224FBDE90007A1C3 /* RijiDetailViewController.h */,
+				0A8A93A6224FBDE90007A1C3 /* RijiDetailViewController.m */,
+			);
+			path = Riji;
+			sourceTree = "<group>";
+		};
+		0A8A9390224F5B590007A1C3 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				0A38B8E9222BAA1100ADD2A2 /* AppDelegate.h */,
+				0A38B8EA222BAA1100ADD2A2 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		0A8A9391224F5B6D0007A1C3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0ACCD7C42247B3C900CC7E0D /* BaseNavViewController.h */,
+				0ACCD7C52247B3C900CC7E0D /* BaseNavViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0A8A9395224F5DFC0007A1C3 /* LaunchImage */ = {
+			isa = PBXGroup;
+			children = (
+				0A8A9396224F5E130007A1C3 /* LaunchImageView.h */,
+				0A8A9397224F5E130007A1C3 /* LaunchImageView.m */,
+			);
+			path = LaunchImage;
+			sourceTree = "<group>";
+		};
 		0ACCD7C02247AE2B00CC7E0D /* LunarFormatter */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +378,8 @@
 				0ACCD7CB2247B41000CC7E0D /* UIImage+ImageEffects.m */,
 				0ACCD7CC2247B41000CC7E0D /* ParallaxHeaderView.h */,
 				0ACCD7CD2247B41000CC7E0D /* SetViewController.m */,
+				0A8A9399224F8BE80007A1C3 /* AboutViewController.h */,
+				0A8A939A224F8BE80007A1C3 /* AboutViewController.m */,
 			);
 			path = set;
 			sourceTree = "<group>";
@@ -377,6 +443,10 @@
 		0AD20459224BC0A50064F4E8 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				0A8A938A224F58870007A1C3 /* book.json */,
+				0A8A938B224F58870007A1C3 /* say.json */,
+				0AD20457224A6D700064F4E8 /* holiday.json */,
+				0AD20449224911480064F4E8 /* date.json */,
 				0AD2045A224BC0D10064F4E8 /* 01.JPG */,
 				0AD2045C224BC0D10064F4E8 /* 02.JPG */,
 				0AD2045B224BC0D10064F4E8 /* 03.JPG */,
@@ -658,6 +728,7 @@
 				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/LEETheme/LEETheme.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework",
@@ -679,6 +750,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LEETheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MWPhotoBrowser.framework",
@@ -722,23 +794,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A38B8EE222BAA1100ADD2A2 /* ViewController.m in Sources */,
+				0A38B8EE222BAA1100ADD2A2 /* RootViewController.m in Sources */,
 				0A8A678D2233EB12001D270B /* NSDate+Reporting.m in Sources */,
 				0A5218CB224E523100256157 /* ShouWenzhanViewController.m in Sources */,
 				0AFB36032230172F001DD940 /* LanguageManger.m in Sources */,
 				0ABC48E0223530F600799B4A /* RijiCell.m in Sources */,
 				0AD204482247C17A0064F4E8 /* HexColor.m in Sources */,
+				0A8A9398224F5E130007A1C3 /* LaunchImageView.m in Sources */,
 				0AD204332247BE780064F4E8 /* TSBlurView.m in Sources */,
 				0AFB36012230172F001DD940 /* RiJiModel.m in Sources */,
 				0AD204322247BE780064F4E8 /* TSMessageView.m in Sources */,
+				0A8A939B224F8BE80007A1C3 /* AboutViewController.m in Sources */,
 				0A8A678C2233EB12001D270B /* NSDate+CupertinoYankee.m in Sources */,
 				0AD2045022491E360064F4E8 /* RijiManager.m in Sources */,
-				0AB00217224E5EED0000B8E2 /* WenzhanManager.m in Sources */,
+				0A8A9394224F5C5C0007A1C3 /* WenzhanManager.m in Sources */,
 				0A8A67892233EB12001D270B /* NSDate+Utilities.m in Sources */,
 				0AD20456224A63CC0064F4E8 /* MRJCalendarWeekdayView.m in Sources */,
 				0ACCD7C32247AE3600CC7E0D /* LunarFormatter.m in Sources */,
 				0AFB36062233B28A001DD940 /* EditViewController.m in Sources */,
 				0A38B8F9222BAA1200ADD2A2 /* main.m in Sources */,
+				0A8A93A1224F90520007A1C3 /* BtnColumnView.m in Sources */,
 				0A8A678B2233EB12001D270B /* NSDate+Extension.m in Sources */,
 				0ACCD7C62247B3C900CC7E0D /* BaseNavViewController.m in Sources */,
 				0ACCD7CE2247B41100CC7E0D /* ParallaxHeaderView.m in Sources */,
@@ -748,7 +823,10 @@
 				0AD2044D22491DAD0064F4E8 /* RijiYearViewController.m in Sources */,
 				0AD204342247BE780064F4E8 /* TSMessage.m in Sources */,
 				0ACCD7CF2247B41100CC7E0D /* UIImage+ImageEffects.m in Sources */,
+				0A8A93A7224FBDE90007A1C3 /* RijiDetailViewController.m in Sources */,
 				0ACCD7D02247B41100CC7E0D /* SetViewController.m in Sources */,
+				0A8A939E224F8FA50007A1C3 /* JumpDateView.m in Sources */,
+				0A8A93A4224FAAF60007A1C3 /* ImageCell.m in Sources */,
 				0A8A678A2233EB12001D270B /* NSDate+Formatter.m in Sources */,
 				0A8A678E2233EB12001D270B /* NSDate+InternetDateTime.m in Sources */,
 				0A8A679122340ACB001D270B /* ShowRijiViewController.m in Sources */,
