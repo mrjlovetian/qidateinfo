@@ -13,6 +13,7 @@
 		0A38B8F6222BAA1200ADD2A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A38B8F4222BAA1200ADD2A2 /* LaunchScreen.storyboard */; };
 		0A38B8F9222BAA1200ADD2A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B8F8222BAA1200ADD2A2 /* main.m */; };
 		0A38B903222BAA1300ADD2A2 /* DateInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B902222BAA1300ADD2A2 /* DateInfoTests.m */; };
+		0A5218CB224E523100256157 /* ShouWenzhanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5218CA224E523100256157 /* ShouWenzhanViewController.m */; };
 		0A8A67892233EB12001D270B /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A677D2233EB10001D270B /* NSDate+Utilities.m */; };
 		0A8A678A2233EB12001D270B /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A677E2233EB11001D270B /* NSDate+Formatter.m */; };
 		0A8A678B2233EB12001D270B /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67812233EB11001D270B /* NSDate+Extension.m */; };
@@ -20,6 +21,9 @@
 		0A8A678D2233EB12001D270B /* NSDate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67852233EB11001D270B /* NSDate+Reporting.m */; };
 		0A8A678E2233EB12001D270B /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67882233EB12001D270B /* NSDate+InternetDateTime.m */; };
 		0A8A679122340ACB001D270B /* ShowRijiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A679022340ACB001D270B /* ShowRijiViewController.m */; };
+		0A8A938C224F58870007A1C3 /* book.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A8A938A224F58870007A1C3 /* book.json */; };
+		0A8A938D224F58870007A1C3 /* say.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A8A938B224F58870007A1C3 /* say.json */; };
+		0AB00217224E5EED0000B8E2 /* WenzhanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB00216224E5EED0000B8E2 /* WenzhanManager.m */; };
 		0ABC48E0223530F600799B4A /* RijiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC48DF223530F600799B4A /* RijiCell.m */; };
 		0ACCD7C32247AE3600CC7E0D /* LunarFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACCD7C12247AE3600CC7E0D /* LunarFormatter.m */; };
 		0ACCD7C62247B3C900CC7E0D /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACCD7C52247B3C900CC7E0D /* BaseNavViewController.m */; };
@@ -52,6 +56,10 @@
 		0AD2045022491E360064F4E8 /* RijiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2044F22491E360064F4E8 /* RijiManager.m */; };
 		0AD20456224A63CC0064F4E8 /* MRJCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD20455224A63CC0064F4E8 /* MRJCalendarWeekdayView.m */; };
 		0AD20458224A6D700064F4E8 /* holiday.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AD20457224A6D700064F4E8 /* holiday.json */; };
+		0AD2045E224BC0D10064F4E8 /* 01.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2045A224BC0D10064F4E8 /* 01.JPG */; };
+		0AD2045F224BC0D10064F4E8 /* 03.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2045B224BC0D10064F4E8 /* 03.JPG */; };
+		0AD20460224BC0D10064F4E8 /* 02.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2045C224BC0D10064F4E8 /* 02.JPG */; };
+		0AD20461224BC0D10064F4E8 /* 04.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2045D224BC0D10064F4E8 /* 04.PNG */; };
 		0ADC844B223525A400A18C8C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC844A223525A400A18C8C /* TestViewController.m */; };
 		0AFB36012230172F001DD940 /* RiJiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FA2230172F001DD940 /* RiJiModel.m */; };
 		0AFB36022230172F001DD940 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FD2230172F001DD940 /* FileManager.m */; };
@@ -84,6 +92,8 @@
 		0A38B8FE222BAA1300ADD2A2 /* DateInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A38B902222BAA1300ADD2A2 /* DateInfoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateInfoTests.m; sourceTree = "<group>"; };
 		0A38B904222BAA1300ADD2A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A5218C9224E523100256157 /* ShouWenzhanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShouWenzhanViewController.h; sourceTree = "<group>"; };
+		0A5218CA224E523100256157 /* ShouWenzhanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShouWenzhanViewController.m; sourceTree = "<group>"; };
 		0A8A677D2233EB10001D270B /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		0A8A677E2233EB11001D270B /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
 		0A8A677F2233EB11001D270B /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
@@ -98,6 +108,10 @@
 		0A8A67882233EB12001D270B /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
 		0A8A678F22340ACB001D270B /* ShowRijiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowRijiViewController.h; sourceTree = "<group>"; };
 		0A8A679022340ACB001D270B /* ShowRijiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowRijiViewController.m; sourceTree = "<group>"; };
+		0A8A938A224F58870007A1C3 /* book.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = book.json; sourceTree = "<group>"; };
+		0A8A938B224F58870007A1C3 /* say.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = say.json; sourceTree = "<group>"; };
+		0AB00215224E5EED0000B8E2 /* WenzhanManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WenzhanManager.h; sourceTree = "<group>"; };
+		0AB00216224E5EED0000B8E2 /* WenzhanManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WenzhanManager.m; sourceTree = "<group>"; };
 		0ABC48DE223530F600799B4A /* RijiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RijiCell.h; sourceTree = "<group>"; };
 		0ABC48DF223530F600799B4A /* RijiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RijiCell.m; sourceTree = "<group>"; };
 		0ACCD7C12247AE3600CC7E0D /* LunarFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunarFormatter.m; sourceTree = "<group>"; };
@@ -143,6 +157,10 @@
 		0AD20454224A63CC0064F4E8 /* MRJCalendarWeekdayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRJCalendarWeekdayView.h; sourceTree = "<group>"; };
 		0AD20455224A63CC0064F4E8 /* MRJCalendarWeekdayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRJCalendarWeekdayView.m; sourceTree = "<group>"; };
 		0AD20457224A6D700064F4E8 /* holiday.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = holiday.json; sourceTree = "<group>"; };
+		0AD2045A224BC0D10064F4E8 /* 01.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.JPG; sourceTree = "<group>"; };
+		0AD2045B224BC0D10064F4E8 /* 03.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.JPG; sourceTree = "<group>"; };
+		0AD2045C224BC0D10064F4E8 /* 02.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.JPG; sourceTree = "<group>"; };
+		0AD2045D224BC0D10064F4E8 /* 04.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 04.PNG; sourceTree = "<group>"; };
 		0ADC8449223525A400A18C8C /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		0ADC844A223525A400A18C8C /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		0AFB35F92230172F001DD940 /* RiJiModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiJiModel.h; sourceTree = "<group>"; };
@@ -185,6 +203,7 @@
 		0A38B8DD222BAA1100ADD2A2 = {
 			isa = PBXGroup;
 			children = (
+				0AD20459224BC0A50064F4E8 /* resource */,
 				0A38B8E8222BAA1100ADD2A2 /* DateInfo */,
 				0A38B901222BAA1300ADD2A2 /* DateInfoTests */,
 				0A38B8E7222BAA1100ADD2A2 /* Products */,
@@ -232,6 +251,12 @@
 				0ADC844A223525A400A18C8C /* TestViewController.m */,
 				0AD2044E22491E360064F4E8 /* RijiManager.h */,
 				0AD2044F22491E360064F4E8 /* RijiManager.m */,
+				0A5218C9224E523100256157 /* ShouWenzhanViewController.h */,
+				0A5218CA224E523100256157 /* ShouWenzhanViewController.m */,
+				0AB00215224E5EED0000B8E2 /* WenzhanManager.h */,
+				0AB00216224E5EED0000B8E2 /* WenzhanManager.m */,
+				0A8A938A224F58870007A1C3 /* book.json */,
+				0A8A938B224F58870007A1C3 /* say.json */,
 				0AD20457224A6D700064F4E8 /* holiday.json */,
 				0AD20449224911480064F4E8 /* date.json */,
 				0A38B8F2222BAA1200ADD2A2 /* Assets.xcassets */,
@@ -347,6 +372,17 @@
 				0AD204312247BE780064F4E8 /* NotificationButtonBackground.png */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		0AD20459224BC0A50064F4E8 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				0AD2045A224BC0D10064F4E8 /* 01.JPG */,
+				0AD2045C224BC0D10064F4E8 /* 02.JPG */,
+				0AD2045B224BC0D10064F4E8 /* 03.JPG */,
+				0AD2045D224BC0D10064F4E8 /* 04.PNG */,
+			);
+			path = resource;
 			sourceTree = "<group>";
 		};
 		0AFB35F82230172F001DD940 /* RiModel */ = {
@@ -482,15 +518,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8A938C224F58870007A1C3 /* book.json in Resources */,
 				0AD204412247BE780064F4E8 /* NotificationBackgroundWarningIcon.png in Resources */,
 				0A38B8F6222BAA1200ADD2A2 /* LaunchScreen.storyboard in Resources */,
 				0AD204452247BE780064F4E8 /* NotificationButtonBackground.png in Resources */,
 				0AD2044A224911480064F4E8 /* date.json in Resources */,
 				0AD204432247BE780064F4E8 /* NotificationBackgroundErrorIcon@2x.png in Resources */,
 				0AD204372247BE780064F4E8 /* NotificationBackgroundSuccess@2x.png in Resources */,
+				0AD2045E224BC0D10064F4E8 /* 01.JPG in Resources */,
 				0AD2043E2247BE780064F4E8 /* NotificationBackgroundSuccessIcon@2x.png in Resources */,
+				0AD2045F224BC0D10064F4E8 /* 03.JPG in Resources */,
 				0AD2043A2247BE780064F4E8 /* TSMessagesDefaultDesign.json in Resources */,
 				0AD2043C2247BE780064F4E8 /* NotificationBackgroundMessage@2x.png in Resources */,
+				0AD20460224BC0D10064F4E8 /* 02.JPG in Resources */,
 				0A38B8F3222BAA1200ADD2A2 /* Assets.xcassets in Resources */,
 				0AD2043F2247BE780064F4E8 /* NotificationBackgroundErrorIcon.png in Resources */,
 				0AD204362247BE780064F4E8 /* NotificationBackgroundWarning@2x.png in Resources */,
@@ -498,9 +538,11 @@
 				0AD204442247BE780064F4E8 /* NotificationBackgroundWarning.png in Resources */,
 				0AD20458224A6D700064F4E8 /* holiday.json in Resources */,
 				0AD2043B2247BE780064F4E8 /* NotificationBackgroundError.png in Resources */,
+				0A8A938D224F58870007A1C3 /* say.json in Resources */,
 				0AD204422247BE780064F4E8 /* NotificationBackgroundWarningIcon@2x.png in Resources */,
 				0AD204382247BE780064F4E8 /* NotificationButtonBackground@2x.png in Resources */,
 				0AD2043D2247BE780064F4E8 /* NotificationBackgroundSuccessIcon.png in Resources */,
+				0AD20461224BC0D10064F4E8 /* 04.PNG in Resources */,
 				0AD204402247BE780064F4E8 /* NotificationBackgroundError@2x.png in Resources */,
 				0AD204392247BE780064F4E8 /* NotificationBackgroundSuccess.png in Resources */,
 			);
@@ -617,6 +659,7 @@
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -637,6 +680,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MWPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -680,6 +724,7 @@
 			files = (
 				0A38B8EE222BAA1100ADD2A2 /* ViewController.m in Sources */,
 				0A8A678D2233EB12001D270B /* NSDate+Reporting.m in Sources */,
+				0A5218CB224E523100256157 /* ShouWenzhanViewController.m in Sources */,
 				0AFB36032230172F001DD940 /* LanguageManger.m in Sources */,
 				0ABC48E0223530F600799B4A /* RijiCell.m in Sources */,
 				0AD204482247C17A0064F4E8 /* HexColor.m in Sources */,
@@ -688,6 +733,7 @@
 				0AD204322247BE780064F4E8 /* TSMessageView.m in Sources */,
 				0A8A678C2233EB12001D270B /* NSDate+CupertinoYankee.m in Sources */,
 				0AD2045022491E360064F4E8 /* RijiManager.m in Sources */,
+				0AB00217224E5EED0000B8E2 /* WenzhanManager.m in Sources */,
 				0A8A67892233EB12001D270B /* NSDate+Utilities.m in Sources */,
 				0AD20456224A63CC0064F4E8 /* MRJCalendarWeekdayView.m in Sources */,
 				0ACCD7C32247AE3600CC7E0D /* LunarFormatter.m in Sources */,

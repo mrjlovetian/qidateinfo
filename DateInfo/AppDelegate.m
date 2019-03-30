@@ -17,6 +17,7 @@
 #import "CYLTabBarController.h"
 #import "BaseNavViewController.h"
 #import "RijiManager.h"
+#import "WenzhanManager.h"
 
 @interface AppDelegate ()
 
@@ -35,6 +36,7 @@
     // Override point for customization after application launch.
 
     [RijiManager shareRijiManager];
+    [WenzhanManager shareManager];
     [IQKeyboardManager sharedManager].enable = YES;
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     [[IQKeyboardManager sharedManager] registerTextFieldViewClass:YYTextView.class didBeginEditingNotificationName:YYTextViewTextDidBeginEditingNotification didEndEditingNotificationName:YYTextViewTextDidEndEditingNotification];
@@ -92,7 +94,7 @@
                                            threeNavigationController,
                                            ]];
     self.tabBarController = tabBarController;
-    self.tabBarController.tabBar.backgroundImage = [UIImage imageWithColor:FlatMint];
+    self.tabBarController.tabBar.backgroundImage = [UIImage imageWithColor:[UIColor colorWithHexString:@"014D41"]];
 }
 
 /*

@@ -8,6 +8,7 @@
 
 #import "SetViewController.h"
 #import "ParallaxHeaderView.h"
+#import "ShouWenzhanViewController.h"
 
 @interface SetViewController () <UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate>
 
@@ -32,11 +33,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = FlatMint;
+    self.view.backgroundColor = [UIColor colorWithHexString:@"014D41"];
     self.title = @"设置";
     self.dataSource = @[@"主题切换", @"字体切换", @"意见反馈", @"关于"];
     [self.view addSubview:self.tableView];
-    UIImage *image = [UIImage imageNamed:@"DSCN0481.JPG"];
+    UIImage *image = [UIImage imageNamed:@"04.PNG"];
     self.headerView = [ParallaxHeaderView parallaxHeaderViewWithImage:image forSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 200)];
     self.tableView.tableHeaderView = self.headerView;
     // Do any additional setup after loading the view.
@@ -45,6 +46,10 @@
 #pragma mark UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    ShouWenzhanViewController *vc = [ShouWenzhanViewController new];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
 }
 
 #pragma mark UITableViewDataSource
@@ -60,6 +65,7 @@
     }
     cell.textLabel.text = self.dataSource[indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.backgroundColor = [UIColor colorWithHexString:@"014D41"];
     return cell;
 }
 
@@ -77,7 +83,7 @@
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.backgroundColor = FlatMint;
+        _tableView.backgroundColor = [UIColor colorWithHexString:@"014D41"];
         _tableView.tableFooterView = [UIView new];
     }
     return _tableView;

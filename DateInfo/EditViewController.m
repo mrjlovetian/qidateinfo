@@ -38,7 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"新增日志";
-    self.view.backgroundColor = FlatMint;
+    self.view.backgroundColor = [UIColor colorWithHexString:@"014D41"];
 
     [self.view addSubview:self.titleTextField];
     [self.view addSubview:self.contentTextView];

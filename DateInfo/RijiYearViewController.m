@@ -75,6 +75,7 @@
     RiJiYear *rijiYear = [RijiManager shareRijiManager].rijiArr[indexPath.section];
     RiJiMonth *rijiMonth = rijiYear.datas[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@月", rijiMonth.month];
+    cell.backgroundColor = [UIColor colorWithHexString:@"014D41"];
     return cell;
 }
 
@@ -86,7 +87,7 @@
         _tableView.dataSource = self;
         _tableView.estimatedRowHeight = 100;
         _tableView.rowHeight = UITableViewAutomaticDimension;
-        _tableView.backgroundColor = FlatMint;
+        _tableView.backgroundColor = [UIColor colorWithHexString:@"014D41"];
         _tableView.tableFooterView = [UIView new];
     }
     return _tableView;

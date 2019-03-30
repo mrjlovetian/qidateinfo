@@ -32,7 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = FlatMint;
+    self.view.backgroundColor = [UIColor colorWithHexString:@"014D41"];
     self.navigationController.navigationBar.translucent = NO;
      self.title = @"日子";
     
@@ -65,6 +65,7 @@
     [calendar addSubview:weekHeaderView];
     [self.view addSubview:calendar];
     [calendar selectDate:[NSDate date]];
+    calendar.placeholderType = FSCalendarPlaceholderTypeNone;
     self.calendar = calendar;
     
     self.dateFormatter = [[NSDateFormatter alloc] init];

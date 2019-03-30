@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = FlatMint;
+    self.view.backgroundColor = [UIColor colorWithHexString:@"014D41"];
     [self.view addSubview:self.tableView];
     self.tableView.estimatedRowHeight = 150;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -96,6 +96,7 @@
     RiJiDay *rijiDay =  [self.rijiDayArr objectAtIndex:indexPath.section];
     RiJiModel *rijiModel = rijiDay.datas[indexPath.row];
     cell.rijiModel = rijiModel;
+    cell.backgroundColor = [UIColor colorWithHexString:@"014D41"];
     return cell;
 }
 
@@ -107,7 +108,7 @@
         _tableView.dataSource = self;
         _tableView.estimatedRowHeight = 100;
         _tableView.rowHeight = UITableViewAutomaticDimension;
-        _tableView.backgroundColor = FlatMint;
+        _tableView.backgroundColor = [UIColor colorWithHexString:@"014D41"];
         _tableView.tableFooterView = [UIView new];
     }
     return _tableView;
