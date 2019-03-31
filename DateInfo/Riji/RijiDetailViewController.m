@@ -70,7 +70,9 @@
         }]];
         [imageView sd_setImageWithURL:[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@%@", [[FileManager shareManager] getMianPath], _rijiModel.images[i]]]];
         [self.mainView addSubview:imageView];
-        bottom = imageView.bottom + 20;
+        if (i == _rijiModel.images.count - 1) {
+            bottom = imageView.bottom + 20;
+        }
     }
     self.mainView.contentSize = CGSizeMake(0, bottom);
     // Do any additional setup after loading the view.
@@ -91,22 +93,8 @@
 }
 
 - (void)deleteRiji {
-    UIAlertController *alert = [[UIAlertController alloc] init];
-    alert.title = @"删除日志";
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"删除日志" message:@"日志删除后无法恢复" preferredStyle:(UIAlertControllerStyleAlert)];
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-        
-        
-//        NSArray *allRijiArr = [[[RijiManager shareRijiManager] rijiArr] yy_modelToJSONObject];
-//        NSDictionary *modelDic = [self.rijiModel yy_modelToJSONObject];
-//        for (NSDictionary *yearDic in allRijiArr) {
-//            if ([yearDic objectForKey:[self.rijiModel.dateStr substringFromIndex:4]]) {
-//                NSDictionary *monthDic = [yearDic objectForKey:[self.rijiModel.dateStr substringWithRange:NSMakeRange(4, 2)]];
-//                if ([monthDic objectForKey:self.rijiModel.dateStr]) {
-//                    NSDictionary *dayDic = [monthDic objectForKey:self.rijiModel.dateStr];
-//
-//                }
-//            }
-//        }
         
         for (RiJiYear *rijiyear in [[RijiManager shareRijiManager] rijiArr]) {
             if ([rijiyear.year isEqualToString:[self.rijiModel.dateStr substringToIndex:4]]) {
@@ -139,6 +127,12 @@
                         }
                     }
                 }
+            }
+            if (rijiyear.datas.count == 0) {
+                NSMutableArray *temArr = [NSMutableArray arrayWithCapacity:1];
+                [temArr addObjectsFromArray:[[RijiManager shareRijiManager] rijiArr]];
+                [temArr removeObject:rijiyear];
+                [RijiManager shareRijiManager].rijiArr = temArr;
             }
         }
         

@@ -7,10 +7,13 @@
 //
 
 #import "TestViewController.h"
+#import <YYImage/YYImage.h>
+#import "YYAnimatedImageView.h"
+#import <YYWebImage/YYWebImage.h>
 
 @interface TestViewController ()
 
-@property (nonatomic, strong)UIImageView *imageView;
+@property (nonatomic, strong)YYAnimatedImageView *imageView;
 
 @end
 
@@ -19,14 +22,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.imageView];
-    NSData *data = [NSData dataWithContentsOfURL:self.imagUrl];
-    self.imageView.image = [UIImage imageWithData:data];
+    
+//    NSURL * url = [[NSURL alloc] initWithString:@"http://simg.sydzyb.com/images/20190331/bba6b60995de9e3bfb95c147607a8c1a_2000_1333.jpg"];
+//    YYImage *image = [YYImage imageWithData:data];
+//    self.imageView.image = image;
+    self.imageView.yy_imageURL = [NSURL URLWithString:@"http://simg.sydzyb.com/images/20190331/bba6b60995de9e3bfb95c147607a8c1a_2000_1333.jpg"];
     // Do any additional setup after loading the view.
 }
 
-- (UIImageView *)imageView {
+- (YYAnimatedImageView *)imageView {
     if (!_imageView) {
-        _imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+        _imageView = [[YYAnimatedImageView alloc] initWithFrame:self.view.bounds];
     }
     return _imageView;
 }

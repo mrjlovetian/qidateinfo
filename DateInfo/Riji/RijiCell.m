@@ -21,6 +21,7 @@
 @property (nonatomic, strong)YYLabel *titleLab;
 @property (nonatomic, strong)UILabel *contentLab;
 @property (nonatomic, strong)YYLabel *dateLab;
+@property (nonatomic, strong)UIView *bottomLineView;
 
 @property (nonatomic, strong)UIImageView *imageView1;
 @property (nonatomic, strong)UIImageView *imageView2;
@@ -49,6 +50,7 @@
     [self.contentView addSubview:self.titleLab];
     [self.contentView addSubview:self.contentLab];
     [self.contentView addSubview:self.dateLab];
+    [self.contentView addSubview:self.bottomLineView];
     
     [self.contentView addSubview:self.imageView1];
     [self.contentView addSubview:self.imageView2];
@@ -75,7 +77,7 @@
 
 + (CGFloat)hetightForModel:(RiJiModel *)rijiModel {
     CGFloat contentHeight = [rijiModel.content boundingRectWithSize:CGSizeMake(ScreenSzie.width - 20, 0) options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
-    contentHeight = MIN(contentHeight, 30);
+    contentHeight = MIN(contentHeight, 40);
     if (rijiModel.images.count > 0) {
 
         if (rijiModel.images.count%3 == 0) {
@@ -94,8 +96,8 @@
     _contentLab.text = rijiModel.content;
     
     CGFloat contentHeight = [rijiModel.content boundingRectWithSize:CGSizeMake(self.contentLab.frame.size.width, 0) options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0]} context:nil].size.height;
-    if (contentHeight > 30) {
-        self.contentLab.height = 30;
+    if (contentHeight > 40) {
+        self.contentLab.height = 40;
     } else {
         self.contentLab.height = contentHeight;
     }
@@ -183,6 +185,7 @@
 
 - (void)refreshImageFrame {
     CGFloat iamgeWidth = (ScreenSzie.width - 30)/3.0;
+    CGFloat bottomHeight = self.contentLab.bottom;
     for (int i = 0; i < _rijiModel.images.count; i++) {
         UIImageView *imageView = [self viewWithTag:101 + i];
         imageView.clipsToBounds = YES;
@@ -195,7 +198,12 @@
             }
         }]];
         [imageView sd_setImageWithURL:[NSURL fileURLWithPath:[NSString stringWithFormat:@"%@%@", [[FileManager shareManager] getMianPath], _rijiModel.images[i]]]];
+        if (i == _rijiModel.images.count - 1) {
+            bottomHeight = imageView.bottom;
+        }
     }
+    self.bottomLineView.top = bottomHeight + 5;
+    
 }
 
 #pragma mark ui
@@ -229,6 +237,14 @@
         _dateLab.lee_theme.LeeAddBackgroundColor(@"main", MAINCOLOR);
     }
     return _dateLab;
+}
+
+- (UIView *)bottomLineView {
+    if (!_bottomLineView) {
+        _bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth - 30, 0.5)];
+        _bottomLineView.backgroundColor = [UIColor whiteColor];
+    }
+    return _bottomLineView;
 }
 
 - (UIImageView *)imageView1 {

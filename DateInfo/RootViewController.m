@@ -15,6 +15,7 @@
 #import "MRJCalendarWeekdayView.h"
 #import "JumpDateView.h"
 #import "NSDate+Reporting.h"
+#import "TestViewController.h"
 
 @interface RootViewController () <FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance, JumpDateViewDelegate>
 
@@ -99,6 +100,10 @@
 }
 
 - (void)addRiji {
+    TestViewController *vca = [TestViewController new];
+    [self.navigationController pushViewController:vca animated:YES];
+    return;
+    
     UIViewController *vc = [[NSClassFromString(@"EditViewController") alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 //    if ([[self.calendar.selectedDate formatYMD] isEqualToString:[[NSDate date] formatYMD]]) {

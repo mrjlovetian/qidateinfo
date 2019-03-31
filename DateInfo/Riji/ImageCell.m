@@ -47,7 +47,6 @@
 
 - (void)setIndexPath:(NSIndexPath *)indexPath {
     _indexPath = indexPath;
-    [_colseBtn setTitle:[NSString stringWithFormat:@"%ld", indexPath.row] forState:UIControlStateNormal];
 }
 
 - (void)setImage:(UIImage *)image {
@@ -76,7 +75,7 @@
 - (UIButton *)colseBtn {
     if (!_colseBtn) {
         _colseBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _colseBtn.backgroundColor = [UIColor redColor];
+        [_colseBtn setImage:[[UIImage imageNamed:@"delete"] imageWithRenderingMode:(UIImageRenderingModeAlwaysOriginal)] forState:UIControlStateNormal];
         [_colseBtn addTarget:self action:@selector(deleteImage:) forControlEvents:UIControlEventTouchUpInside];
         _colseBtn.frame = CGRectMake(self.imageView.right - 30, 0, 30, 30);
     }

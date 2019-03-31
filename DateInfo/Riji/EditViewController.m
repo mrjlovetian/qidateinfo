@@ -97,7 +97,7 @@ static NSString *indetif = @"image";
     rijiModel.dateStr = today;
     rijiModel.dateTime = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSince1970]];
     
-    if ([self.titleTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0 && [self.contentTextView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0 && self.imageArr.count == 0) {
+    if ([self.titleTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0 && [self.contentTextView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0 && self.imageArr.count == 1) {
         
         [TSMessage showNotificationWithTitle:@"内容错误" subtitle:@"至少添加一项内容吧" type:(TSMessageNotificationTypeError)];
         return;

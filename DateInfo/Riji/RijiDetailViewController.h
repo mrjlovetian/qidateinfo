@@ -6,13 +6,13 @@
 //  Copyright © 2019 MRJ. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
 @class RiJiModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RijiDetailViewController : UIViewController
+@interface RijiDetailViewController : BaseViewController
 
 @property (nonatomic, strong)RiJiModel *rijiModel;
 

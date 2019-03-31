@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "35E27C3B1CBA7C5CB9E5298AE715E5FF"
+               BlueprintIdentifier = "B83B881C5BB944AA29B17D9B91A39BC7"
                BuildableName = "StarWars.framework"
                BlueprintName = "StarWars"
                ReferencedContainer = "container:Pods.xcodeproj">

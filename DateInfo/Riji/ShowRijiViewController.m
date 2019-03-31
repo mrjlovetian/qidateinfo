@@ -13,11 +13,14 @@
 #import "TestViewController.h"
 #import "RijiCell.h"
 #import "RijiDetailViewController.h"
+#import "RijiSectionView.h"
+#import "DateInfo-Swift.h"
 
 @interface ShowRijiViewController () <UITableViewDelegate, UITableViewDataSource, MWPhotoBrowserDelegate>
 
 @property (nonatomic, strong)UITableView *tableView;
 @property (nonatomic, copy)NSArray *photos;
+@property (nonatomic, strong)NSMutableArray *isExtentArr;
 
 @end
 
@@ -38,6 +41,16 @@
     self.tableView.estimatedRowHeight = 150;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView reloadData];
+    StarsOverlay *starsOverlay = [[StarsOverlay alloc] init];
+    starsOverlay.layer.frame = self.view.bounds;
+    starsOverlay.emitter.emitterPosition = CGPointMake(ScreenWidth/2.0, (ScreenHeight - NavBarHeight - 49)/2.0);
+    starsOverlay.emitter.emitterSize = CGSizeMake(ScreenWidth/4.0, (ScreenHeight - NavBarHeight - 49)/4.0);
+    [self.view.layer addSublayer:starsOverlay.layer];
+    
+    self.isExtentArr = [NSMutableArray arrayWithCapacity:1];
+    for (int i = 0; i < self.rijiDayArr.count; i++) {
+        [self.isExtentArr addObject:@"1"];
+    }
 }
 
 #pragma mark method
@@ -81,10 +94,28 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     RiJiDay *rijiDay = self.rijiDayArr[section];
-    UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
-    titleLab.text = [NSString stringWithFormat:@"\t%@", rijiDay.date];
-    titleLab.backgroundColor = [UIColor whiteColor];
-    return titleLab;
+    RijiSectionView *rijiSectionView = [[RijiSectionView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
+    rijiSectionView.titleStr = [NSString stringWithFormat:@"%@", rijiDay.date];
+    rijiSectionView.btnState = [self.isExtentArr[section] boolValue];
+    MRJWeakSelf(self);
+    rijiSectionView.lefyCallback = ^(NSInteger btnState){
+        if ([weakself.isExtentArr[section] isEqualToString:@"0"]) {
+            //关闭 => 展开
+            [weakself.isExtentArr removeObjectAtIndex:section];
+            [weakself.isExtentArr insertObject:@"1" atIndex:section];
+        }else{
+            //展开 => 关闭
+            [weakself.isExtentArr removeObjectAtIndex:section];
+            [weakself.isExtentArr insertObject:@"0" atIndex:section];
+        }
+        
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:section];
+        NSRange rang = NSMakeRange(indexPath.section, 1);
+        NSIndexSet *set = [NSIndexSet indexSetWithIndexesInRange:rang];
+        [weakself.tableView reloadSections:set withRowAnimation:UITableViewRowAnimationFade];
+        
+    };
+    return rijiSectionView;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -99,8 +130,11 @@
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    RiJiDay *rijiDay = self.rijiDayArr[section];
-    return rijiDay.datas.count;
+    if ([[self.isExtentArr objectAtIndex:section] isEqualToString:@"1"]) {
+        RiJiDay *rijiDay = self.rijiDayArr[section];
+        return rijiDay.datas.count;
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -127,6 +161,7 @@
         _tableView.dataSource = self;
         _tableView.estimatedRowHeight = 100;
         _tableView.rowHeight = UITableViewAutomaticDimension;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.lee_theme.LeeAddBackgroundColor(@"main", MAINCOLOR);
         _tableView.tableFooterView = [UIView new];
     }

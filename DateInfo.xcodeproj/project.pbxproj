@@ -30,6 +30,9 @@
 		0A8A93A1224F90520007A1C3 /* BtnColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93A0224F90520007A1C3 /* BtnColumnView.m */; };
 		0A8A93A4224FAAF60007A1C3 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93A3224FAAF60007A1C3 /* ImageCell.m */; };
 		0A8A93A7224FBDE90007A1C3 /* RijiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93A6224FBDE90007A1C3 /* RijiDetailViewController.m */; };
+		0A8A93AA22505AA50007A1C3 /* RijiSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93A922505AA50007A1C3 /* RijiSectionView.m */; };
+		0A8A93B1225077530007A1C3 /* StarsOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93B0225077530007A1C3 /* StarsOverlay.swift */; };
+		0A8A93B422508A7A0007A1C3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93B322508A7A0007A1C3 /* BaseViewController.m */; };
 		0ABC48E0223530F600799B4A /* RijiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC48DF223530F600799B4A /* RijiCell.m */; };
 		0ACCD7C32247AE3600CC7E0D /* LunarFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACCD7C12247AE3600CC7E0D /* LunarFormatter.m */; };
 		0ACCD7C62247B3C900CC7E0D /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACCD7C52247B3C900CC7E0D /* BaseNavViewController.m */; };
@@ -130,6 +133,12 @@
 		0A8A93A3224FAAF60007A1C3 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
 		0A8A93A5224FBDE90007A1C3 /* RijiDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RijiDetailViewController.h; sourceTree = "<group>"; };
 		0A8A93A6224FBDE90007A1C3 /* RijiDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RijiDetailViewController.m; sourceTree = "<group>"; };
+		0A8A93A822505AA50007A1C3 /* RijiSectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RijiSectionView.h; sourceTree = "<group>"; };
+		0A8A93A922505AA50007A1C3 /* RijiSectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RijiSectionView.m; sourceTree = "<group>"; };
+		0A8A93AB225073FF0007A1C3 /* DateInfo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DateInfo-Bridging-Header.h"; sourceTree = "<group>"; };
+		0A8A93B0225077530007A1C3 /* StarsOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsOverlay.swift; sourceTree = "<group>"; };
+		0A8A93B222508A7A0007A1C3 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		0A8A93B322508A7A0007A1C3 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		0ABC48DE223530F600799B4A /* RijiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RijiCell.h; sourceTree = "<group>"; };
 		0ABC48DF223530F600799B4A /* RijiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RijiCell.m; sourceTree = "<group>"; };
 		0ACCD7C12247AE3600CC7E0D /* LunarFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunarFormatter.m; sourceTree = "<group>"; };
@@ -323,6 +332,8 @@
 				0A8A679022340ACB001D270B /* ShowRijiViewController.m */,
 				0AD2044B22491DAD0064F4E8 /* RijiYearViewController.h */,
 				0AD2044C22491DAD0064F4E8 /* RijiYearViewController.m */,
+				0A8A93A822505AA50007A1C3 /* RijiSectionView.h */,
+				0A8A93A922505AA50007A1C3 /* RijiSectionView.m */,
 				0ABC48DE223530F600799B4A /* RijiCell.h */,
 				0ABC48DF223530F600799B4A /* RijiCell.m */,
 				0AD20454224A63CC0064F4E8 /* MRJCalendarWeekdayView.h */,
@@ -347,6 +358,8 @@
 			children = (
 				0ACCD7C42247B3C900CC7E0D /* BaseNavViewController.h */,
 				0ACCD7C52247B3C900CC7E0D /* BaseNavViewController.m */,
+				0A8A93B222508A7A0007A1C3 /* BaseViewController.h */,
+				0A8A93B322508A7A0007A1C3 /* BaseViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -356,6 +369,8 @@
 			children = (
 				0A8A9396224F5E130007A1C3 /* LaunchImageView.h */,
 				0A8A9397224F5E130007A1C3 /* LaunchImageView.m */,
+				0A8A93AB225073FF0007A1C3 /* DateInfo-Bridging-Header.h */,
+				0A8A93B0225077530007A1C3 /* StarsOverlay.swift */,
 			);
 			path = LaunchImage;
 			sourceTree = "<group>";
@@ -557,6 +572,7 @@
 				TargetAttributes = {
 					0A38B8E5222BAA1100ADD2A2 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					0A38B8FD222BAA1300ADD2A2 = {
 						CreatedOnToolsVersion = 10.1;
@@ -679,7 +695,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DateInfo/Pods-DateInfo-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-				$PODS_CONFIGURATION_BUILD_DIR/MWPhotoBrowser/MWPhotoBrowser.bundle,
+				"$PODS_CONFIGURATION_BUILD_DIR/MWPhotoBrowser/MWPhotoBrowser.bundle",
 				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -736,10 +752,12 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/StarWars/StarWars.framework",
 				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
 				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
+				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -758,10 +776,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarWars.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -798,6 +818,7 @@
 				0A8A678D2233EB12001D270B /* NSDate+Reporting.m in Sources */,
 				0A5218CB224E523100256157 /* ShouWenzhanViewController.m in Sources */,
 				0AFB36032230172F001DD940 /* LanguageManger.m in Sources */,
+				0A8A93B1225077530007A1C3 /* StarsOverlay.swift in Sources */,
 				0ABC48E0223530F600799B4A /* RijiCell.m in Sources */,
 				0AD204482247C17A0064F4E8 /* HexColor.m in Sources */,
 				0A8A9398224F5E130007A1C3 /* LaunchImageView.m in Sources */,
@@ -814,6 +835,8 @@
 				0AFB36062233B28A001DD940 /* EditViewController.m in Sources */,
 				0A38B8F9222BAA1200ADD2A2 /* main.m in Sources */,
 				0A8A93A1224F90520007A1C3 /* BtnColumnView.m in Sources */,
+				0A8A93AA22505AA50007A1C3 /* RijiSectionView.m in Sources */,
+				0A8A93B422508A7A0007A1C3 /* BaseViewController.m in Sources */,
 				0A8A678B2233EB12001D270B /* NSDate+Extension.m in Sources */,
 				0ACCD7C62247B3C900CC7E0D /* BaseNavViewController.m in Sources */,
 				0ACCD7CE2247B41100CC7E0D /* ParallaxHeaderView.m in Sources */,
@@ -980,6 +1003,7 @@
 			baseConfigurationReference = A6C04EFD44FAD3BCA420F761 /* Pods-DateInfo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5D64CYZ8CL;
 				GCC_PREFIX_HEADER = /Users/mrj/Desktop/Project/DateInfo/DateInfo/Header.pch;
@@ -991,6 +1015,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MRJ.DateInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DateInfo/LaunchImage/DateInfo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1000,6 +1027,7 @@
 			baseConfigurationReference = F0BB700E4E665E3E8AC92E33 /* Pods-DateInfo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5D64CYZ8CL;
 				GCC_PREFIX_HEADER = /Users/mrj/Desktop/Project/DateInfo/DateInfo/Header.pch;
@@ -1011,6 +1039,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MRJ.DateInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DateInfo/LaunchImage/DateInfo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1019,6 +1049,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BE2150E9CD53743B9A60E9B1 /* Pods-DateInfoTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8NGS85AAV;
@@ -1039,6 +1070,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6CD1ADE3617331DBD65A1A6B /* Pods-DateInfoTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8NGS85AAV;

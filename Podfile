@@ -18,6 +18,7 @@ target 'DateInfo' do
   pod 'YYCategories'
   pod 'MJRefresh'
   pod 'LEETheme'
+  pod 'YYWebImage'
 #  pod 'TSMessages'
 #  pod 'HexColors'
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks

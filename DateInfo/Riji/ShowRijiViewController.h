@@ -6,11 +6,11 @@
 //  Copyright © 2019 MRJ. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ShowRijiViewController : UIViewController
+@interface ShowRijiViewController : BaseViewController
 @property (nonatomic, strong)NSArray *rijiDayArr;
 
 @end
