@@ -23,21 +23,24 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+    self.navigationController.delegate = self;
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    self.navigationController.navigationBarHidden = NO;
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (viewController == self) {
+        [navigationController setNavigationBarHidden:YES animated:YES];
+    } else {
+        [navigationController setNavigationBarHidden:NO animated:YES];
+    }
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithHexString:@"014D41"];
-    self.title = @"设置";
     self.dataSource = @[@"随机散文", @"意见反馈", @"关于", @"当前版本"];
     [self.view addSubview:self.tableView];
-    UIImage *image = [UIImage imageNamed:@"02.JPG"];
+    UIImage *image = [UIImage imageNamed:@"5.JPG"];
     self.headerView = [ParallaxHeaderView parallaxHeaderViewWithImage:image forSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 200)];
     self.tableView.tableHeaderView = self.headerView;
 }
@@ -74,7 +77,7 @@
     cell.lee_theme.LeeAddBackgroundColor(@"main", MAINCOLOR);
     cell.textLabel.textColor = [UIColor whiteColor];
     
-    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(15, cell.frame.size.height - 0.5, ScreenWidth - 30, 0.4)];
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.frame.size.height - 0.5, ScreenWidth, 0.4)];
     lineView.backgroundColor = [UIColor whiteColor];
     [cell addSubview:lineView];
     if (indexPath.row == 3) {
@@ -92,7 +95,6 @@
 #pragma mark UIScrollView
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView == self.tableView) {
-        // pass the current offset of the UITableView so that the ParallaxHeaderView layouts the subViews.
         [(ParallaxHeaderView *)self.tableView.tableHeaderView layoutHeaderViewForScrollViewOffset:scrollView.contentOffset];
     }
 }

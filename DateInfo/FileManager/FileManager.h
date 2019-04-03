@@ -25,4 +25,6 @@
 
 - (NSString *)getMianPath;
 
+- (BOOL)deleteImageWithPath:(NSString *)imagePath;
+
 @end

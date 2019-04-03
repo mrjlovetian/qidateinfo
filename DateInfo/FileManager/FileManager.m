@@ -95,4 +95,15 @@ static FileManager *manager;
     return path;
 }
 
+- (BOOL)deleteImageWithPath:(NSString *)imagePath {
+    NSString *filePath = [self getMianPath];
+    filePath = [filePath stringByAppendingPathComponent:imagePath];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        NSLog(@"删除成功");
+        return [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+    }
+    NSLog(@"删除失败");
+    return NO;
+}
+
 @end

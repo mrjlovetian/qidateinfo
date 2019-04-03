@@ -43,7 +43,7 @@
     self.title = @"日子";
     UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [addBtn setTitle:@"+" forState:UIControlStateNormal];
-    [addBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [addBtn setTitleColor:[UIColor colorWithHexString:@"ff801a"] forState:UIControlStateNormal];
     [addBtn addTarget:self action:@selector(addRiji) forControlEvents:UIControlEventTouchUpInside];
     addBtn.frame = CGRectMake(0, 0, 40, 40);
     UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithCustomView:addBtn];
@@ -51,7 +51,7 @@
     
     UIButton *selectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [selectBtn setTitle:@"选择" forState:UIControlStateNormal];
-    [selectBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [selectBtn setTitleColor:[UIColor colorWithHexString:@"ff801a"] forState:UIControlStateNormal];
     [selectBtn addTarget:self action:@selector(selectDay) forControlEvents:UIControlEventTouchUpInside];
     selectBtn.frame = CGRectMake(0, 0, 40, 40);
     UIBarButtonItem *selectItem = [[UIBarButtonItem alloc] initWithCustomView:selectBtn];
@@ -59,7 +59,7 @@
     
     UIButton *todayBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [todayBtn setTitle:@"今" forState:UIControlStateNormal];
-    [todayBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [todayBtn setTitleColor:[UIColor colorWithHexString:@"ff801a"] forState:UIControlStateNormal];
     [todayBtn addTarget:self action:@selector(today) forControlEvents:UIControlEventTouchUpInside];
     todayBtn.frame = CGRectMake(0, 0, 40, 40);
     UIBarButtonItem *todayBtnItem = [[UIBarButtonItem alloc] initWithCustomView:todayBtn];
@@ -100,9 +100,9 @@
 }
 
 - (void)addRiji {
-    TestViewController *vca = [TestViewController new];
-    [self.navigationController pushViewController:vca animated:YES];
-    return;
+//    TestViewController *vca = [TestViewController new];
+//    [self.navigationController pushViewController:vca animated:YES];
+//    return;
     
     UIViewController *vc = [[NSClassFromString(@"EditViewController") alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
@@ -237,9 +237,9 @@
         if ([[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr]) {
             if ([[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr]) {
                 if ([[[[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr] objectForKey:@"holiday"] boolValue]) {
-                    return [UIColor greenColor];
+                    return [UIColor colorWithHexString:@"38c88a"];
                 }
-                return [UIColor orangeColor];
+                return [UIColor colorWithHexString:@"ff801a"];
             }
         }
     }
@@ -255,9 +255,9 @@
         if ([[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr]) {
             if ([[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr]) {
                 if ([[[[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr] objectForKey:@"holiday"] boolValue]) {
-                    return [UIColor greenColor];
+                    return [UIColor colorWithHexString:@"38c88a"];
                 }
-                return [UIColor orangeColor];
+                return [UIColor colorWithHexString:@"ff801a"];
             }
         }
     }

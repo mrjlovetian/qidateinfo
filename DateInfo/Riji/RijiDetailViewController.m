@@ -136,6 +136,9 @@
             }
         }
         
+        for (NSString *imageFielPath in self.rijiModel.images) {
+            [[FileManager shareManager] deleteImageWithPath:imageFielPath];
+        }
         
         
         NSString *content = [[[RijiManager shareRijiManager] rijiArr] yy_modelToJSONString];

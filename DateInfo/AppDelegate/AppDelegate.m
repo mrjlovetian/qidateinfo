@@ -96,10 +96,9 @@
     BaseNavViewController *threeNavigationController = [[BaseNavViewController alloc]
                                                         initWithRootViewController:threeViewController];
     
-    
     CYLTabBarController *tabBarController = [[CYLTabBarController alloc] init];
     [self customizeTabBarForController:tabBarController];
-    
+    [tabBarController setTintColor:[UIColor whiteColor]];
     [tabBarController setViewControllers:@[
                                            firstNavigationController,
                                            secondNavigationController,
@@ -117,19 +116,19 @@
 - (void)customizeTabBarForController:(CYLTabBarController *)tabBarController {
     
     NSDictionary *dict1 = @{
-                            CYLTabBarItemTitle : @"信息",
-                            CYLTabBarItemImage : @"home_normal",
-                            CYLTabBarItemSelectedImage : @"home_highlight",
+                            CYLTabBarItemTitle : @"日子",
+                            CYLTabBarItemImage : @"oneBlack",
+                            CYLTabBarItemSelectedImage : @"one",
                             };
     NSDictionary *dict2 = @{
                             CYLTabBarItemTitle : @"日志",
-                            CYLTabBarItemImage : @"mycity_normal",
-                            CYLTabBarItemSelectedImage : @"mycity_highlight",
+                            CYLTabBarItemImage : @"twoBlack",
+                            CYLTabBarItemSelectedImage : @"two",
                             };
     NSDictionary *dict3 = @{
                             CYLTabBarItemTitle : @"设置",
-                            CYLTabBarItemImage : @"mycity_normal",
-                            CYLTabBarItemSelectedImage : @"mycity_highlight",
+                            CYLTabBarItemImage : @"threeBlack",
+                            CYLTabBarItemSelectedImage : @"three",
                             };
     
     NSArray *tabBarItemsAttributes = @[ dict1, dict2 , dict3];

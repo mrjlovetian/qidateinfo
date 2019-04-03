@@ -9,6 +9,7 @@
 #import "ShouWenzhanViewController.h"
 #import <MJRefresh/MJRefresh.h>
 #import "WenzhanManager.h"
+#import <Photos/Photos.h>
 
 @interface ShouWenzhanViewController ()<UIScrollViewDelegate>
 
@@ -34,6 +35,7 @@
     [self.mainView addSubview:self.contentLab];
     [self.view addSubview:self.backBtn];
     
+    
     NSInteger count = [[WenzhanManager shareManager] dataSource].count - 1;
     self.index = (arc4random()%count);
     
@@ -58,6 +60,8 @@
         }];
     }];
 }
+
+
 
 #pragma mark UIScrollViewDelegate
 
@@ -138,9 +142,8 @@
         [_backBtn setImage:[[UIImage imageNamed:@"exit"] imageWithRenderingMode:(UIImageRenderingModeAlwaysOriginal)] forState:UIControlStateNormal];
         _backBtn.layer.cornerRadius = 4.0;
         _backBtn.clipsToBounds = YES;
-        _backBtn.lee_theme.LeeAddBackgroundColor(@"main", [UIColor greenColor]);
+        _backBtn.lee_theme.LeeAddBackgroundColor(@"main", [UIColor colorWithHexString:@"ff801a"]);
         [_backBtn addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
-        [_backBtn setTitleColor:[UIColor colorWithHexString:@"333333"] forState:UIControlStateNormal];
     }
     return _backBtn;
 }

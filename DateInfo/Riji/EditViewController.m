@@ -28,11 +28,6 @@ static NSString *indetif = @"image";
 
 @property (nonatomic, strong)UITextField *titleTextField;
 @property (nonatomic, strong)YYTextView *contentTextView;
-//@property (nonatomic, strong)UIImageView *addImageView;
-//@property (nonatomic, strong)NSMutableArray *dataSources;
-//@property (nonatomic, assign)CGFloat imageWidth;
-//@property (nonatomic, assign)CGFloat startX;
-//@property (nonatomic, assign)CGFloat startY;
 @property (nonatomic, assign)NSInteger maxCount;
 
 @property (nonatomic, strong)NSMutableArray *imageArr;
@@ -54,7 +49,7 @@ static NSString *indetif = @"image";
     
     UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [addBtn setTitle:@"添加" forState:UIControlStateNormal];
-    [addBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [addBtn setTitleColor:[UIColor colorWithHexString:@"ff801a"] forState:UIControlStateNormal];
     [addBtn addTarget:self action:@selector(addRiji:) forControlEvents:UIControlEventTouchUpInside];
     addBtn.frame = CGRectMake(0, 0, 60, 40);
     UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithCustomView:addBtn];
@@ -82,6 +77,10 @@ static NSString *indetif = @"image";
              [self.imageNameArr addObject:[[assets objectAtIndex:i] filename]];
         }
     }];
+    vc.navigationBar.barTintColor = MAINCOLOR;
+    vc.navigationBar.translucent = NO;
+    vc.navigationItem.title = @"选择图片";
+//    self.view.lee_theme.LeeAddBackgroundColor(@"main", MAINCOLOR);
     [self presentViewController:vc animated:YES completion:nil];
 }
 
@@ -102,8 +101,6 @@ static NSString *indetif = @"image";
         [TSMessage showNotificationWithTitle:@"内容错误" subtitle:@"至少添加一项内容吧" type:(TSMessageNotificationTypeError)];
         return;
     }
-    
-    
     
     if (self.imageArr.count > 0) {
         [self.imageArr removeLastObject];
@@ -153,10 +150,15 @@ static NSString *indetif = @"image";
             if (!hasMonth) {
                 rijiMonth = [RiJiMonth new];
                 rijiMonth.month = [NSString stringWithFormat:@"%ld", month];
+                if (!rijiDay) {
+                    rijiDay = [RiJiDay new];
+                    rijiDay.date = today;
+                    rijiDay.datas = @[rijiModel];
+                }
                 rijiMonth.datas = @[rijiDay];
                 NSMutableArray *monthArr = [NSMutableArray arrayWithCapacity:1];
                 [monthArr addObjectsFromArray:rijiYear.datas];
-                [monthArr insertObject:rijiDay atIndex:0];
+                [monthArr insertObject:rijiMonth atIndex:0];
                 rijiYear.datas = monthArr;
             }
             hasYear = YES;
@@ -192,7 +194,14 @@ static NSString *indetif = @"image";
 - (UITextField *)titleTextField {
     if (!_titleTextField) {
         _titleTextField = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, ScreenWidth - 20, 30)];
-        _titleTextField.placeholder = @"起个名字吧！";
+        NSString *str = @"起个名字吧！";
+        NSMutableAttributedString *att = [[NSMutableAttributedString alloc] initWithString:str];
+        [att addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:17.0] range:NSMakeRange(0, str.length)];
+        [att addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"afafaf"] range:NSMakeRange(0, str.length)];
+        _titleTextField.attributedPlaceholder = att;
+//        _titleTextField.lee_theme.LeeAddPlaceholderColor(@"main", [UIColor colorWithHexString:@"dfdfdf"]);
+//        _titleTextField.placeholder = @"起个名字吧！";
+//        _titleTextField.font = [UIFont systemFontOfSize:17.0];
         _titleTextField.textColor = [UIColor whiteColor];
     }
     return _titleTextField;
@@ -202,6 +211,9 @@ static NSString *indetif = @"image";
     if (!_contentTextView) {
         _contentTextView = [[YYTextView alloc] initWithFrame:CGRectMake(_titleTextField.left, _titleTextField.bottom + 10, _titleTextField.width, 100)];
         _contentTextView.placeholderText = @"今天写点什么呢？";
+        _contentTextView.placeholderTextColor = [UIColor colorWithHexString:@"afafaf"];
+        _contentTextView.font = [UIFont systemFontOfSize:16.0];
+        _contentTextView.placeholderFont = [UIFont systemFontOfSize:16.0];
         _contentTextView.textColor = [UIColor whiteColor];
     }
     return _contentTextView;

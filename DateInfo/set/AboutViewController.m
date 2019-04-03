@@ -27,7 +27,7 @@
     self.aboutLab.font = [UIFont systemFontOfSize:15.0];
     [self.view addSubview:self.aboutLab];
     
-    NSString *aboutStr = @"这是一款简单的日历软件，可记录用户个人当天的私密日志，记录的日志可在日志页面下查看。\n软件名称小七日历";
+    NSString *aboutStr = @"软件著作为个人所有，如您在使用本软件的过程中遇到任何问题或者您需要向作者提供建议，均可联系作者，我会认真思考您对本软件提出的意见或建议！\n\n软件提供基本的日历功能，提供当年的节假日信息，仅供参考。您可以在本软件中添加当天的日志信息，包括日志标题，日志内容以及不超与6张的图片信息。添加之后的日志信息会在日志功能页显示，你可选择性查看所添加的日志，在日志详情业内可以日志删除，日志不会上传到互联网，删除操作数据是不可恢复的。\n 联系作者：mrjlovetian@gmail.com";
     self.aboutLab.text = aboutStr;
     CGRect rect = [aboutStr boundingRectWithSize:CGSizeMake( ScreenWidth - 30, 0) options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15.0]} context:nil];
     self.aboutLab.height = rect.size.height;

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A20BA732254FD5D004F4ACC /* 6.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 0A20BA702254FD5D004F4ACC /* 6.JPG */; };
+		0A20BA742254FD5D004F4ACC /* 7.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 0A20BA712254FD5D004F4ACC /* 7.JPG */; };
+		0A20BA752254FD5D004F4ACC /* 5.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 0A20BA722254FD5D004F4ACC /* 5.JPG */; };
 		0A38B8EB222BAA1100ADD2A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B8EA222BAA1100ADD2A2 /* AppDelegate.m */; };
 		0A38B8EE222BAA1100ADD2A2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B8ED222BAA1100ADD2A2 /* RootViewController.m */; };
 		0A38B8F3222BAA1200ADD2A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A38B8F2222BAA1200ADD2A2 /* Assets.xcassets */; };
@@ -89,6 +92,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A20BA702254FD5D004F4ACC /* 6.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.JPG; sourceTree = "<group>"; };
+		0A20BA712254FD5D004F4ACC /* 7.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.JPG; sourceTree = "<group>"; };
+		0A20BA722254FD5D004F4ACC /* 5.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.JPG; sourceTree = "<group>"; };
 		0A38B8E6222BAA1100ADD2A2 /* DateInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A38B8E9222BAA1100ADD2A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A38B8EA222BAA1100ADD2A2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -466,6 +472,9 @@
 				0AD2045C224BC0D10064F4E8 /* 02.JPG */,
 				0AD2045B224BC0D10064F4E8 /* 03.JPG */,
 				0AD2045D224BC0D10064F4E8 /* 04.PNG */,
+				0A20BA722254FD5D004F4ACC /* 5.JPG */,
+				0A20BA702254FD5D004F4ACC /* 6.JPG */,
+				0A20BA712254FD5D004F4ACC /* 7.JPG */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -613,7 +622,9 @@
 				0AD204372247BE780064F4E8 /* NotificationBackgroundSuccess@2x.png in Resources */,
 				0AD2045E224BC0D10064F4E8 /* 01.JPG in Resources */,
 				0AD2043E2247BE780064F4E8 /* NotificationBackgroundSuccessIcon@2x.png in Resources */,
+				0A20BA752254FD5D004F4ACC /* 5.JPG in Resources */,
 				0AD2045F224BC0D10064F4E8 /* 03.JPG in Resources */,
+				0A20BA732254FD5D004F4ACC /* 6.JPG in Resources */,
 				0AD2043A2247BE780064F4E8 /* TSMessagesDefaultDesign.json in Resources */,
 				0AD2043C2247BE780064F4E8 /* NotificationBackgroundMessage@2x.png in Resources */,
 				0AD20460224BC0D10064F4E8 /* 02.JPG in Resources */,
@@ -629,6 +640,7 @@
 				0AD204382247BE780064F4E8 /* NotificationButtonBackground@2x.png in Resources */,
 				0AD2043D2247BE780064F4E8 /* NotificationBackgroundSuccessIcon.png in Resources */,
 				0AD20461224BC0D10064F4E8 /* 04.PNG in Resources */,
+				0A20BA742254FD5D004F4ACC /* 7.JPG in Resources */,
 				0AD204402247BE780064F4E8 /* NotificationBackgroundError@2x.png in Resources */,
 				0AD204392247BE780064F4E8 /* NotificationBackgroundSuccess.png in Resources */,
 			);
@@ -695,7 +707,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DateInfo/Pods-DateInfo-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-				"$PODS_CONFIGURATION_BUILD_DIR/MWPhotoBrowser/MWPhotoBrowser.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/MWPhotoBrowser/MWPhotoBrowser.bundle,
 				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";

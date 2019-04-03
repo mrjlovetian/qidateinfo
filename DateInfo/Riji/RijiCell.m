@@ -241,7 +241,7 @@
 
 - (UIView *)bottomLineView {
     if (!_bottomLineView) {
-        _bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth - 30, 0.5)];
+        _bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0.5)];
         _bottomLineView.backgroundColor = [UIColor whiteColor];
     }
     return _bottomLineView;
