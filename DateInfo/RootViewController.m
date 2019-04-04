@@ -172,7 +172,6 @@
 }
 
 - (NSArray<UIColor *> *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance eventDefaultColorsForDate:(NSDate *)date {
-//    if (!self.showsEvents) return nil;
     if (!self.events) return nil;
     NSArray<EKEvent *> *events = [self eventsForDate:date];
     NSMutableArray<UIColor *> *colors = [NSMutableArray arrayWithCapacity:events.count];

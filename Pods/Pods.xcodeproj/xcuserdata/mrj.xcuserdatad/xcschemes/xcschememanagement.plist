@@ -88,7 +88,7 @@
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
-		<key>Pods-DateInfoTests.xcscheme</key>
+		<key>Pods-DateToday.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

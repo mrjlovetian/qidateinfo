@@ -36,6 +36,15 @@
 		0A8A93AA22505AA50007A1C3 /* RijiSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93A922505AA50007A1C3 /* RijiSectionView.m */; };
 		0A8A93B1225077530007A1C3 /* StarsOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93B0225077530007A1C3 /* StarsOverlay.swift */; };
 		0A8A93B422508A7A0007A1C3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93B322508A7A0007A1C3 /* BaseViewController.m */; };
+		0A9341D02256480600AC48FF /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9341CF2256480600AC48FF /* NotificationCenter.framework */; };
+		0A9341D42256480600AC48FF /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9341D32256480600AC48FF /* TodayViewController.m */; };
+		0A9341DB2256480600AC48FF /* DateToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0A9341CE2256480600AC48FF /* DateToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0A9341E1225648B000AC48FF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A9341E0225648B000AC48FF /* MainInterface.storyboard */; };
+		0A9341E322564A2900AC48FF /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A9341E222564A2900AC48FF /* Image.xcassets */; };
+		0A9341E5225650C200AC48FF /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67812233EB11001D270B /* NSDate+Extension.m */; };
+		0A9341E8225650E100AC48FF /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9341E7225650E100AC48FF /* NSDate+Extension.m */; };
+		0A9341E9225650FF00AC48FF /* NSDate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67852233EB11001D270B /* NSDate+Reporting.m */; };
+		0A9341EC2256511A00AC48FF /* NSDate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9341EB2256511A00AC48FF /* NSDate+Reporting.m */; };
 		0ABC48E0223530F600799B4A /* RijiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC48DF223530F600799B4A /* RijiCell.m */; };
 		0ACCD7C32247AE3600CC7E0D /* LunarFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACCD7C12247AE3600CC7E0D /* LunarFormatter.m */; };
 		0ACCD7C62247B3C900CC7E0D /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACCD7C52247B3C900CC7E0D /* BaseNavViewController.m */; };
@@ -77,8 +86,8 @@
 		0AFB36022230172F001DD940 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FD2230172F001DD940 /* FileManager.m */; };
 		0AFB36032230172F001DD940 /* LanguageManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB36002230172F001DD940 /* LanguageManger.m */; };
 		0AFB36062233B28A001DD940 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB36052233B28A001DD940 /* EditViewController.m */; };
+		3ECFB66A6A84649C57CE4DE2 /* Pods_DateToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB1AC516BF6B0BF62C0B590 /* Pods_DateToday.framework */; };
 		C8F846AA26317E6C0AA02DF3 /* Pods_DateInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CFC9E3B60C1AB77E5AA1F2 /* Pods_DateInfo.framework */; };
-		E584CFB93D2F2A6CE2464D0C /* Pods_DateInfoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAFF6CE54CFF8062C9EE63A /* Pods_DateInfoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +98,28 @@
 			remoteGlobalIDString = 0A38B8E5222BAA1100ADD2A2;
 			remoteInfo = DateInfo;
 		};
+		0A9341D92256480600AC48FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A38B8DE222BAA1100ADD2A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A9341CD2256480600AC48FF;
+			remoteInfo = DateToday;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0A9341DF2256480600AC48FF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0A9341DB2256480600AC48FF /* DateToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0A20BA702254FD5D004F4ACC /* 6.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.JPG; sourceTree = "<group>"; };
@@ -145,6 +175,19 @@
 		0A8A93B0225077530007A1C3 /* StarsOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsOverlay.swift; sourceTree = "<group>"; };
 		0A8A93B222508A7A0007A1C3 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		0A8A93B322508A7A0007A1C3 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		0A9341CE2256480600AC48FF /* DateToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DateToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A9341CF2256480600AC48FF /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		0A9341D22256480600AC48FF /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		0A9341D32256480600AC48FF /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		0A9341D82256480600AC48FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A9341E0225648B000AC48FF /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		0A9341E222564A2900AC48FF /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		0A9341E6225650E100AC48FF /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Extension.h"; path = "DateInfo/NSDate+Extension.h"; sourceTree = SOURCE_ROOT; };
+		0A9341E7225650E100AC48FF /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Extension.m"; path = "DateInfo/NSDate+Extension.m"; sourceTree = SOURCE_ROOT; };
+		0A9341EA2256511A00AC48FF /* NSDate+Reporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Reporting.h"; path = "DateInfo/NSDate+Reporting.h"; sourceTree = SOURCE_ROOT; };
+		0A9341EB2256511A00AC48FF /* NSDate+Reporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Reporting.m"; path = "DateInfo/NSDate+Reporting.m"; sourceTree = SOURCE_ROOT; };
+		0A9341ED2256540500AC48FF /* DateToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DateToday.entitlements; sourceTree = "<group>"; };
+		0A9341EE2256541100AC48FF /* DateInfo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DateInfo.entitlements; sourceTree = "<group>"; };
 		0ABC48DE223530F600799B4A /* RijiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RijiCell.h; sourceTree = "<group>"; };
 		0ABC48DF223530F600799B4A /* RijiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RijiCell.m; sourceTree = "<group>"; };
 		0ACCD7C12247AE3600CC7E0D /* LunarFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunarFormatter.m; sourceTree = "<group>"; };
@@ -205,11 +248,15 @@
 		0AFB36042233B28A001DD940 /* EditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		0AFB36052233B28A001DD940 /* EditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		0AFB36072233BC68001DD940 /* Header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.pch; sourceTree = "<group>"; };
-		6CD1ADE3617331DBD65A1A6B /* Pods-DateInfoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateInfoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateInfoTests/Pods-DateInfoTests.release.xcconfig"; sourceTree = "<group>"; };
+		5B56D4DFF79CAC75F19AF577 /* Pods-DateToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateToday/Pods-DateToday.debug.xcconfig"; sourceTree = "<group>"; };
+		85A303234A2DEB43E0084B64 /* Pods-DateInfo-DateToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateInfo-DateToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateInfo-DateToday/Pods-DateInfo-DateToday.release.xcconfig"; sourceTree = "<group>"; };
+		8F19D27B618991C611C796EA /* Pods-DateToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateToday/Pods-DateToday.release.xcconfig"; sourceTree = "<group>"; };
 		A6C04EFD44FAD3BCA420F761 /* Pods-DateInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateInfo/Pods-DateInfo.debug.xcconfig"; sourceTree = "<group>"; };
+		AAB1AC516BF6B0BF62C0B590 /* Pods_DateToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CFC9E3B60C1AB77E5AA1F2 /* Pods_DateInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE2150E9CD53743B9A60E9B1 /* Pods-DateInfoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateInfoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateInfoTests/Pods-DateInfoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBAFF6CE54CFF8062C9EE63A /* Pods_DateInfoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateInfoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1C153E0DECED008B1FCE123 /* Pods_DateInfo_DateToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateInfo_DateToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3F7B4BDBD721883B149E9B /* Pods-DateInfo-DateToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateInfo-DateToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateInfo-DateToday/Pods-DateInfo-DateToday.debug.xcconfig"; sourceTree = "<group>"; };
 		F0BB700E4E665E3E8AC92E33 /* Pods-DateInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateInfo/Pods-DateInfo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -226,7 +273,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E584CFB93D2F2A6CE2464D0C /* Pods_DateInfoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A9341CB2256480600AC48FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9341D02256480600AC48FF /* NotificationCenter.framework in Frameworks */,
+				3ECFB66A6A84649C57CE4DE2 /* Pods_DateToday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +294,7 @@
 				0AD20459224BC0A50064F4E8 /* resource */,
 				0A38B8E8222BAA1100ADD2A2 /* DateInfo */,
 				0A38B901222BAA1300ADD2A2 /* DateInfoTests */,
+				0A9341D12256480600AC48FF /* DateToday */,
 				0A38B8E7222BAA1100ADD2A2 /* Products */,
 				519CAAB705064059A57297F9 /* Pods */,
 				5AEB786F129D16462C99B2A2 /* Frameworks */,
@@ -250,6 +306,7 @@
 			children = (
 				0A38B8E6222BAA1100ADD2A2 /* DateInfo.app */,
 				0A38B8FE222BAA1300ADD2A2 /* DateInfoTests.xctest */,
+				0A9341CE2256480600AC48FF /* DateToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -257,6 +314,7 @@
 		0A38B8E8222BAA1100ADD2A2 /* DateInfo */ = {
 			isa = PBXGroup;
 			children = (
+				0A9341EE2256541100AC48FF /* DateInfo.entitlements */,
 				0A8A9395224F5DFC0007A1C3 /* LaunchImage */,
 				0A8A9391224F5B6D0007A1C3 /* Base */,
 				0A8A9390224F5B590007A1C3 /* AppDelegate */,
@@ -381,6 +439,23 @@
 			path = LaunchImage;
 			sourceTree = "<group>";
 		};
+		0A9341D12256480600AC48FF /* DateToday */ = {
+			isa = PBXGroup;
+			children = (
+				0A9341ED2256540500AC48FF /* DateToday.entitlements */,
+				0A9341EA2256511A00AC48FF /* NSDate+Reporting.h */,
+				0A9341EB2256511A00AC48FF /* NSDate+Reporting.m */,
+				0A9341E6225650E100AC48FF /* NSDate+Extension.h */,
+				0A9341E7225650E100AC48FF /* NSDate+Extension.m */,
+				0A9341D22256480600AC48FF /* TodayViewController.h */,
+				0A9341D32256480600AC48FF /* TodayViewController.m */,
+				0A9341E222564A2900AC48FF /* Image.xcassets */,
+				0A9341E0225648B000AC48FF /* MainInterface.storyboard */,
+				0A9341D82256480600AC48FF /* Info.plist */,
+			);
+			path = DateToday;
+			sourceTree = "<group>";
+		};
 		0ACCD7C02247AE2B00CC7E0D /* LunarFormatter */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,7 +541,6 @@
 			children = (
 				0A8A938A224F58870007A1C3 /* book.json */,
 				0A8A938B224F58870007A1C3 /* say.json */,
-				0AD20457224A6D700064F4E8 /* holiday.json */,
 				0AD20449224911480064F4E8 /* date.json */,
 				0AD2045A224BC0D10064F4E8 /* 01.JPG */,
 				0AD2045C224BC0D10064F4E8 /* 02.JPG */,
@@ -475,6 +549,7 @@
 				0A20BA722254FD5D004F4ACC /* 5.JPG */,
 				0A20BA702254FD5D004F4ACC /* 6.JPG */,
 				0A20BA712254FD5D004F4ACC /* 7.JPG */,
+				0AD20457224A6D700064F4E8 /* holiday.json */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -511,8 +586,10 @@
 			children = (
 				A6C04EFD44FAD3BCA420F761 /* Pods-DateInfo.debug.xcconfig */,
 				F0BB700E4E665E3E8AC92E33 /* Pods-DateInfo.release.xcconfig */,
-				BE2150E9CD53743B9A60E9B1 /* Pods-DateInfoTests.debug.xcconfig */,
-				6CD1ADE3617331DBD65A1A6B /* Pods-DateInfoTests.release.xcconfig */,
+				EF3F7B4BDBD721883B149E9B /* Pods-DateInfo-DateToday.debug.xcconfig */,
+				85A303234A2DEB43E0084B64 /* Pods-DateInfo-DateToday.release.xcconfig */,
+				5B56D4DFF79CAC75F19AF577 /* Pods-DateToday.debug.xcconfig */,
+				8F19D27B618991C611C796EA /* Pods-DateToday.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -522,6 +599,9 @@
 			children = (
 				B4CFC9E3B60C1AB77E5AA1F2 /* Pods_DateInfo.framework */,
 				CBAFF6CE54CFF8062C9EE63A /* Pods_DateInfoTests.framework */,
+				0A9341CF2256480600AC48FF /* NotificationCenter.framework */,
+				E1C153E0DECED008B1FCE123 /* Pods_DateInfo_DateToday.framework */,
+				AAB1AC516BF6B0BF62C0B590 /* Pods_DateToday.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -539,10 +619,12 @@
 				0A38B8E4222BAA1100ADD2A2 /* Resources */,
 				CE54DA7F312BFB2D2B08FF51 /* [CP] Embed Pods Frameworks */,
 				53D084D7A5ECAC6FC257885E /* [CP] Copy Pods Resources */,
+				0A9341DF2256480600AC48FF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0A9341DA2256480600AC48FF /* PBXTargetDependency */,
 			);
 			name = DateInfo;
 			productName = DateInfo;
@@ -553,12 +635,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A38B90A222BAA1300ADD2A2 /* Build configuration list for PBXNativeTarget "DateInfoTests" */;
 			buildPhases = (
-				286A9F33450F8A5566E134F5 /* [CP] Check Pods Manifest.lock */,
 				0A38B8FA222BAA1300ADD2A2 /* Sources */,
 				0A38B8FB222BAA1300ADD2A2 /* Frameworks */,
 				0A38B8FC222BAA1300ADD2A2 /* Resources */,
-				4737ADB32D90E520E9EF5CE5 /* [CP] Embed Pods Frameworks */,
-				D6EAEAE58322C9B099FD6DDE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -569,6 +648,25 @@
 			productName = DateInfoTests;
 			productReference = 0A38B8FE222BAA1300ADD2A2 /* DateInfoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0A9341CD2256480600AC48FF /* DateToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A9341DE2256480600AC48FF /* Build configuration list for PBXNativeTarget "DateToday" */;
+			buildPhases = (
+				5572F76A59A5E087D6C61778 /* [CP] Check Pods Manifest.lock */,
+				0A9341CA2256480600AC48FF /* Sources */,
+				0A9341CB2256480600AC48FF /* Frameworks */,
+				0A9341CC2256480600AC48FF /* Resources */,
+				9380FC74B20C849E64407872 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DateToday;
+			productName = DateToday;
+			productReference = 0A9341CE2256480600AC48FF /* DateToday.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -582,10 +680,23 @@
 					0A38B8E5222BAA1100ADD2A2 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					0A38B8FD222BAA1300ADD2A2 = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 0A38B8E5222BAA1100ADD2A2;
+					};
+					0A9341CD2256480600AC48FF = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -604,6 +715,7 @@
 			targets = (
 				0A38B8E5222BAA1100ADD2A2 /* DateInfo */,
 				0A38B8FD222BAA1300ADD2A2 /* DateInfoTests */,
+				0A9341CD2256480600AC48FF /* DateToday */,
 			);
 		};
 /* End PBXProject section */
@@ -653,50 +765,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A9341CC2256480600AC48FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9341E1225648B000AC48FF /* MainInterface.storyboard in Resources */,
+				0A9341E322564A2900AC48FF /* Image.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		286A9F33450F8A5566E134F5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DateInfoTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4737ADB32D90E520E9EF5CE5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DateInfoTests/Pods-DateInfoTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		53D084D7A5ECAC6FC257885E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -718,6 +798,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DateInfo/Pods-DateInfo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5572F76A59A5E087D6C61778 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DateToday-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9380FC74B20C849E64407872 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DateToday/Pods-DateToday-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AE7F1346CF4C424CA15D1DB8 /* [CP] Check Pods Manifest.lock */ = {
@@ -800,25 +921,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DateInfo/Pods-DateInfo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D6EAEAE58322C9B099FD6DDE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DateInfoTests/Pods-DateInfoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -876,6 +978,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A9341CA2256480600AC48FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9341E5225650C200AC48FF /* NSDate+Extension.m in Sources */,
+				0A9341E9225650FF00AC48FF /* NSDate+Reporting.m in Sources */,
+				0A9341D42256480600AC48FF /* TodayViewController.m in Sources */,
+				0A9341EC2256511A00AC48FF /* NSDate+Reporting.m in Sources */,
+				0A9341E8225650E100AC48FF /* NSDate+Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -883,6 +997,11 @@
 			isa = PBXTargetDependency;
 			target = 0A38B8E5222BAA1100ADD2A2 /* DateInfo */;
 			targetProxy = 0A38B8FF222BAA1300ADD2A2 /* PBXContainerItemProxy */;
+		};
+		0A9341DA2256480600AC48FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A9341CD2256480600AC48FF /* DateToday */;
+			targetProxy = 0A9341D92256480600AC48FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1059,7 +1178,6 @@
 		};
 		0A38B90B222BAA1300ADD2A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE2150E9CD53743B9A60E9B1 /* Pods-DateInfoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1080,7 +1198,6 @@
 		};
 		0A38B90C222BAA1300ADD2A2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CD1ADE3617331DBD65A1A6B /* Pods-DateInfoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1096,6 +1213,46 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DateInfo.app/DateInfo";
+			};
+			name = Release;
+		};
+		0A9341DC2256480600AC48FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B56D4DFF79CAC75F19AF577 /* Pods-DateToday.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D64CYZ8CL;
+				INFOPLIST_FILE = DateToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MRJ.DateInfo.DateToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0A9341DD2256480600AC48FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F19D27B618991C611C796EA /* Pods-DateToday.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D64CYZ8CL;
+				INFOPLIST_FILE = DateToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MRJ.DateInfo.DateToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1125,6 +1282,15 @@
 			buildConfigurations = (
 				0A38B90B222BAA1300ADD2A2 /* Debug */,
 				0A38B90C222BAA1300ADD2A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A9341DE2256480600AC48FF /* Build configuration list for PBXNativeTarget "DateToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A9341DC2256480600AC48FF /* Debug */,
+				0A9341DD2256480600AC48FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

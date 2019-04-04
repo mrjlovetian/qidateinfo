@@ -1,9 +1,11 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 use_frameworks!
+pod 'FSCalendar'
+pod 'YYCategories'
 
 target 'DateInfo' do
-  pod 'FSCalendar'
+  
   pod 'YYModel', '~> 1.0.4'
   pod 'YYText', '~> 1.0.7'
   pod 'Masonry', '~> 1.1.0'
@@ -15,7 +17,6 @@ target 'DateInfo' do
   pod 'StarWars', '~> 2.0'
   pod 'CYLTabBarController'
   pod 'ChameleonFramework'
-  pod 'YYCategories'
   pod 'MJRefresh'
   pod 'LEETheme'
   pod 'YYWebImage'
@@ -24,11 +25,10 @@ target 'DateInfo' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
-  # Pods for DateInfo
+  # Pods for DateInf
 
-  target 'DateInfoTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+end
+
+target 'DateToday' do
 
 end

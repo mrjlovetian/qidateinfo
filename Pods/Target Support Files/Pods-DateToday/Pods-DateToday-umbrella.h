@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_DateInfoTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_DateInfoTestsVersionString[];
+FOUNDATION_EXPORT double Pods_DateTodayVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_DateTodayVersionString[];
 
