@@ -139,6 +139,13 @@
 		0A38B904222BAA1300ADD2A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A5218C9224E523100256157 /* ShouWenzhanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShouWenzhanViewController.h; sourceTree = "<group>"; };
 		0A5218CA224E523100256157 /* ShouWenzhanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShouWenzhanViewController.m; sourceTree = "<group>"; };
+		0A74A7B72257AC55000E96AB /* StringMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringMacro.h; sourceTree = "<group>"; };
+		0A74A7B82257AC55000E96AB /* ScreenMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenMacro.h; sourceTree = "<group>"; };
+		0A74A7B92257AC55000E96AB /* PropetyMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropetyMarco.h; sourceTree = "<group>"; };
+		0A74A7BA2257AC55000E96AB /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		0A74A7BB2257AC55000E96AB /* IosVerionMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IosVerionMacro.h; sourceTree = "<group>"; };
+		0A74A7BC2257AC55000E96AB /* ClassMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassMacro.h; sourceTree = "<group>"; };
+		0A74A7BD2257AC55000E96AB /* ColorMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorMacro.h; sourceTree = "<group>"; };
 		0A8A677D2233EB10001D270B /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		0A8A677E2233EB11001D270B /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
 		0A8A677F2233EB11001D270B /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
@@ -314,6 +321,7 @@
 		0A38B8E8222BAA1100ADD2A2 /* DateInfo */ = {
 			isa = PBXGroup;
 			children = (
+				0A74A7B62257AC55000E96AB /* Marco */,
 				0A9341EE2256541100AC48FF /* DateInfo.entitlements */,
 				0A8A9395224F5DFC0007A1C3 /* LaunchImage */,
 				0A8A9391224F5B6D0007A1C3 /* Base */,
@@ -347,6 +355,20 @@
 				0A38B904222BAA1300ADD2A2 /* Info.plist */,
 			);
 			path = DateInfoTests;
+			sourceTree = "<group>";
+		};
+		0A74A7B62257AC55000E96AB /* Marco */ = {
+			isa = PBXGroup;
+			children = (
+				0A74A7B72257AC55000E96AB /* StringMacro.h */,
+				0A74A7B82257AC55000E96AB /* ScreenMacro.h */,
+				0A74A7B92257AC55000E96AB /* PropetyMarco.h */,
+				0A74A7BA2257AC55000E96AB /* Macro.h */,
+				0A74A7BB2257AC55000E96AB /* IosVerionMacro.h */,
+				0A74A7BC2257AC55000E96AB /* ClassMacro.h */,
+				0A74A7BD2257AC55000E96AB /* ColorMacro.h */,
+			);
+			path = Marco;
 			sourceTree = "<group>";
 		};
 		0A8A677C2233EA8F001D270B /* DateTool */ = {
@@ -883,7 +905,6 @@
 				"${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/StarWars/StarWars.framework",
 				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
@@ -907,7 +928,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MWPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarWars.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
@@ -1148,7 +1168,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DateInfo/LaunchImage/DateInfo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1171,7 +1191,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MRJ.DateInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DateInfo/LaunchImage/DateInfo-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StarsOverlay: UIView {
+@objcMembers class StarsOverlay: UIView {
 
     override class var layerClass : AnyClass {
         return CAEmitterLayer.self

@@ -33,7 +33,6 @@
     for (int i = 0; i < [RijiManager shareRijiManager].rijiArr.count; i++) {
         [self.isExtentArr addObject:@"1"];
     }
-    
     starsOverlay.layer.frame = self.view.bounds;
     starsOverlay.emitter.emitterPosition = CGPointMake(ScreenWidth/2.0, (ScreenHeight - NavBarHeight - 49)/2.0);
     starsOverlay.emitter.emitterSize = CGSizeMake(ScreenWidth/4.0, (ScreenHeight - NavBarHeight - 49)/4.0);

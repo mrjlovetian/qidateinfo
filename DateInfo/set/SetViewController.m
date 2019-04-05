@@ -39,6 +39,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithHexString:@"014D41"];
     self.dataSource = @[@"随机散文", @"意见反馈", @"关于", @"当前版本"];
+    
     [self.view addSubview:self.tableView];
     UIImage *image = [UIImage imageNamed:@"5.JPG"];
     self.headerView = [ParallaxHeaderView parallaxHeaderViewWithImage:image forSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 200)];
@@ -76,6 +77,8 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.lee_theme.LeeAddBackgroundColor(@"main", MAINCOLOR);
     cell.textLabel.textColor = [UIColor whiteColor];
+    NSString *imageName = [self.dataSource objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:imageName];
     
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.frame.size.height - 0.5, ScreenWidth, 0.4)];
     lineView.backgroundColor = [UIColor whiteColor];
@@ -88,6 +91,7 @@
         versionLab.font = [UIFont systemFontOfSize:14.0];
         versionLab.textAlignment = NSTextAlignmentRight;
         [cell addSubview:versionLab];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
 }

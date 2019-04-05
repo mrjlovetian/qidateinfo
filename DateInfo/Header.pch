@@ -9,7 +9,7 @@
 #ifndef Header_h
 #define Header_h
 
-#import <MRJTool/Macro.h>
+#import "Macro.h"
 #import "YYModel.h"
 #import "YYText.h"
 #import "Chameleon.h"

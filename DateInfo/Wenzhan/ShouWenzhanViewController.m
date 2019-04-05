@@ -137,7 +137,7 @@
 - (UIButton *)backBtn {
     if (!_backBtn) {
         _backBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-        _backBtn.frame = CGRectMake(20, 30, 40, 40);
+        _backBtn.frame = CGRectMake(20, NavBarHeight + 10, 40, 40);
 //        [_backBtn setTitle:@"退出" forState:UIControlStateNormal];
         [_backBtn setImage:[[UIImage imageNamed:@"exit"] imageWithRenderingMode:(UIImageRenderingModeAlwaysOriginal)] forState:UIControlStateNormal];
         _backBtn.layer.cornerRadius = 4.0;

@@ -1,1 +1,0 @@
-../../../MRJTool/MRJTool/Classes/Marco/StringMacro.h
