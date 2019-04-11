@@ -36,8 +36,12 @@
     [self.view addSubview:self.backBtn];
     
     
-    NSInteger count = [[WenzhanManager shareManager] dataSource].count - 1;
-    self.index = (arc4random()%count);
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"wenzhanIndex"]) {
+        self.index = [[[NSUserDefaults standardUserDefaults] objectForKey:@"wenzhanIndex"] intValue];
+    } else {
+        NSInteger count = [[WenzhanManager shareManager] dataSource].count - 1;
+        self.index = (arc4random()%count);
+    }
     
     [self refreshData];
     
@@ -86,6 +90,10 @@
     if (self.index > [WenzhanManager shareManager].dataSource.count) {
         self.index = 0;
     }
+    if (self.index < 0) {
+        self.index = [WenzhanManager shareManager].dataSource.count - 1;
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:@(self.index) forKey:@"wenzhanIndex"];
     return [[[WenzhanManager shareManager] dataSource] objectAtIndex:self.index];
 }
 
