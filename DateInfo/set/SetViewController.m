@@ -37,12 +37,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithHexString:@"014D41"];
+    self.view.backgroundColor = MAINCOLOR;
     self.dataSource = @[@"随机散文", @"意见反馈", @"关于", @"当前版本"];
     
     [self.view addSubview:self.tableView];
-    UIImage *image = [UIImage imageNamed:@"5.JPG"];
+    UIImage *image = [UIImage imageWithColor:MAINCOLOR];
     self.headerView = [ParallaxHeaderView parallaxHeaderViewWithImage:image forSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 200)];
+    self.headerView.headerTitleLabel.text = @"今晚的月亮好美！";
     self.tableView.tableHeaderView = self.headerView;
 }
 
