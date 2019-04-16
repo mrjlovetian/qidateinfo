@@ -34,16 +34,16 @@
     }
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = MAINCOLOR;
     self.dataSource = @[@"随机散文", @"意见反馈", @"关于", @"当前版本"];
     
     [self.view addSubview:self.tableView];
-    UIImage *image = [UIImage imageWithColor:MAINCOLOR];
+    UIImage *image = [UIImage imageNamed:@"yuel.jpg"];
     self.headerView = [ParallaxHeaderView parallaxHeaderViewWithImage:image forSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 200)];
     self.headerView.headerTitleLabel.text = @"今晚的月亮好美！";
+    self.headerView.headerTitleLabel.top = 80;
     self.tableView.tableHeaderView = self.headerView;
 }
 
@@ -56,11 +56,15 @@
             
         }];
     } else if (indexPath.row == 1) {
-        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto://1520312758@qq.com"]];
     } else if (indexPath.row == 2) {
         AboutViewController *vc = [AboutViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 48.0;
 }
 
 #pragma mark UITableViewDataSource

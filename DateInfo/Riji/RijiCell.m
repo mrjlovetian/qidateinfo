@@ -77,15 +77,23 @@
 
 + (CGFloat)hetightForModel:(RiJiModel *)rijiModel {
     CGFloat contentHeight = [rijiModel.content boundingRectWithSize:CGSizeMake(ScreenSzie.width - 20, 0) options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
+    if (rijiModel.content.length == 0) {
+        contentHeight = 0;
+    }
     contentHeight = MIN(contentHeight, 40);
+    
+    CGFloat titleheight = 20.0;
+    if (rijiModel.title.length == 0) {
+        titleheight = 0.0;
+    }
     if (rijiModel.images.count > 0) {
 
         if (rijiModel.images.count%3 == 0) {
-            return 20 + contentHeight + 40 +  (rijiModel.images.count/3)*MoreImageHeight;
+            return titleheight + contentHeight + 40 +  (rijiModel.images.count/3)*MoreImageHeight;
         }
-        return 20 + contentHeight + 40 +  (rijiModel.images.count/3 +1)*MoreImageHeight;
+        return titleheight + contentHeight + 40 +  (rijiModel.images.count/3 +1)*MoreImageHeight;
     }
-    return 20 + contentHeight + 30;
+    return titleheight + contentHeight + 30;
 }
 
 #pragma mark set
@@ -94,14 +102,20 @@
     _rijiModel = rijiModel;
     _titleLab.text = rijiModel.title;
     _contentLab.text = rijiModel.content;
+    if (rijiModel.title.length == 0) {
+        self.titleLab.height = 0;
+    }
     
     CGFloat contentHeight = [rijiModel.content boundingRectWithSize:CGSizeMake(self.contentLab.frame.size.width, 0) options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0]} context:nil].size.height;
+    if (rijiModel.content.length == 0) {
+        contentHeight = 0;
+    }
     if (contentHeight > 40) {
         self.contentLab.height = 40;
     } else {
         self.contentLab.height = contentHeight;
     }
-    
+    self.contentLab.top = self.titleLab.bottom + 5;
     [self showImageView];
     [self refreshImageFrame];
 }

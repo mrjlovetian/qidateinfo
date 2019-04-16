@@ -19,7 +19,7 @@
 #import "LEETheme.h"
 
 ///014D41
-#define MAINCOLOR [UIColor colorWithHexString:@"0d5561"]
+#define MAINCOLOR [UIColor colorWithHexString:@"00456b"]
 #define TWOCOLOR [UIColor colorWithHexString:@"4F726C"]
 
 #endif /* Header_h */

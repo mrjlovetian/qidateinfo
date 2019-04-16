@@ -37,6 +37,14 @@
     starsOverlay.emitter.emitterPosition = CGPointMake(ScreenWidth/2.0, (ScreenHeight - NavBarHeight - 49)/2.0);
     starsOverlay.emitter.emitterSize = CGSizeMake(ScreenWidth/4.0, (ScreenHeight - NavBarHeight - 49)/4.0);
     [self.view.layer addSublayer:starsOverlay.layer];
+    
+    if ([RijiManager shareRijiManager].rijiArr.count == 0) {
+        UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"您还没有记录新的日志哦！去首页添加一条吧！" preferredStyle:(UIAlertControllerStyleAlert)];
+        [alertVc addAction:[UIAlertAction actionWithTitle:@"好哒" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        [self presentViewController:alertVc animated:YES completion:nil];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
