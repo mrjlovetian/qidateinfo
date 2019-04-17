@@ -82,6 +82,7 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.lee_theme.LeeAddBackgroundColor(@"main", MAINCOLOR);
     cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont systemFontOfSize:15.0];
     NSString *imageName = [self.dataSource objectAtIndex:indexPath.row];
     cell.imageView.image = [UIImage imageNamed:imageName];
     
