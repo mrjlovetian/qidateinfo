@@ -113,9 +113,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if ([[self.isExtentArr objectAtIndex:section] isEqualToString:@"1"]) {
-        RiJiYear *rijiYear = [RijiManager shareRijiManager].rijiArr[section];
-        return rijiYear.datas.count;
+    if (self.isExtentArr.count > 0) {
+        if ([[self.isExtentArr objectAtIndex:section] isEqualToString:@"1"]) {
+            RiJiYear *rijiYear = [RijiManager shareRijiManager].rijiArr[section];
+            return rijiYear.datas.count;
+        }
     }
     return 0;
 }
