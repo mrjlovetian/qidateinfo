@@ -81,29 +81,32 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    RiJiYear *rijiYear = [RijiManager shareRijiManager].rijiArr[section];
-    RijiSectionView *rijiSectionView = [[RijiSectionView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
-    rijiSectionView.titleStr = [NSString stringWithFormat:@"%@年", rijiYear.year];
-    rijiSectionView.btnState = [self.isExtentArr[section] boolValue];
-    MRJWeakSelf(self);
-    rijiSectionView.lefyCallback = ^(NSInteger btnState){
-        if ([weakself.isExtentArr[section] isEqualToString:@"0"]) {
-            //关闭 => 展开
-            [weakself.isExtentArr removeObjectAtIndex:section];
-            [weakself.isExtentArr insertObject:@"1" atIndex:section];
-        }else{
-            //展开 => 关闭
-            [weakself.isExtentArr removeObjectAtIndex:section];
-            [weakself.isExtentArr insertObject:@"0" atIndex:section];
-        }
-        
-        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:section];
-        NSRange rang = NSMakeRange(indexPath.section, 1);
-        NSIndexSet *set = [NSIndexSet indexSetWithIndexesInRange:rang];
-        [weakself.tableView reloadSections:set withRowAnimation:UITableViewRowAnimationFade];
-        
-    };
-    return rijiSectionView;
+    if (self.isExtentArr.count > 0) {
+        RiJiYear *rijiYear = [RijiManager shareRijiManager].rijiArr[section];
+        RijiSectionView *rijiSectionView = [[RijiSectionView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
+        rijiSectionView.titleStr = [NSString stringWithFormat:@"%@年", rijiYear.year];
+        rijiSectionView.btnState = [self.isExtentArr[section] boolValue];
+        MRJWeakSelf(self);
+        rijiSectionView.lefyCallback = ^(NSInteger btnState){
+            if ([weakself.isExtentArr[section] isEqualToString:@"0"]) {
+                //关闭 => 展开
+                [weakself.isExtentArr removeObjectAtIndex:section];
+                [weakself.isExtentArr insertObject:@"1" atIndex:section];
+            } else {
+                //展开 => 关闭
+                [weakself.isExtentArr removeObjectAtIndex:section];
+                [weakself.isExtentArr insertObject:@"0" atIndex:section];
+            }
+            
+            NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:section];
+            NSRange rang = NSMakeRange(indexPath.section, 1);
+            NSIndexSet *set = [NSIndexSet indexSetWithIndexesInRange:rang];
+            [weakself.tableView reloadSections:set withRowAnimation:UITableViewRowAnimationFade];
+            
+        };
+        return rijiSectionView;
+    }
+    return nil;
 }
 
 #pragma mark UITableViewDataSource

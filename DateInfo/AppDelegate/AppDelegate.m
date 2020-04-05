@@ -36,6 +36,8 @@
     [self.window makeKeyAndVisible];
     [self.tabBarController hideTabBadgeBackgroundSeparator];
     
+    //    日期接口
+    //    http://timor.tech/api/holiday/year/2020
     [[UINavigationBar appearance]  setBackgroundImage:[[UIImage alloc] init] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]]; 
     // Override point for customization after application launch.

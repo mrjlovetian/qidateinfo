@@ -150,7 +150,7 @@
         [_backBtn setImage:[[UIImage imageNamed:@"exit"] imageWithRenderingMode:(UIImageRenderingModeAlwaysOriginal)] forState:UIControlStateNormal];
         _backBtn.layer.cornerRadius = 4.0;
         _backBtn.clipsToBounds = YES;
-        _backBtn.lee_theme.LeeAddBackgroundColor(@"main", [UIColor colorWithHexString:@"ff801a"]);
+//        _backBtn.lee_theme.LeeAddBackgroundColor(@"main", [UIColor colorWithHexString:@"ff801a"]);
         [_backBtn addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
     }
     return _backBtn;
