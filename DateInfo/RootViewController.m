@@ -95,8 +95,6 @@
     NSData *data = [[NSData data] initWithContentsOfFile:path];
     self.holiyDay = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     
-    
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)addRiji {
