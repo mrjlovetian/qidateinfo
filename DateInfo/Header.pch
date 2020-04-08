@@ -10,13 +10,14 @@
 #define Header_h
 
 #import "Macro.h"
-#import "YYModel.h"
-#import "YYText.h"
-#import "Chameleon.h"
-#import "YYCategories.h"
+#import <YYModel/YYModel.h>
+#import <YYText.h>
+#import <YYText/YYLabel.h>
+#import <Chameleon.h>
+#import <YYCategories/YYCategories.h>
 #import "TSMessage.h"
 #import <Masonry/Masonry.h>
-#import "LEETheme.h"
+#import <LEETheme/LEETheme.h>
 
 ///014D41
 #define MAINCOLOR [UIColor colorWithHexString:@"00456b"]

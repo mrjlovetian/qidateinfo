@@ -46,7 +46,7 @@ DEPENDENCIES:
   - YYCategories
   - YYImage (~> 1.0.4)
   - YYModel (~> 1.0.4)
-  - YYText (~> 1.0.7)
+  - YYText
   - YYWebImage
 
 SPEC REPOS:
@@ -90,6 +90,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 3c0686a508190db3bba64472aad916ccbaebf968
+PODFILE CHECKSUM: 65e82127cb4528daa5be5b4dc7d10e102faeb64e
 
 COCOAPODS: 1.8.4

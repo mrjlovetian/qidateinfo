@@ -7,7 +7,7 @@ pod 'YYCategories'
 target 'DateInfo' do
   
   pod 'YYModel', '~> 1.0.4'
-  pod 'YYText', '~> 1.0.7'
+  pod 'YYText'
   pod 'Masonry', '~> 1.1.0'
 #  pod 'MRJTool'
   pod 'IQKeyboardManager'
