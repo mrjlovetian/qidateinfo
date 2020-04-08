@@ -11,7 +11,7 @@
 
 @implementation TZAssetModel
 
-+ (instancetype)modelWithAsset:(id)asset type:(TZAssetModelMediaType)type{
++ (instancetype)modelWithAsset:(PHAsset *)asset type:(TZAssetModelMediaType)type{
     TZAssetModel *model = [[TZAssetModel alloc] init];
     model.asset = asset;
     model.isSelected = NO;
@@ -19,7 +19,7 @@
     return model;
 }
 
-+ (instancetype)modelWithAsset:(id)asset type:(TZAssetModelMediaType)type timeLength:(NSString *)timeLength {
++ (instancetype)modelWithAsset:(PHAsset *)asset type:(TZAssetModelMediaType)type timeLength:(NSString *)timeLength {
     TZAssetModel *model = [self modelWithAsset:asset type:type];
     model.timeLength = timeLength;
     return model;
@@ -31,7 +31,7 @@
 
 @implementation TZAlbumModel
 
-- (void)setResult:(id)result needFetchAssets:(BOOL)needFetchAssets {
+- (void)setResult:(PHFetchResult *)result needFetchAssets:(BOOL)needFetchAssets {
     _result = result;
     if (needFetchAssets) {
         [[TZImageManager manager] getAssetsFromFetchResult:result completion:^(NSArray<TZAssetModel *> *models) {
@@ -52,12 +52,12 @@
 
 - (void)checkSelectedModels {
     self.selectedCount = 0;
-    NSMutableArray *selectedAssets = [NSMutableArray array];
+    NSMutableSet *selectedAssets = [NSMutableSet setWithCapacity:_selectedModels.count];
     for (TZAssetModel *model in _selectedModels) {
         [selectedAssets addObject:model.asset];
     }
     for (TZAssetModel *model in _models) {
-        if ([[TZImageManager manager] isAssetsArray:selectedAssets containAsset:model.asset]) {
+        if ([selectedAssets containsObject:model.asset]) {
             self.selectedCount ++;
         }
     }

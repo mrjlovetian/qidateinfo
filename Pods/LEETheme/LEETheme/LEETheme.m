@@ -11,8 +11,8 @@
  *  @brief  LEE主题管理
  *
  *  @author LEE
- *  @copyright    Copyright © 2016 - 2017年 lee. All rights reserved.
- *  @version    V1.1.7
+ *  @copyright    Copyright © 2016 - 2019年 lee. All rights reserved.
+ *  @version    V1.1.9
  */
 
 #import "LEETheme.h"
@@ -257,8 +257,8 @@ static NSString * const LEEThemeConfigInfo = @"LEEThemeConfigInfo";
 
 @interface LEEThemeConfigModel ()
 
-@property (nonatomic , copy ) void(^modelUpdateCurrentThemeConfig)();
-@property (nonatomic , copy ) void(^modelConfigThemeChangingBlock)();
+@property (nonatomic , copy ) void(^modelUpdateCurrentThemeConfig)(void);
+@property (nonatomic , copy ) void(^modelConfigThemeChangingBlock)(void);
 
 @property (nonatomic , copy ) LEEThemeChangingBlock modelChangingBlock;
 
@@ -521,8 +521,17 @@ static NSString * const LEEThemeConfigInfo = @"LEEThemeConfigInfo";
     __weak typeof(self) weakSelf = self;
     
     return ^(NSString *tag , id color){
-        
-        return weakSelf.LeeAddKeyPathAndValue(tag , @"_placeholderLabel.textColor" , color);
+        #ifdef __IPHONE_13_0
+        return weakSelf.LeeAddCustomConfig(tag, ^(id  _Nonnull item) {
+            if ([item respondsToSelector:@selector(setAttributedPlaceholder:)] && [item respondsToSelector:@selector(placeholder)]) {
+                NSString *placeholder = [item valueForKey:@"placeholder"];
+                NSAttributedString *string = [[NSAttributedString alloc] initWithString:placeholder attributes:@{NSForegroundColorAttributeName: color}];
+                [item setValue:string forKey:@"attributedPlaceholder"];
+            }
+        });
+        #else
+            return weakSelf.LeeAddKeyPathAndValue(tag , @"_placeholderLabel.textColor" , color);
+        #endif
     };
     
 }
@@ -861,7 +870,9 @@ static NSString * const LEEThemeConfigInfo = @"LEEThemeConfigInfo";
         
         if (!valuesArray) valuesArray = [NSMutableArray array];
         
-        [[valuesArray copy] enumerateObjectsUsingBlock:^(NSArray *valueArray, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSArray *temp = [valuesArray copy];
+        
+        [temp enumerateObjectsUsingBlock:^(NSArray *valueArray, NSUInteger idx, BOOL * _Nonnull stop) {
             
             if ([valueArray isEqualToArray:values]) [valuesArray removeObject:valueArray]; // 过滤相同参数值的数组
         }];
@@ -1193,8 +1204,17 @@ typedef NS_ENUM(NSInteger, LEEThemeIdentifierConfigType) {
     __weak typeof(self) weakSelf = self;
     
     return ^(NSString *identifier){
-        
-        return weakSelf.LeeConfigKeyPathAndIdentifier(@"_placeholderLabel.textColor" , identifier);
+    #ifdef __IPHONE_13_0
+    return weakSelf.LeeCustomConfig(identifier, ^(id  _Nonnull item, id  _Nonnull value) {
+        if ([item respondsToSelector:@selector(setAttributedPlaceholder:)] && [item respondsToSelector:@selector(placeholder)]) {
+            NSString *placeholder = [item valueForKey:@"placeholder"];
+            NSAttributedString *string = [[NSAttributedString alloc] initWithString:placeholder attributes:@{NSForegroundColorAttributeName: value}];
+            [item setValue:string forKey:@"attributedPlaceholder"];
+        }
+    });
+    #else
+    return weakSelf.LeeConfigKeyPathAndIdentifier(@"_placeholderLabel.textColor" , identifier);
+    #endif
     };
     
 }
@@ -2254,7 +2274,10 @@ typedef NS_ENUM(NSInteger, LEEThemeIdentifierConfigType) {
             blue  = [self colorComponentFrom:colorString start: 6 length: 2];
             break;
         default:
-            alpha = 0, red = 0, blue = 0, green = 0;
+            alpha = 0;
+            red = 0;
+            blue = 0;
+            green = 0;
             break;
     }
     
