@@ -20,6 +20,10 @@ PODS:
     - SDWebImage/Core (= 3.8.3)
   - SDWebImage/Core (3.8.3)
   - TZImagePickerController (3.3.1)
+  - UMCCommon (7.1.0)
+  - UMCPush (3.2.4):
+    - UMCCommon
+  - UMCSecurityPlugins (1.0.6)
   - YYCache (1.0.4)
   - YYCategories (1.0.4):
     - YYCategories/no-arc (= 1.0.4)
@@ -43,6 +47,9 @@ DEPENDENCIES:
   - MJRefresh
   - MWPhotoBrowser
   - TZImagePickerController
+  - UMCCommon
+  - UMCPush
+  - UMCSecurityPlugins
   - YYCategories
   - YYImage (~> 1.0.4)
   - YYModel (~> 1.0.4)
@@ -63,6 +70,9 @@ SPEC REPOS:
     - MWPhotoBrowser
     - SDWebImage
     - TZImagePickerController
+    - UMCCommon
+    - UMCPush
+    - UMCSecurityPlugins
     - YYCache
     - YYCategories
     - YYImage
@@ -83,6 +93,9 @@ SPEC CHECKSUMS:
   MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
   SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c
   TZImagePickerController: 99f03b64145a8c92c55b9b1b931410967d9be4cb
+  UMCCommon: 4e80f93492d300245683236668763dc5d0b04dbd
+  UMCPush: 1edd856027dcf905333effb4040ace5d236a7316
+  UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
@@ -90,6 +103,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 65e82127cb4528daa5be5b4dc7d10e102faeb64e
+PODFILE CHECKSUM: d74361235ddd28e3315ea13861f955dfb3260dc2
 
 COCOAPODS: 1.8.4

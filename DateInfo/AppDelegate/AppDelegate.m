@@ -19,6 +19,8 @@
 #import "RijiManager.h"
 #import "WenzhanManager.h"
 #import "LaunchImageView.h"
+#import <UMCommon/UMCommon.h>
+#import <UMPush/UMessage.h>
 
 @interface AppDelegate ()
 
@@ -55,7 +57,26 @@
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     [[IQKeyboardManager sharedManager] registerTextFieldViewClass:YYTextView.class didBeginEditingNotificationName:YYTextViewTextDidBeginEditingNotification didEndEditingNotificationName:YYTextViewTextDidEndEditingNotification];
     
+    // UMeng
+    [self setupUMeng:launchOptions];
+    
     return YES;
+}
+
+- (void)setupUMeng:(NSDictionary *)launchOptions {
+#ifdef DEBUG
+    NSString *channel = @"DEBUG";
+#else
+    NSString *channel = @"App Store";
+#endif
+    [UMConfigure initWithAppkey:@"5ef2c04f167edd1e9e000201" channel:channel];
+//    [MobClick setAutoPageEnabled:YES];
+    
+    UMessageRegisterEntity *entity = [[UMessageRegisterEntity alloc] init];
+    entity.types = UMessageAuthorizationOptionBadge | UMessageAuthorizationOptionSound | UMessageAuthorizationOptionAlert;
+    [UMessage registerForRemoteNotificationsWithLaunchOptions:launchOptions Entity:entity completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        NSLog(@"umeng-push: %@", @(granted));
+    }];
 }
 
 
@@ -135,6 +156,24 @@
     
     NSArray *tabBarItemsAttributes = @[ dict1, dict2 , dict3];
     tabBarController.tabBarItemsAttributes = tabBarItemsAttributes;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+
+    
+    // umeng
+    const unsigned *bytes = deviceToken.bytes;
+    NSString *token = [NSString stringWithFormat:@"%08x%08x%08x%08x%08x%08x%08x%08x",
+                       ntohl(bytes[0]), ntohl(bytes[1]), ntohl(bytes[2]), ntohl(bytes[3]),
+                       ntohl(bytes[4]), ntohl(bytes[5]), ntohl(bytes[6]), ntohl(bytes[7])
+                       ];
+#if DEBUG
+    UIPasteboard.generalPasteboard.string = token;
+#endif
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"app.push.reg.failed");
 }
 
 

@@ -189,6 +189,7 @@
 		0A9341EE2256541100AC48FF /* DateInfo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DateInfo.entitlements; sourceTree = "<group>"; };
 		0ABC48DE223530F600799B4A /* RijiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RijiCell.h; sourceTree = "<group>"; };
 		0ABC48DF223530F600799B4A /* RijiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RijiCell.m; sourceTree = "<group>"; };
+		0ABDE5D524A36C5700598B8E /* 七日.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "七日.entitlements"; sourceTree = "<group>"; };
 		0ACCD7C12247AE3600CC7E0D /* LunarFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunarFormatter.m; sourceTree = "<group>"; };
 		0ACCD7C22247AE3600CC7E0D /* LunarFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunarFormatter.h; sourceTree = "<group>"; };
 		0ACCD7C42247B3C900CC7E0D /* BaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
@@ -309,6 +310,7 @@
 		0A38B8E8222BAA1100ADD2A2 /* DateInfo */ = {
 			isa = PBXGroup;
 			children = (
+				0ABDE5D524A36C5700598B8E /* 七日.entitlements */,
 				0A74A7B62257AC55000E96AB /* Marco */,
 				0A9341EE2256541100AC48FF /* DateInfo.entitlements */,
 				0A8A9395224F5DFC0007A1C3 /* LaunchImage */,
@@ -1048,10 +1050,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "DateInfo/七日.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1.3;
 				DEVELOPMENT_TEAM = S2L4BYS6LP;
-				GCC_PREFIX_HEADER = /Users/mrj/qidateinfo/DateInfo/Header.pch;
+				GCC_PREFIX_HEADER = /Users/mrj/Desktop/Project/DateInfo/DateInfo/Header.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/CYLTabBarController/CYLTabBarController.framework/Headers\"",
@@ -1097,10 +1100,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "DateInfo/七日.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1.3;
 				DEVELOPMENT_TEAM = S2L4BYS6LP;
-				GCC_PREFIX_HEADER = /Users/mrj/qidateinfo/DateInfo/Header.pch;
+				GCC_PREFIX_HEADER = /Users/mrj/Desktop/Project/DateInfo/DateInfo/Header.pch;
 				INFOPLIST_FILE = DateInfo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

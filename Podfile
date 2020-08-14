@@ -20,6 +20,9 @@ target 'DateInfo' do
   pod 'MJRefresh'
   pod 'LEETheme'
   pod 'YYWebImage'
+  pod 'UMCCommon'
+  pod 'UMCPush'
+  pod 'UMCSecurityPlugins'
 #  pod 'TSMessages'
 #  pod 'HexColors'
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
