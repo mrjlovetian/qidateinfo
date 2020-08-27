@@ -11,7 +11,6 @@
 @interface ImageCell()
 
 @property (nonatomic, strong) UIButton *colseBtn;
-@property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
@@ -63,7 +62,7 @@
 
 - (UIImageView *)imageView {
     if (!_imageView) {
-        _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 100)];
+        _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
         _imageView.userInteractionEnabled = YES;
         _imageView.contentMode = UIViewContentModeScaleAspectFill;
         _imageView.clipsToBounds = YES;

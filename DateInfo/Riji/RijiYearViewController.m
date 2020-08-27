@@ -30,7 +30,7 @@
     StarsOverlay *starsOverlay = [[StarsOverlay alloc] init];
     [self.view addSubview:self.tableView];
     self.isExtentArr = [[NSMutableArray alloc] initWithCapacity:1];
-    for (int i = 0; i < [RijiManager shareRijiManager].rijiArr.count; i++) {
+    for (int i = 0; i < self.arr.count; i++) {
         [self.isExtentArr addObject:@"1"];
     }
     starsOverlay.layer.frame = self.view.bounds;
@@ -38,7 +38,8 @@
     starsOverlay.emitter.emitterSize = CGSizeMake(ScreenWidth/4.0, (ScreenHeight - NavBarHeight - 49)/4.0);
     [self.view.layer addSublayer:starsOverlay.layer];
     
-    if ([RijiManager shareRijiManager].rijiArr.count == 0) {
+    
+    if (self.arr.count == 0) {
         UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"您还没有记录新的日志哦！去首页添加一条吧！" preferredStyle:(UIAlertControllerStyleAlert)];
         [alertVc addAction:[UIAlertAction actionWithTitle:@"好哒" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             
@@ -51,6 +52,12 @@
     [super viewWillAppear:animated];
     [[RijiManager shareRijiManager] reloadData];
     [self.tableView reloadData];
+    
+    
+    
+//    NSArray *array = [RiJiModel selectDataByYear:@"2020"];
+    
+    NSLog(@".......%@", self.arr);
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{

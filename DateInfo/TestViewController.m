@@ -9,7 +9,7 @@
 #import "TestViewController.h"
 #import <YYImage/YYImage.h>
 #import "YYAnimatedImageView.h"
-#import <YYWebImage/YYWebImage.h>
+#import "YBImageBrowser.h"
 
 @interface TestViewController ()
 
@@ -27,7 +27,6 @@
 //    YYImage *image = [YYImage imageWithData:data];
 //    self.imageView.image = image;
 
-    self.imageView.yy_imageURL = [NSURL URLWithString:@"http://simg.sydzyb.com/images/20190331/bba6b60995de9e3bfb95c147607a8c1a_2000_1333.jpg"];
     // Do any additional setup after loading the view.
 }
 

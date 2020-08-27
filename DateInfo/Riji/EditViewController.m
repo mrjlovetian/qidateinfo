@@ -17,12 +17,14 @@
 #import "TZImagePickerController.h"
 #import "RijiManager.h"
 #import "ImageCell.h"
-#import "MWPhoto.h"
-#import "MWPhotoBrowser.h"
+#import "YBImageBrowser.h"
+//#import ""
+//#import "MWPhoto.h"
+//#import "MWPhotoBrowser.h"
 
 static NSString *indetif = @"image";
 
-@interface EditViewController ()<TZImagePickerControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MWPhotoBrowserDelegate>
+@interface EditViewController ()<TZImagePickerControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -88,13 +90,13 @@ static NSString *indetif = @"image";
     btn.enabled = NO;
     NSString *today = [[NSDate date] formatYMD];
     NSInteger year = [[NSDate date] year];
-    NSInteger month = [[NSDate date] month];
     
     RiJiModel *rijiModel = [RiJiModel new];
     rijiModel.title = self.titleTextField.text;
     rijiModel.content = self.contentTextView.text;
-    rijiModel.dateStr = today;
-    rijiModel.dateTime = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSince1970]];
+    rijiModel.day = today;
+    rijiModel.year = [NSString stringWithFormat:@"%ld", year];
+    rijiModel.month = [[NSDate date] stringWithFormat:@"yyyy-MM"];
     
     if ([self.titleTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0 && [self.contentTextView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0 && self.imageArr.count == 1) {
         
@@ -106,87 +108,16 @@ static NSString *indetif = @"image";
         [self.imageArr removeLastObject];
     }
     [[FileManager shareManager] saveImages:self.imageArr imageName:self.imageNameArr complete:^(NSArray<NSString *> *imageUrls) {
-        rijiModel.images = imageUrls;
-    }];
-    
-    
-    NSMutableArray *datasArr = [NSMutableArray arrayWithCapacity:1];
-    [datasArr addObjectsFromArray:[RijiManager shareRijiManager].rijiArr];
-    NSMutableArray *modelarr = [NSMutableArray arrayWithCapacity:1];
-    
-    
-    BOOL hasDay = NO;
-    BOOL hasMonth = NO;
-    BOOL hasYear = NO;
-    RiJiDay *rijiDay = nil;
-    RiJiMonth *rijiMonth = nil;
-    RiJiYear *rijiYear = nil;
-    for (RiJiYear *rijiYear in datasArr) {
-        if ([rijiYear.year integerValue] == year && rijiYear.datas && rijiYear.datas.count > 0) {
-            for (RiJiMonth *rijiMonth in rijiYear.datas) {
-                if ([rijiMonth.month integerValue] == month && rijiMonth.datas && rijiMonth.datas.count > 0) {
-                    for (RiJiDay *rijiDay in rijiMonth.datas) {
-                        if ([rijiDay.date isEqualToString:today] && rijiDay.datas && rijiDay.datas.count > 0) {
-                            [modelarr addObjectsFromArray:rijiDay.datas];
-                            [modelarr insertObject:rijiModel atIndex:0];
-                            rijiDay.datas = modelarr;
-                            hasDay = YES;
-                            break;
-                        }
-                    }
-                    if (!hasDay) {
-                        rijiDay = [RiJiDay new];
-                        rijiDay.date = today;
-                        rijiDay.datas = @[rijiModel];
-                        NSMutableArray *dayArr = [NSMutableArray arrayWithCapacity:1];
-                        [dayArr addObjectsFromArray:rijiMonth.datas];
-                        [dayArr insertObject:rijiDay atIndex:0];
-                        rijiMonth.datas = dayArr;
-                    }
-                    hasMonth = YES;
-                    break;
-                }
-            }
-            if (!hasMonth) {
-                rijiMonth = [RiJiMonth new];
-                rijiMonth.month = [NSString stringWithFormat:@"%ld", month];
-                if (!rijiDay) {
-                    rijiDay = [RiJiDay new];
-                    rijiDay.date = today;
-                    rijiDay.datas = @[rijiModel];
-                }
-                rijiMonth.datas = @[rijiDay];
-                NSMutableArray *monthArr = [NSMutableArray arrayWithCapacity:1];
-                [monthArr addObjectsFromArray:rijiYear.datas];
-                [monthArr insertObject:rijiMonth atIndex:0];
-                rijiYear.datas = monthArr;
-            }
-            hasYear = YES;
-            break;
+        NSString *imageUrl = [imageUrls componentsJoinedByString:@"#"];
+        rijiModel.imageUrls = imageUrl;
+        BOOL result = [RiJiModel insertData:rijiModel];
+        
+        if (result) {
+            [TSMessage showNotificationWithTitle:@"添加成功" subtitle:@"可以到日志列表看看今天新增的日志哦" type:(TSMessageNotificationTypeSuccess)];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self.navigationController popViewControllerAnimated:YES];
+            });
         }
-    }
-    
-    if (!hasYear) {
-        rijiYear = [RiJiYear new];
-        rijiMonth = [RiJiMonth new];
-        rijiDay = [RiJiDay new];
-        rijiYear.datas = @[rijiMonth];
-        rijiYear.year = [NSString stringWithFormat:@"%ld", (long)year];
-        rijiMonth.datas = @[rijiDay];
-        rijiMonth.month = [NSString stringWithFormat:@"%ld", (long)month];
-        rijiDay.datas = @[rijiModel];
-        rijiDay.date = today;
-        [datasArr insertObject:rijiYear atIndex:0];
-    }
-    
-    NSString *content = [datasArr yy_modelToJSONString];
-    [[FileManager shareManager] saveFile:content fileName:@"riji" complete:^(NSString *fileUrl) {
-        [[FileManager shareManager] saveFileName:fileUrl ForKey:@"mrjdata"];
-        [TSMessage showNotificationWithTitle:@"添加成功" subtitle:@"可以到日志列表看看今天新增的日志哦" type:(TSMessageNotificationTypeSuccess)];
-        [[RijiManager shareRijiManager] reloadData];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.navigationController popViewControllerAnimated:YES];
-        });
     }];
 }
 
@@ -199,9 +130,6 @@ static NSString *indetif = @"image";
         [att addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:17.0] range:NSMakeRange(0, str.length)];
         [att addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"afafaf"] range:NSMakeRange(0, str.length)];
         _titleTextField.attributedPlaceholder = att;
-//        _titleTextField.lee_theme.LeeAddPlaceholderColor(@"main", [UIColor colorWithHexString:@"dfdfdf"]);
-//        _titleTextField.placeholder = @"起个名字吧！";
-//        _titleTextField.font = [UIFont systemFontOfSize:17.0];
         _titleTextField.textColor = [UIColor whiteColor];
     }
     return _titleTextField;
@@ -219,17 +147,13 @@ static NSString *indetif = @"image";
     return _contentTextView;
 }
 
-#pragma mark MWPhotoBrowserDelegate
-- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
-    return self.imageArr.count-1;
-}
-
-- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
-    MWPhoto *photo = [MWPhoto photoWithImage:self.imageArr[index]];
-    return photo;
-}
-
 #pragma mark UICollectionViewDelegate
+
+//设置每个item的UIEdgeInsets
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(10, 10, 10, 10);
+}
+
 
 #pragma mark UICollectionViewDataSource
 
@@ -257,10 +181,19 @@ static NSString *indetif = @"image";
             [self addImage];
         } else {
             MRJLog(@"点击图片");
-            MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
-            browser.displayActionButton = YES;
-            [browser setCurrentPhotoIndex:indexPath.row];
-            [self.navigationController pushViewController:browser animated:YES];
+            NSMutableArray *datas = [NSMutableArray arrayWithCapacity:1];
+            for (UIImage *image in self.imageArr) {
+                YBIBImageData *data = [YBIBImageData new];
+                data.image = ^UIImage * _Nullable{
+                    return image;
+                };
+                [datas addObject:data];
+            }
+            
+            YBImageBrowser *browser = [YBImageBrowser new];
+            browser.dataSourceArray = datas;
+            browser.currentPage = indexPath.row;
+            [browser show];
         }
     };
     return cell;
@@ -276,10 +209,8 @@ static NSString *indetif = @"image";
         _collectionView.dataSource = self;
         [_collectionView registerClass:[ImageCell class] forCellWithReuseIdentifier:indetif];
         _collectionView.lee_theme.LeeAddBackgroundColor(@"main", MAINCOLOR);
-        _collectionView.contentInset = UIEdgeInsetsMake(10, 10, 0, 10);
-        layout.itemSize = CGSizeMake(80, 100);
-        layout.minimumLineSpacing = 10;
-        layout.minimumInteritemSpacing = 20;
+        CGFloat iamgeWidth = (ScreenSzie.width - 41)/3.0;
+        layout.itemSize = CGSizeMake(iamgeWidth, iamgeWidth);
     }
     return _collectionView;
 }

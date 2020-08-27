@@ -14,6 +14,7 @@ typedef void(^ImageCellTapBlock)(NSIndexPath *indexPath);
 @interface ImageCell : UICollectionViewCell
 
 @property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, assign) NSIndexPath *indexPath;
 @property (nonatomic, assign) BOOL isHideCloseBtn;
 

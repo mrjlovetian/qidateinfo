@@ -29,15 +29,28 @@
 
 @interface RiJiModel : NSObject
 
+@property (nonatomic, copy)NSString *year;
+@property (nonatomic, copy)NSString *month;
+@property (nonatomic, copy)NSString *day;
 @property (nonatomic, copy)NSString *title;
 @property (nonatomic, copy)NSString *content;
 @property (nonatomic, copy)NSString *dateTime;
-@property (nonatomic, copy)NSString *dateStr;
-@property (nonatomic, copy)NSString *index;
+@property (nonatomic, copy)NSString *imageUrls;
 @property (nonatomic, copy)NSArray *images;
-@property (nonatomic, copy)NSArray *videos;
-@property (nonatomic, copy)NSArray *voices;
+@property (nonatomic, assign) NSInteger localID;
+//@property (nonatomic, copy)NSArray *videos;
+//@property (nonatomic, copy)NSArray *voices;
 
 @property (nonatomic, assign)CGFloat height;
+
++ (BOOL)insertData:(RiJiModel *)model;
++ (BOOL)deleteModel:(RiJiModel *)model;
++ (NSArray *)selectDataByType:(NSInteger)modelType;
+
++ (NSArray *)selectDataByDay:(NSString *)day;
+
++ (NSArray *)selectDataByYear:(NSString *)year;
+
++ (NSArray *)selectDataByYearMonth:(NSString *)month;
 
 @end

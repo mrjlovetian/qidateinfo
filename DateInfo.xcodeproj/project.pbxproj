@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A05AFA424E6B1BE008E3275 /* XMDataManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0A05AFA224E6B1BD008E3275 /* XMDataManager.mm */; };
+		0A05AFA724E6B250008E3275 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A05AFA524E6B24E008E3275 /* NSDate+Extension.m */; };
 		0A10B9292262E69B00E56D4C /* yuel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A10B9282262E69B00E56D4C /* yuel.jpg */; };
 		0A38B8EB222BAA1100ADD2A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B8EA222BAA1100ADD2A2 /* AppDelegate.m */; };
 		0A38B8EE222BAA1100ADD2A2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B8ED222BAA1100ADD2A2 /* RootViewController.m */; };
@@ -76,7 +78,7 @@
 		0AD20456224A63CC0064F4E8 /* MRJCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD20455224A63CC0064F4E8 /* MRJCalendarWeekdayView.m */; };
 		0AD20458224A6D700064F4E8 /* holiday.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AD20457224A6D700064F4E8 /* holiday.json */; };
 		0ADC844B223525A400A18C8C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC844A223525A400A18C8C /* TestViewController.m */; };
-		0AFB36012230172F001DD940 /* RiJiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FA2230172F001DD940 /* RiJiModel.m */; };
+		0AFB36012230172F001DD940 /* RiJiModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FA2230172F001DD940 /* RiJiModel.mm */; };
 		0AFB36022230172F001DD940 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FD2230172F001DD940 /* FileManager.m */; };
 		0AFB36032230172F001DD940 /* LanguageManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB36002230172F001DD940 /* LanguageManger.m */; };
 		0AFB36062233B28A001DD940 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB36052233B28A001DD940 /* EditViewController.m */; };
@@ -116,6 +118,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A05AFA224E6B1BD008E3275 /* XMDataManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XMDataManager.mm; sourceTree = "<group>"; };
+		0A05AFA324E6B1BE008E3275 /* XMDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMDataManager.h; sourceTree = "<group>"; };
+		0A05AFA524E6B24E008E3275 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		0A05AFA624E6B24F008E3275 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		0A10B9282262E69B00E56D4C /* yuel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yuel.jpg; sourceTree = "<group>"; };
 		0A38B8E6222BAA1100ADD2A2 /* 七日.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "七日.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A38B8E9222BAA1100ADD2A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -236,7 +242,7 @@
 		0ADC8449223525A400A18C8C /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		0ADC844A223525A400A18C8C /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		0AFB35F92230172F001DD940 /* RiJiModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiJiModel.h; sourceTree = "<group>"; };
-		0AFB35FA2230172F001DD940 /* RiJiModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RiJiModel.m; sourceTree = "<group>"; };
+		0AFB35FA2230172F001DD940 /* RiJiModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RiJiModel.mm; sourceTree = "<group>"; };
 		0AFB35FC2230172F001DD940 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		0AFB35FD2230172F001DD940 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		0AFB35FF2230172F001DD940 /* LanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageManager.h; sourceTree = "<group>"; };
@@ -563,8 +569,12 @@
 		0AFB35F82230172F001DD940 /* RiModel */ = {
 			isa = PBXGroup;
 			children = (
+				0A05AFA624E6B24F008E3275 /* NSDate+Extension.h */,
+				0A05AFA524E6B24E008E3275 /* NSDate+Extension.m */,
 				0AFB35F92230172F001DD940 /* RiJiModel.h */,
-				0AFB35FA2230172F001DD940 /* RiJiModel.m */,
+				0AFB35FA2230172F001DD940 /* RiJiModel.mm */,
+				0A05AFA324E6B1BE008E3275 /* XMDataManager.h */,
+				0A05AFA224E6B1BD008E3275 /* XMDataManager.mm */,
 			);
 			path = RiModel;
 			sourceTree = "<group>";
@@ -845,6 +855,7 @@
 			files = (
 				0A38B8EE222BAA1100ADD2A2 /* RootViewController.m in Sources */,
 				0A8A678D2233EB12001D270B /* NSDate+Reporting.m in Sources */,
+				0A05AFA424E6B1BE008E3275 /* XMDataManager.mm in Sources */,
 				0A5218CB224E523100256157 /* ShouWenzhanViewController.m in Sources */,
 				0AFB36032230172F001DD940 /* LanguageManger.m in Sources */,
 				0A8A93B1225077530007A1C3 /* StarsOverlay.swift in Sources */,
@@ -852,7 +863,8 @@
 				0AD204482247C17A0064F4E8 /* HexColor.m in Sources */,
 				0A8A9398224F5E130007A1C3 /* LaunchImageView.m in Sources */,
 				0AD204332247BE780064F4E8 /* TSBlurView.m in Sources */,
-				0AFB36012230172F001DD940 /* RiJiModel.m in Sources */,
+				0A05AFA724E6B250008E3275 /* NSDate+Extension.m in Sources */,
+				0AFB36012230172F001DD940 /* RiJiModel.mm in Sources */,
 				0AD204322247BE780064F4E8 /* TSMessageView.m in Sources */,
 				0A8A939B224F8BE80007A1C3 /* AboutViewController.m in Sources */,
 				0A8A678C2233EB12001D270B /* NSDate+CupertinoYankee.m in Sources */,

@@ -16,6 +16,8 @@
 #import "JumpDateView.h"
 #import "NSDate+Reporting.h"
 #import "TestViewController.h"
+#import "RiJiModel.h"
+#import "RijiDetailViewController.h"
 
 @interface RootViewController () <FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance, JumpDateViewDelegate>
 
@@ -29,6 +31,8 @@
 @property (strong, nonatomic) LunarFormatter *lunarFormatter;
 @property (strong, nonatomic) NSArray<EKEvent *> *events;
 @property (strong, nonatomic) NSDictionary *holiyDay;
+@property (nonatomic, strong) NSArray *rijiArr;
+@property (nonatomic, strong) NSMutableArray *daysArr;
 
 @end
 
@@ -95,6 +99,8 @@
     NSData *data = [[NSData data] initWithContentsOfFile:path];
     self.holiyDay = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     
+    self.daysArr = [NSMutableArray arrayWithCapacity:1];
+    [self getRijiarrWith:[NSDate date]];
 }
 
 - (void)addRiji {
@@ -119,6 +125,16 @@
 
 - (void)today {
     [self.calendar setCurrentPage:[NSDate date] animated:YES];
+}
+
+- (void)getRijiarrWith:(NSDate *)date {
+    NSString *selectMonth = [date stringWithFormat:@"yyyy-MM"];
+    self.rijiArr = [RiJiModel selectDataByYearMonth:selectMonth];
+    
+    [self.daysArr removeAllObjects];
+    for (RiJiModel *model in self.rijiArr) {
+        [self.daysArr addObject:model.day];
+    }
 }
 
 #pragma mark JumpDateViewDelegate
@@ -156,10 +172,20 @@
 
 - (void)calendar:(FSCalendar *)calendar didSelectDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition {
     NSLog(@"did select %@",[self.dateFormatter stringFromDate:date]);
+    NSString *day = [date stringWithFormat:@"yyyy-MM-dd"];
+    if ([self.daysArr containsObject:day]) {
+        RijiDetailViewController *vc = [RijiDetailViewController new];
+        NSArray *arr = [RiJiModel selectDataByDay:day];
+        if (arr.count > 0) {
+            vc.rijiModel = arr[0];
+        }
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (void)calendarCurrentPageDidChange:(FSCalendar *)calendar {
-    NSLog(@"did change page %@",[self.dateFormatter stringFromDate:calendar.currentPage]);
+    NSDate *date = calendar.currentPage;
+    [self getRijiarrWith:date];
 }
 
 - (NSInteger)calendar:(FSCalendar *)calendar numberOfEventsForDate:(NSDate *)date {
@@ -232,12 +258,10 @@
     NSString *dateStr = [date stringWithFormat:@"MM-dd"];
     if ([self.holiyDay objectForKey:@"holiday"] && ([date year] == [[NSDate date] year])) {
         if ([[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr]) {
-            if ([[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr]) {
-                if ([[[[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr] objectForKey:@"holiday"] boolValue]) {
-                    return [UIColor colorWithHexString:@"38c88a"];
-                }
-                return [UIColor colorWithHexString:@"ff801a"];
+            if ([[[[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr] objectForKey:@"holiday"] boolValue]) {
+                return [UIColor colorWithHexString:@"38c88a"];
             }
+            return [UIColor colorWithHexString:@"ff801a"];
         }
     }
     return [UIColor whiteColor];
@@ -250,15 +274,27 @@
     NSString *dateStr = [date stringWithFormat:@"MM-dd"];
     if ([self.holiyDay objectForKey:@"holiday"] && ([date year] == [[NSDate date] year])) {
         if ([[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr]) {
-            if ([[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr]) {
-                if ([[[[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr] objectForKey:@"holiday"] boolValue]) {
-                    return [UIColor colorWithHexString:@"38c88a"];
-                }
-                return [UIColor colorWithHexString:@"ff801a"];
+            if ([[[[self.holiyDay objectForKey:@"holiday"] objectForKey:dateStr] objectForKey:@"holiday"] boolValue]) {
+                return [UIColor colorWithHexString:@"38c88a"];
             }
+            return [UIColor colorWithHexString:@"ff801a"];
         }
     }
     return [UIColor whiteColor];
+}
+
+//- (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance fillSelectionColorForDate:(NSDate *)date
+//{
+//    return [UIColor whiteColor];
+//}
+
+- (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance borderDefaultColorForDate:(NSDate *)date {
+    
+    if ([self.daysArr containsObject:[date stringWithFormat:@"yyyy-MM-dd"]]) {
+        return [UIColor magentaColor];
+    }
+    return nil;
+    
 }
 
 #pragma mark ui

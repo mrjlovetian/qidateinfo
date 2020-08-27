@@ -9,14 +9,14 @@
 #import "ShowRijiViewController.h"
 #import "FileManager.h"
 #import "RiJiModel.h"
-#import "MWPhotoBrowser.h"
 #import "TestViewController.h"
 #import "RijiCell.h"
 #import "RijiDetailViewController.h"
 #import "RijiSectionView.h"
 #import "DateInfo-Swift.h"
+#import "YBImageBrowser.h"
 
-@interface ShowRijiViewController () <UITableViewDelegate, UITableViewDataSource, MWPhotoBrowserDelegate>
+@interface ShowRijiViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong)UITableView *tableView;
 @property (nonatomic, copy)NSArray *photos;
@@ -55,26 +55,29 @@
 
 #pragma mark method
 - (void)checkImageIndex:(NSInteger)index rijiModel:(RiJiModel *)model {
-    NSMutableArray *arr = [NSMutableArray arrayWithCapacity:1];
+//    NSMutableArray *arr = [NSMutableArray arrayWithCapacity:1];
+//    for (NSString *imageUrl in model.images) {
+//        NSURL *url = [[NSURL alloc] initFileURLWithPath:[NSString stringWithFormat:@"%@%@", [[FileManager shareManager] getMianPath] , imageUrl]];
+//        MWPhoto *photo = [[MWPhoto alloc] initWithURL:url];
+//        [arr addObject:photo];
+//    }
+//    self.photos = arr;
+//    MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+//    [browser setCurrentPhotoIndex:index];
+//    [self.navigationController pushViewController:browser animated:YES];
+    
+    NSMutableArray *datas = [NSMutableArray arrayWithCapacity:1];
     for (NSString *imageUrl in model.images) {
-        NSURL *url = [[NSURL alloc] initFileURLWithPath:[NSString stringWithFormat:@"%@%@", [[FileManager shareManager] getMianPath] , imageUrl]];
-        MWPhoto *photo = [[MWPhoto alloc] initWithURL:url];
-        [arr addObject:photo];
+        YBIBImageData *data = [YBIBImageData new];
+        data.imagePath = imageUrl;
+        [datas addObject:data];
     }
-    self.photos = arr;
-    MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
-    [browser setCurrentPhotoIndex:index];
-    [self.navigationController pushViewController:browser animated:YES];
+    YBImageBrowser *browser = [YBImageBrowser new];
+    browser.dataSourceArray = datas;
+    browser.currentPage = index;
+    [browser show];
 }
 
-#pragma mark MWPhotoBrowserDelegate
-- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
-    return self.photos.count;
-}
-
-- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
-    return [self.photos objectAtIndex:index];
-}
 
 #pragma mark UITableViewDelegate
 
