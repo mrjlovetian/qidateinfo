@@ -77,7 +77,6 @@
 		0AD2045022491E360064F4E8 /* RijiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2044F22491E360064F4E8 /* RijiManager.m */; };
 		0AD20456224A63CC0064F4E8 /* MRJCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD20455224A63CC0064F4E8 /* MRJCalendarWeekdayView.m */; };
 		0AD20458224A6D700064F4E8 /* holiday.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AD20457224A6D700064F4E8 /* holiday.json */; };
-		0ADC844B223525A400A18C8C /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC844A223525A400A18C8C /* TestViewController.m */; };
 		0AFB36012230172F001DD940 /* RiJiModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FA2230172F001DD940 /* RiJiModel.mm */; };
 		0AFB36022230172F001DD940 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FD2230172F001DD940 /* FileManager.m */; };
 		0AFB36032230172F001DD940 /* LanguageManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB36002230172F001DD940 /* LanguageManger.m */; };
@@ -239,8 +238,6 @@
 		0AD20454224A63CC0064F4E8 /* MRJCalendarWeekdayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRJCalendarWeekdayView.h; sourceTree = "<group>"; };
 		0AD20455224A63CC0064F4E8 /* MRJCalendarWeekdayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRJCalendarWeekdayView.m; sourceTree = "<group>"; };
 		0AD20457224A6D700064F4E8 /* holiday.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = holiday.json; sourceTree = "<group>"; };
-		0ADC8449223525A400A18C8C /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		0ADC844A223525A400A18C8C /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		0AFB35F92230172F001DD940 /* RiJiModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RiJiModel.h; sourceTree = "<group>"; };
 		0AFB35FA2230172F001DD940 /* RiJiModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RiJiModel.mm; sourceTree = "<group>"; };
 		0AFB35FC2230172F001DD940 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
@@ -333,8 +330,6 @@
 				0AFB35F82230172F001DD940 /* RiModel */,
 				0A38B8EC222BAA1100ADD2A2 /* RootViewController.h */,
 				0A38B8ED222BAA1100ADD2A2 /* RootViewController.m */,
-				0ADC8449223525A400A18C8C /* TestViewController.h */,
-				0ADC844A223525A400A18C8C /* TestViewController.m */,
 				0A38B8F2222BAA1200ADD2A2 /* Assets.xcassets */,
 				0A38B8F4222BAA1200ADD2A2 /* LaunchScreen.storyboard */,
 				0A38B8F7222BAA1200ADD2A2 /* Info.plist */,
@@ -881,7 +876,6 @@
 				0A8A678B2233EB12001D270B /* NSDate+Extension.m in Sources */,
 				0ACCD7C62247B3C900CC7E0D /* BaseNavViewController.m in Sources */,
 				0ACCD7CE2247B41100CC7E0D /* ParallaxHeaderView.m in Sources */,
-				0ADC844B223525A400A18C8C /* TestViewController.m in Sources */,
 				0AFB36022230172F001DD940 /* FileManager.m in Sources */,
 				0A38B8EB222BAA1100ADD2A2 /* AppDelegate.m in Sources */,
 				0AD2044D22491DAD0064F4E8 /* RijiYearViewController.m in Sources */,

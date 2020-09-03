@@ -9,7 +9,6 @@
 #import "ShowRijiViewController.h"
 #import "FileManager.h"
 #import "RiJiModel.h"
-#import "TestViewController.h"
 #import "RijiCell.h"
 #import "RijiDetailViewController.h"
 #import "RijiSectionView.h"

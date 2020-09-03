@@ -15,7 +15,6 @@
 #import "MRJCalendarWeekdayView.h"
 #import "JumpDateView.h"
 #import "NSDate+Reporting.h"
-#import "TestViewController.h"
 #import "RiJiModel.h"
 #import "RijiDetailViewController.h"
 
@@ -100,22 +99,18 @@
     self.holiyDay = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     
     self.daysArr = [NSMutableArray arrayWithCapacity:1];
+//    [self getRijiarrWith:[NSDate date]];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [self getRijiarrWith:[NSDate date]];
+    [self.calendar reloadData];
 }
 
 - (void)addRiji {
-//    TestViewController *vca = [TestViewController new];
-//    [self.navigationController pushViewController:vca animated:YES];
-//    return;
-    
     UIViewController *vc = [[NSClassFromString(@"EditViewController") alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
-//    if ([[self.calendar.selectedDate formatYMD] isEqualToString:[[NSDate date] formatYMD]]) {
-//        UIViewController *vc = [[NSClassFromString(@"EditViewController") alloc] init];
-//        [self.navigationController pushViewController:vc animated:YES];
-//        return;
-//    }
-//    [TSMessage showNotificationWithTitle:@"选择错误" subtitle:@"只能增加今天的日志" type:(TSMessageNotificationTypeError)];
 }
 
 - (void)selectDay {
@@ -189,7 +184,6 @@
 }
 
 - (NSInteger)calendar:(FSCalendar *)calendar numberOfEventsForDate:(NSDate *)date {
-//    if (!self.showsEvents) return 0;
     if (!self.events) return 0;
     NSArray<EKEvent *> *events = [self eventsForDate:date];
     return events.count;

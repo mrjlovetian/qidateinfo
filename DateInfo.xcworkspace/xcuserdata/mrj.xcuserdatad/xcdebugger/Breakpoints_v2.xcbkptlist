@@ -154,74 +154,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "48ABB443-EA70-4539-9DAC-009AAC2D8071"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DateInfo/Riji/RijiDetailViewController.m"
-            timestampString = "575999450.661633"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "-deleteRiji"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "48ABB443-EA70-4539-9DAC-009AAC2D8071 - 8380d653bb9b5ca5"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__38-[RijiDetailViewController deleteRiji]_block_invoke"
-                  moduleName = "DateInfo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mrj/Desktop/Project/DateInfo/DateInfo/Riji/RijiDetailViewController.m"
-                  timestampString = "575998440.076156"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "48ABB443-EA70-4539-9DAC-009AAC2D8071 - 8380d653bb9b5ca5"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__38-[RijiDetailViewController deleteRiji]_block_invoke"
-                  moduleName = "DateInfo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mrj/Desktop/Project/DateInfo/DateInfo/Riji/RijiDetailViewController.m"
-                  timestampString = "575998440.082773"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "132">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "72778A61-B279-4806-9592-28AFF1CC7733"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DateInfo/Riji/RijiDetailViewController.m"
-            timestampString = "575999450.661677"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "-deleteRiji"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0AD6F26B-1DBD-4E9B-BF8A-24D7720C55E2"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -281,8 +213,8 @@
             timestampString = "576170424.578801"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "7">
          </BreakpointContent>
@@ -335,23 +267,6 @@
             startingLineNumber = "37"
             endingLineNumber = "37"
             landmarkName = "-tabView"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "43D30D5F-58B4-4591-86C9-34A2187AA99C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DateInfo/Riji/RijiDetailViewController.m"
-            timestampString = "575999450.662187"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "-deleteRiji"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -658,8 +573,8 @@
             filePath = "DateInfo/RootViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
             landmarkName = "-loadCalendarEvents"
             landmarkType = "7">
          </BreakpointContent>
@@ -674,8 +589,8 @@
             filePath = "DateInfo/RootViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "-getRijiarrWith:"
             landmarkType = "7">
          </BreakpointContent>
@@ -693,22 +608,6 @@
             startingLineNumber = "47"
             endingLineNumber = "47"
             landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "38FF7BB4-2968-4368-A767-E8B52C5CEB48"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DateInfo/Riji/RijiDetailViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "-checkImageIndex:rijiModel:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -758,6 +657,22 @@
                   offsetFromSymbolStart = "564">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A7E655A-738F-435D-8F39-5C693F8DDE6D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DateInfo/RootViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "-viewDidAppear:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

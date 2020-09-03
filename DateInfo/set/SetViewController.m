@@ -52,9 +52,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
         ShouWenzhanViewController *vc = [ShouWenzhanViewController new];
-        [self presentViewController:vc animated:YES completion:^{
-            
-        }];
+        vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self presentViewController:vc animated:YES completion:nil];
     } else if (indexPath.row == 1) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto://1520312758@qq.com"]];
     } else if (indexPath.row == 2) {
