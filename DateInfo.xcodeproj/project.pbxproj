@@ -1061,6 +1061,7 @@
 				CURRENT_PROJECT_VERSION = 1.1.3;
 				DEVELOPMENT_TEAM = S2L4BYS6LP;
 				GCC_PREFIX_HEADER = /Users/mrj/Desktop/Project/DateInfo/DateInfo/Header.pch;
+
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/CYLTabBarController/CYLTabBarController.framework/Headers\"",
@@ -1091,6 +1092,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrj.qidate;
 				PRODUCT_NAME = "七日";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DateInfo/LaunchImage/DateInfo-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "DateInfo-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1111,6 +1113,7 @@
 				CURRENT_PROJECT_VERSION = 1.1.3;
 				DEVELOPMENT_TEAM = S2L4BYS6LP;
 				GCC_PREFIX_HEADER = /Users/mrj/Desktop/Project/DateInfo/DateInfo/Header.pch;
+
 				INFOPLIST_FILE = DateInfo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1120,6 +1123,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrj.qidate;
 				PRODUCT_NAME = "七日";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DateInfo/LaunchImage/DateInfo-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "DateInfo-Swift.h";
 				SWIFT_VERSION = 4.0;
