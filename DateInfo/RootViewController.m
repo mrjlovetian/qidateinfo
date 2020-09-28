@@ -17,6 +17,7 @@
 #import "NSDate+Reporting.h"
 #import "RiJiModel.h"
 #import "RijiDetailViewController.h"
+#import "DateInfo-Swift.h"
 
 @interface RootViewController () <FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance, JumpDateViewDelegate>
 
@@ -100,12 +101,24 @@
     
     self.daysArr = [NSMutableArray arrayWithCapacity:1];
 //    [self getRijiarrWith:[NSDate date]];
+    StarsOverlay *starsOverlay = [[StarsOverlay alloc] init];
+    starsOverlay.layer.frame = self.view.bounds;
+    starsOverlay.emitter.emitterPosition = CGPointMake(ScreenWidth/2.0, (ScreenHeight - NavBarHeight - 49)/2.0);
+    starsOverlay.emitter.emitterSize = CGSizeMake(ScreenWidth/4.0, (ScreenHeight - NavBarHeight - 49)/4.0);
+    [self.view.layer addSublayer:starsOverlay.layer];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self getRijiarrWith:[NSDate date]];
     [self.calendar reloadData];
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+    if ([touch.view isKindOfClass:[StarsOverlay class]]) {
+        return NO;
+    }
+    return YES;
 }
 
 - (void)addRiji {

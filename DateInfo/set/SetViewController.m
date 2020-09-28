@@ -55,7 +55,7 @@
         vc.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:vc animated:YES completion:nil];
     } else if (indexPath.row == 1) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto://1520312758@qq.com"]];
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto://1520312758@qq.com"]];
     } else if (indexPath.row == 2) {
         AboutViewController *vc = [AboutViewController new];
         [self.navigationController pushViewController:vc animated:YES];

@@ -1,14 +1,14 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/aliyun/aliyun-specs.git'
 use_frameworks!
 pod 'FSCalendar'
 pod 'YYCategories'
 
 target 'DateInfo' do
   
-  pod 'YYModel', '~> 1.0.4'
   pod 'YYText'
-  pod 'Masonry', '~> 1.1.0'
 #  pod 'MRJTool'
   pod 'IQKeyboardManager'
   pod 'TZImagePickerController'
@@ -25,6 +25,14 @@ target 'DateInfo' do
   pod 'UMCSecurityPlugins'
   pod 'WCDB'
   pod 'YBImageBrowser'
+  pod 'Masonry'
+  pod 'AFNetworking','~> 3.0'
+  pod 'SDWebImage'
+  pod 'MBProgressHUD'
+  pod 'YYModel'
+#  pod 'YYImage/WebP'
+#  pod 'AlicloudFeedback'
+  pod 'ZXRequestBlock'
 #  pod 'TSMessages'
 #  pod 'HexColors'
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks

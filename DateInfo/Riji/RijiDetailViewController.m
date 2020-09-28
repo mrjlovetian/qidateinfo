@@ -11,7 +11,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "FileManager.h"
 #import "RijiManager.h"
-#import "YBImageBrowser.h"
+#import <YBImageBrowser.h>
 
 @interface RijiDetailViewController ()
 

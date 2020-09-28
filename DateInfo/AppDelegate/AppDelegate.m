@@ -15,12 +15,15 @@
 #import "RijiYearViewController.h"
 #import "SetViewController.h"
 #import "CYLTabBarController.h"
-#import "BaseNavViewController.h"
+//#import "BaseNavViewController.h"
 #import "RijiManager.h"
 #import "WenzhanManager.h"
 #import "LaunchImageView.h"
 #import <UMCommon/UMCommon.h>
 #import <UMPush/UMessage.h>
+#import "ZXRequestBlock.h"
+#import "MainViewController.h"
+#import "XNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -59,6 +62,8 @@
     
     // UMeng
     [self setupUMeng:launchOptions];
+        
+    [ZXRequestBlock disableHttpProxy];
     
     return YES;
 }
@@ -109,14 +114,15 @@
 #pragma mark method
 - (void)setupViewControllers {
     RootViewController *firstViewController = [[RootViewController alloc] init];
-    BaseNavViewController *firstNavigationController = [[BaseNavViewController alloc]
+    XNavigationController *firstNavigationController = [[XNavigationController alloc]
                                                         initWithRootViewController:firstViewController];
     
-    RijiYearViewController *secondViewController = [[RijiYearViewController alloc] init];
-    BaseNavViewController *secondNavigationController = [[BaseNavViewController alloc]
+    MainViewController *secondViewController = [[MainViewController alloc] init];
+    XNavigationController *secondNavigationController = [[XNavigationController alloc]
                                                          initWithRootViewController:secondViewController];
+    
     SetViewController *threeViewController = [[SetViewController alloc] init];
-    BaseNavViewController *threeNavigationController = [[BaseNavViewController alloc]
+    XNavigationController *threeNavigationController = [[XNavigationController alloc]
                                                         initWithRootViewController:threeViewController];
     
     CYLTabBarController *tabBarController = [[CYLTabBarController alloc] init];
@@ -144,7 +150,7 @@
                             CYLTabBarItemSelectedImage : @"one",
                             };
     NSDictionary *dict2 = @{
-                            CYLTabBarItemTitle : @"日志",
+                            CYLTabBarItemTitle : @"壁纸",
                             CYLTabBarItemImage : @"twoBlack",
                             CYLTabBarItemSelectedImage : @"two",
                             };

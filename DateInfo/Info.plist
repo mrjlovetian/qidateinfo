@@ -26,8 +26,6 @@
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
-		<key>NSAllowsArbitraryLoadsInWebContent</key>
-		<true/>
 	</dict>
 	<key>NSCalendarsUsageDescription</key>
 	<string>七日需要访问您的日历，允许后可以为您提供假期信息</string>

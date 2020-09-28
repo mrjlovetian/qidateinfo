@@ -11,7 +11,7 @@
 #import "RiJiModel.h"
 #import "ShowRijiViewController.h"
 #import "RijiSectionView.h"
-#import "DateInfo-Swift.h"
+
 
 @interface RijiYearViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -27,16 +27,13 @@
     [super viewDidLoad];
     self.title = @"日志";
     self.navigationController.navigationBar.translucent = NO;
-    StarsOverlay *starsOverlay = [[StarsOverlay alloc] init];
-    [self.view addSubview:self.tableView];
+    
     self.isExtentArr = [[NSMutableArray alloc] initWithCapacity:1];
     for (int i = 0; i < self.arr.count; i++) {
         [self.isExtentArr addObject:@"1"];
     }
-    starsOverlay.layer.frame = self.view.bounds;
-    starsOverlay.emitter.emitterPosition = CGPointMake(ScreenWidth/2.0, (ScreenHeight - NavBarHeight - 49)/2.0);
-    starsOverlay.emitter.emitterSize = CGSizeMake(ScreenWidth/4.0, (ScreenHeight - NavBarHeight - 49)/4.0);
-    [self.view.layer addSublayer:starsOverlay.layer];
+    [self.view addSubview:self.tableView];
+    
     
     
     if (self.arr.count == 0) {
@@ -60,12 +57,6 @@
     NSLog(@".......%@", self.arr);
 }
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
-    if ([touch.view isKindOfClass:[StarsOverlay class]]) {
-        return NO;
-    }
-    return YES;
-}
 
 #pragma mark UITableViewDelegate
 

@@ -15,6 +15,7 @@
 @property (nonatomic, strong)UIDatePicker *picker;
 @property (nonatomic, strong)NSDate *maxDate;
 @property (nonatomic, strong)NSDate *minDate;
+@property (nonatomic, strong)UIView *backView;
 @property (nonatomic, strong)BtnColumnView *btnColimnView;
 @property (nonatomic, strong)UIButton *hiddenBtn;
 @end
@@ -55,13 +56,28 @@
 - (void)initUI {
     [self addSubview:self.hiddenBtn];
     [self addSubview:self.btnColimnView];
+    [self addSubview:self.backView];
     [self addSubview:self.picker];
+}
+
+- (UIView *)backView {
+    if (!_backView) {
+        _backView = [[UIView alloc] initWithFrame:CGRectMake(0, _btnColimnView.bottom, ScreenWidth, PICK_HEIGHT)];
+        _backView.backgroundColor = [UIColor whiteColor];
+    }
+    return _backView;
 }
 
 - (UIDatePicker *)picker {
     if (!_picker) {
         _picker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, _btnColimnView.bottom, ScreenWidth, PICK_HEIGHT)];
         _picker.datePickerMode = UIDatePickerModeDate;
+        if (@available(iOS 13.4, *)) {
+            _picker.preferredDatePickerStyle = UIDatePickerStyleWheels;
+        } else {
+            // Fallback on earlier versions
+        }
+        _picker.centerX = self.centerX;
         _picker.backgroundColor = [UIColor whiteColor];
         NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];//设置为中文
         _picker.locale = locale;
