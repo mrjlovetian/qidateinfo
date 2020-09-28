@@ -95,7 +95,18 @@
 }
 
 - (void)deleteRiji {
-    [RiJiModel deleteModel:self.rijiModel];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"您确定要删除这篇日志？" preferredStyle:(UIAlertControllerStyleAlert)];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        [RiJiModel deleteModel:self.rijiModel];
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    [alert addAction:action1];
+    [alert addAction:action2];
+    [self.navigationController presentViewController:alert animated:YES completion:nil];
+    
 }
 
 #pragma mark get

@@ -32,6 +32,10 @@
     // Do any additional setup after loading the view.
     self.title = @"XWallPaper";
     
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
+       // Set the label text.
+    hud.label.text = NSLocalizedString(@"加载中...", @"请求");
     [HXHttpNetwork httpRequestDataByGet:@"https://claritywallpaper.com/clarity/api/special/queryByCatalogAllPlus?catalogIds=ff8080816a525a11016a53ac8b441a80" params:nil success:^(id responseObject) {
         NSArray *arr = [NSArray yy_modelArrayWithClass:WallCatageModel.class json:responseObject[@"data"]];
         self.dataSource = [arr reverseObjectEnumerator].allObjects;
@@ -54,8 +58,10 @@
                 
             }];
         }
+        [hud hideAnimated:YES];
     } failure:^(NSError *error) {
         NSLog(@"error = %@", error.localizedDescription);
+        [hud hideAnimated:YES];
     }];
     
     [self.view addSubview:self.collectionView];
