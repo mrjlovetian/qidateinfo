@@ -24,6 +24,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+## AlicloudFeedback
+
+Alibaba-INC copyright
+
 ## CYLTabBarController
 
 Copyright (c) 2015 CYLTabBarController(https://github.com/ChenYilong/CYLTabBarController), L.L.C. All rights reserved.
@@ -687,11 +691,6 @@ Copyright 2011 - 2019 umeng.com. All rights reserved.
 
 
 ## UMCPush
-
-Copyright 2011 - 2018 umeng.com. All rights reserved.
-
-
-## UMCSecurityPlugins
 
 Copyright 2011 - 2018 umeng.com. All rights reserved.
 

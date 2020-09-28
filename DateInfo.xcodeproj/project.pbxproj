@@ -47,6 +47,8 @@
 		0A4C9ADA252190580067955A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C9A64252190570067955A /* MainViewController.m */; };
 		0A4C9ADB252190580067955A /* WallpaperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C9A68252190570067955A /* WallpaperCell.m */; };
 		0A4C9AE8252190DA0067955A /* MoreWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C9AE7252190DA0067955A /* MoreWallViewController.m */; };
+		0A4C9C912522190B0067955A /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A4C9C902522190B0067955A /* AliyunEmasServices-Info.plist */; };
+		0A4C9CB7252219D60067955A /* FeedBackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C9CB6252219D60067955A /* FeedBackManager.m */; };
 		0A5218CB224E523100256157 /* ShouWenzhanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5218CA224E523100256157 /* ShouWenzhanViewController.m */; };
 		0A8A67892233EB12001D270B /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A677D2233EB10001D270B /* NSDate+Utilities.m */; };
 		0A8A678A2233EB12001D270B /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A677E2233EB11001D270B /* NSDate+Formatter.m */; };
@@ -227,6 +229,10 @@
 		0A4C9A68252190570067955A /* WallpaperCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallpaperCell.m; sourceTree = "<group>"; };
 		0A4C9AE6252190DA0067955A /* MoreWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreWallViewController.h; sourceTree = "<group>"; };
 		0A4C9AE7252190DA0067955A /* MoreWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreWallViewController.m; sourceTree = "<group>"; };
+		0A4C9C8C252211360067955A /* 七日.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "七日.entitlements"; sourceTree = "<group>"; };
+		0A4C9C902522190B0067955A /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = "<group>"; };
+		0A4C9CB5252219D50067955A /* FeedBackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackManager.h; sourceTree = "<group>"; };
+		0A4C9CB6252219D60067955A /* FeedBackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackManager.m; sourceTree = "<group>"; };
 		0A5218C9224E523100256157 /* ShouWenzhanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShouWenzhanViewController.h; sourceTree = "<group>"; };
 		0A5218CA224E523100256157 /* ShouWenzhanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShouWenzhanViewController.m; sourceTree = "<group>"; };
 		0A74A7B72257AC55000E96AB /* StringMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringMacro.h; sourceTree = "<group>"; };
@@ -284,10 +290,8 @@
 		0A9341EA2256511A00AC48FF /* NSDate+Reporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Reporting.h"; path = "DateInfo/NSDate+Reporting.h"; sourceTree = SOURCE_ROOT; };
 		0A9341EB2256511A00AC48FF /* NSDate+Reporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Reporting.m"; path = "DateInfo/NSDate+Reporting.m"; sourceTree = SOURCE_ROOT; };
 		0A9341ED2256540500AC48FF /* DateToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DateToday.entitlements; sourceTree = "<group>"; };
-		0A9341EE2256541100AC48FF /* DateInfo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DateInfo.entitlements; sourceTree = "<group>"; };
 		0ABC48DE223530F600799B4A /* RijiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RijiCell.h; sourceTree = "<group>"; };
 		0ABC48DF223530F600799B4A /* RijiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RijiCell.m; sourceTree = "<group>"; };
-		0ABDE5D524A36C5700598B8E /* 七日.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "七日.entitlements"; sourceTree = "<group>"; };
 		0ACCD7C12247AE3600CC7E0D /* LunarFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunarFormatter.m; sourceTree = "<group>"; };
 		0ACCD7C22247AE3600CC7E0D /* LunarFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunarFormatter.h; sourceTree = "<group>"; };
 		0ACCD7C82247B41000CC7E0D /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -381,6 +385,7 @@
 		0A38B8DD222BAA1100ADD2A2 = {
 			isa = PBXGroup;
 			children = (
+				0A4C9C902522190B0067955A /* AliyunEmasServices-Info.plist */,
 				0AD20459224BC0A50064F4E8 /* resource */,
 				0A38B8E8222BAA1100ADD2A2 /* DateInfo */,
 				0A38B901222BAA1300ADD2A2 /* DateInfoTests */,
@@ -404,10 +409,10 @@
 		0A38B8E8222BAA1100ADD2A2 /* DateInfo */ = {
 			isa = PBXGroup;
 			children = (
+				0A4C9CB4252219B70067955A /* Feed */,
+				0A4C9C8C252211360067955A /* 七日.entitlements */,
 				0A4C997C25218FF80067955A /* Wallpaper */,
-				0ABDE5D524A36C5700598B8E /* 七日.entitlements */,
 				0A74A7B62257AC55000E96AB /* Marco */,
-				0A9341EE2256541100AC48FF /* DateInfo.entitlements */,
 				0A8A9395224F5DFC0007A1C3 /* LaunchImage */,
 				0A8A9391224F5B6D0007A1C3 /* Base */,
 				0A8A9390224F5B590007A1C3 /* AppDelegate */,
@@ -620,6 +625,15 @@
 				0A4C9AE7252190DA0067955A /* MoreWallViewController.m */,
 			);
 			path = MoreWall;
+			sourceTree = "<group>";
+		};
+		0A4C9CB4252219B70067955A /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				0A4C9CB5252219D50067955A /* FeedBackManager.h */,
+				0A4C9CB6252219D60067955A /* FeedBackManager.m */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		0A74A7B62257AC55000E96AB /* Marco */ = {
@@ -902,6 +916,7 @@
 				0A38B8E4222BAA1100ADD2A2 /* Resources */,
 				CE54DA7F312BFB2D2B08FF51 /* [CP] Embed Pods Frameworks */,
 				0A9341DF2256480600AC48FF /* Embed App Extensions */,
+				BE5E98F00E0FDE0976D36EB9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1028,6 +1043,7 @@
 				0A8A938D224F58870007A1C3 /* say.json in Resources */,
 				0AD204422247BE780064F4E8 /* NotificationBackgroundWarningIcon@2x.png in Resources */,
 				0AD204382247BE780064F4E8 /* NotificationButtonBackground@2x.png in Resources */,
+				0A4C9C912522190B0067955A /* AliyunEmasServices-Info.plist in Resources */,
 				0AD2043D2247BE780064F4E8 /* NotificationBackgroundSuccessIcon.png in Resources */,
 				0AD204402247BE780064F4E8 /* NotificationBackgroundError@2x.png in Resources */,
 				0AD204392247BE780064F4E8 /* NotificationBackgroundSuccess.png in Resources */,
@@ -1097,6 +1113,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BE5E98F00E0FDE0976D36EB9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DateInfo/Pods-DateInfo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DateInfo/Pods-DateInfo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DateInfo/Pods-DateInfo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CE54DA7F312BFB2D2B08FF51 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1157,6 +1190,7 @@
 				0A4C9A73252190580067955A /* StoryMakeToolsView.m in Sources */,
 				0AFB36062233B28A001DD940 /* EditViewController.m in Sources */,
 				0A4C9AE8252190DA0067955A /* MoreWallViewController.m in Sources */,
+				0A4C9CB7252219D60067955A /* FeedBackManager.m in Sources */,
 				0A38B8F9222BAA1200ADD2A2 /* main.m in Sources */,
 				0A4C9A6F252190580067955A /* StoryMakeSelectColorFooterView.m in Sources */,
 				0A4C9A89252190580067955A /* HXHttpNetwork.m in Sources */,

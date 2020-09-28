@@ -10,6 +10,7 @@
 #import "ParallaxHeaderView.h"
 #import "ShouWenzhanViewController.h"
 #import "AboutViewController.h"
+#import "FeedBackManager.h"
 
 @interface SetViewController () <UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate>
 
@@ -55,6 +56,11 @@
         vc.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:vc animated:YES completion:nil];
     } else if (indexPath.row == 1) {
+        [[FeedBackManager oneInstance] jumpYiJianVC:^(UIViewController * _Nullable viewController, NSError * _Nullable error) {
+            if (viewController) {
+                [self.navigationController presentViewController:viewController animated:YES completion:nil];
+            }
+        }];
 //        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto://1520312758@qq.com"]];
     } else if (indexPath.row == 2) {
         AboutViewController *vc = [AboutViewController new];

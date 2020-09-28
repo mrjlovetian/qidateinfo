@@ -74,13 +74,14 @@
 #else
     NSString *channel = @"App Store";
 #endif
-    [UMConfigure initWithAppkey:@"5ef2c04f167edd1e9e000201" channel:channel];
+    [UMConfigure initWithAppkey:@"5f71d5ef80455950e49a6265" channel:channel];
 //    [MobClick setAutoPageEnabled:YES];
     
     UMessageRegisterEntity *entity = [[UMessageRegisterEntity alloc] init];
     entity.types = UMessageAuthorizationOptionBadge | UMessageAuthorizationOptionSound | UMessageAuthorizationOptionAlert;
     [UMessage registerForRemoteNotificationsWithLaunchOptions:launchOptions Entity:entity completionHandler:^(BOOL granted, NSError * _Nullable error) {
-        NSLog(@"umeng-push: %@", @(granted));
+        NSString* deviceID =  [UMConfigure deviceIDForIntegration];
+        NSLog(@"umeng-push: %@。。。。。。。deviceID=%@", @(granted), deviceID);
     }];
 }
 
