@@ -15,7 +15,6 @@
 		0A38B8F3222BAA1200ADD2A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A38B8F2222BAA1200ADD2A2 /* Assets.xcassets */; };
 		0A38B8F6222BAA1200ADD2A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A38B8F4222BAA1200ADD2A2 /* LaunchScreen.storyboard */; };
 		0A38B8F9222BAA1200ADD2A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B8F8222BAA1200ADD2A2 /* main.m */; };
-		0A38B903222BAA1300ADD2A2 /* DateInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38B902222BAA1300ADD2A2 /* DateInfoTests.m */; };
 		0A4C9A6A252190580067955A /* StoryMaker.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A4C9983252190530067955A /* StoryMaker.xcassets */; };
 		0A4C9A6B252190580067955A /* StoryMakerFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C9987252190530067955A /* StoryMakerFontManager.m */; };
 		0A4C9A6C252190580067955A /* UIImage+imageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C9988252190530067955A /* UIImage+imageWithColor.m */; };
@@ -49,12 +48,12 @@
 		0A4C9AE8252190DA0067955A /* MoreWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C9AE7252190DA0067955A /* MoreWallViewController.m */; };
 		0A4C9C912522190B0067955A /* AliyunEmasServices-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A4C9C902522190B0067955A /* AliyunEmasServices-Info.plist */; };
 		0A4C9CB7252219D60067955A /* FeedBackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C9CB6252219D60067955A /* FeedBackManager.m */; };
+		0A4C9D11252300F90067955A /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C9D0C252300F80067955A /* NSDate+Extension.m */; };
+		0A4C9D12252300F90067955A /* NSDate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C9D0D252300F80067955A /* NSDate+Reporting.m */; };
 		0A5218CB224E523100256157 /* ShouWenzhanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5218CA224E523100256157 /* ShouWenzhanViewController.m */; };
 		0A8A67892233EB12001D270B /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A677D2233EB10001D270B /* NSDate+Utilities.m */; };
 		0A8A678A2233EB12001D270B /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A677E2233EB11001D270B /* NSDate+Formatter.m */; };
-		0A8A678B2233EB12001D270B /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67812233EB11001D270B /* NSDate+Extension.m */; };
 		0A8A678C2233EB12001D270B /* NSDate+CupertinoYankee.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67832233EB11001D270B /* NSDate+CupertinoYankee.m */; };
-		0A8A678D2233EB12001D270B /* NSDate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67852233EB11001D270B /* NSDate+Reporting.m */; };
 		0A8A678E2233EB12001D270B /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67882233EB12001D270B /* NSDate+InternetDateTime.m */; };
 		0A8A679122340ACB001D270B /* ShowRijiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A679022340ACB001D270B /* ShowRijiViewController.m */; };
 		0A8A938C224F58870007A1C3 /* book.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A8A938A224F58870007A1C3 /* book.json */; };
@@ -69,15 +68,6 @@
 		0A8A93AA22505AA50007A1C3 /* RijiSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93A922505AA50007A1C3 /* RijiSectionView.m */; };
 		0A8A93B1225077530007A1C3 /* StarsOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93B0225077530007A1C3 /* StarsOverlay.swift */; };
 		0A8A93B422508A7A0007A1C3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A93B322508A7A0007A1C3 /* BaseViewController.m */; };
-		0A9341D02256480600AC48FF /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9341CF2256480600AC48FF /* NotificationCenter.framework */; };
-		0A9341D42256480600AC48FF /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9341D32256480600AC48FF /* TodayViewController.m */; };
-		0A9341DB2256480600AC48FF /* DateToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0A9341CE2256480600AC48FF /* DateToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0A9341E1225648B000AC48FF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A9341E0225648B000AC48FF /* MainInterface.storyboard */; };
-		0A9341E322564A2900AC48FF /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A9341E222564A2900AC48FF /* Image.xcassets */; };
-		0A9341E5225650C200AC48FF /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67812233EB11001D270B /* NSDate+Extension.m */; };
-		0A9341E8225650E100AC48FF /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9341E7225650E100AC48FF /* NSDate+Extension.m */; };
-		0A9341E9225650FF00AC48FF /* NSDate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A67852233EB11001D270B /* NSDate+Reporting.m */; };
-		0A9341EC2256511A00AC48FF /* NSDate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9341EB2256511A00AC48FF /* NSDate+Reporting.m */; };
 		0ABC48E0223530F600799B4A /* RijiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC48DF223530F600799B4A /* RijiCell.m */; };
 		0ACCD7C32247AE3600CC7E0D /* LunarFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACCD7C12247AE3600CC7E0D /* LunarFormatter.m */; };
 		0ACCD7CE2247B41100CC7E0D /* ParallaxHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACCD7CA2247B41000CC7E0D /* ParallaxHeaderView.m */; };
@@ -113,26 +103,7 @@
 		0AFB36022230172F001DD940 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB35FD2230172F001DD940 /* FileManager.m */; };
 		0AFB36032230172F001DD940 /* LanguageManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB36002230172F001DD940 /* LanguageManger.m */; };
 		0AFB36062233B28A001DD940 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB36052233B28A001DD940 /* EditViewController.m */; };
-		3ECFB66A6A84649C57CE4DE2 /* Pods_DateToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB1AC516BF6B0BF62C0B590 /* Pods_DateToday.framework */; };
-		C8F846AA26317E6C0AA02DF3 /* Pods_DateInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CFC9E3B60C1AB77E5AA1F2 /* Pods_DateInfo.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0A38B8FF222BAA1300ADD2A2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0A38B8DE222BAA1100ADD2A2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0A38B8E5222BAA1100ADD2A2;
-			remoteInfo = DateInfo;
-		};
-		0A9341D92256480600AC48FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0A38B8DE222BAA1100ADD2A2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0A9341CD2256480600AC48FF;
-			remoteInfo = DateToday;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0A9341DF2256480600AC48FF /* Embed App Extensions */ = {
@@ -141,7 +112,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				0A9341DB2256480600AC48FF /* DateToday.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,18 +124,14 @@
 		0A05AFA524E6B24E008E3275 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		0A05AFA624E6B24F008E3275 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		0A10B9282262E69B00E56D4C /* yuel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yuel.jpg; sourceTree = "<group>"; };
-		0A38B8E6222BAA1100ADD2A2 /* 七日.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "七日.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A38B8E6222BAA1100ADD2A2 /* 小七.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "小七.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A38B8E9222BAA1100ADD2A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A38B8EA222BAA1100ADD2A2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0A38B8EC222BAA1100ADD2A2 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		0A38B8ED222BAA1100ADD2A2 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		0A38B8F2222BAA1200ADD2A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A38B8F5222BAA1200ADD2A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0A38B8F7222BAA1200ADD2A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A38B8F8222BAA1200ADD2A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0A38B8FE222BAA1300ADD2A2 /* DateInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A38B902222BAA1300ADD2A2 /* DateInfoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateInfoTests.m; sourceTree = "<group>"; };
-		0A38B904222BAA1300ADD2A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A4C997D252190520067955A /* NSArray+Monad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Monad.h"; sourceTree = "<group>"; };
 		0A4C997F252190520067955A /* USToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USToast.h; sourceTree = "<group>"; };
 		0A4C9981252190530067955A /* WHStoryMakerHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHStoryMakerHeader.h; sourceTree = "<group>"; };
@@ -229,10 +195,13 @@
 		0A4C9A68252190570067955A /* WallpaperCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallpaperCell.m; sourceTree = "<group>"; };
 		0A4C9AE6252190DA0067955A /* MoreWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreWallViewController.h; sourceTree = "<group>"; };
 		0A4C9AE7252190DA0067955A /* MoreWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreWallViewController.m; sourceTree = "<group>"; };
-		0A4C9C8C252211360067955A /* 七日.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "七日.entitlements"; sourceTree = "<group>"; };
 		0A4C9C902522190B0067955A /* AliyunEmasServices-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AliyunEmasServices-Info.plist"; sourceTree = "<group>"; };
 		0A4C9CB5252219D50067955A /* FeedBackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackManager.h; sourceTree = "<group>"; };
 		0A4C9CB6252219D60067955A /* FeedBackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackManager.m; sourceTree = "<group>"; };
+		0A4C9D0C252300F80067955A /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		0A4C9D0D252300F80067955A /* NSDate+Reporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Reporting.m"; sourceTree = "<group>"; };
+		0A4C9D0E252300F80067955A /* NSDate+Reporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Reporting.h"; sourceTree = "<group>"; };
+		0A4C9D10252300F90067955A /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		0A5218C9224E523100256157 /* ShouWenzhanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShouWenzhanViewController.h; sourceTree = "<group>"; };
 		0A5218CA224E523100256157 /* ShouWenzhanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShouWenzhanViewController.m; sourceTree = "<group>"; };
 		0A74A7B72257AC55000E96AB /* StringMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringMacro.h; sourceTree = "<group>"; };
@@ -246,13 +215,9 @@
 		0A8A677E2233EB11001D270B /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
 		0A8A677F2233EB11001D270B /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
 		0A8A67802233EB11001D270B /* NSDate+CupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CupertinoYankee.h"; sourceTree = "<group>"; };
-		0A8A67812233EB11001D270B /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
-		0A8A67822233EB11001D270B /* NSDate+Reporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Reporting.h"; sourceTree = "<group>"; };
 		0A8A67832233EB11001D270B /* NSDate+CupertinoYankee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CupertinoYankee.m"; sourceTree = "<group>"; };
 		0A8A67842233EB11001D270B /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
-		0A8A67852233EB11001D270B /* NSDate+Reporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Reporting.m"; sourceTree = "<group>"; };
 		0A8A67862233EB11001D270B /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
-		0A8A67872233EB12001D270B /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		0A8A67882233EB12001D270B /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
 		0A8A678F22340ACB001D270B /* ShowRijiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowRijiViewController.h; sourceTree = "<group>"; };
 		0A8A679022340ACB001D270B /* ShowRijiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowRijiViewController.m; sourceTree = "<group>"; };
@@ -278,18 +243,7 @@
 		0A8A93B0225077530007A1C3 /* StarsOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsOverlay.swift; sourceTree = "<group>"; };
 		0A8A93B222508A7A0007A1C3 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		0A8A93B322508A7A0007A1C3 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		0A9341CE2256480600AC48FF /* DateToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DateToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9341CF2256480600AC48FF /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		0A9341D22256480600AC48FF /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
-		0A9341D32256480600AC48FF /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
-		0A9341D82256480600AC48FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A9341E0225648B000AC48FF /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
-		0A9341E222564A2900AC48FF /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
-		0A9341E6225650E100AC48FF /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Extension.h"; path = "DateInfo/NSDate+Extension.h"; sourceTree = SOURCE_ROOT; };
-		0A9341E7225650E100AC48FF /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Extension.m"; path = "DateInfo/NSDate+Extension.m"; sourceTree = SOURCE_ROOT; };
-		0A9341EA2256511A00AC48FF /* NSDate+Reporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Reporting.h"; path = "DateInfo/NSDate+Reporting.h"; sourceTree = SOURCE_ROOT; };
-		0A9341EB2256511A00AC48FF /* NSDate+Reporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Reporting.m"; path = "DateInfo/NSDate+Reporting.m"; sourceTree = SOURCE_ROOT; };
-		0A9341ED2256540500AC48FF /* DateToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DateToday.entitlements; sourceTree = "<group>"; };
 		0ABC48DE223530F600799B4A /* RijiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RijiCell.h; sourceTree = "<group>"; };
 		0ABC48DF223530F600799B4A /* RijiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RijiCell.m; sourceTree = "<group>"; };
 		0ACCD7C12247AE3600CC7E0D /* LunarFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunarFormatter.m; sourceTree = "<group>"; };
@@ -359,23 +313,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8F846AA26317E6C0AA02DF3 /* Pods_DateInfo.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0A38B8FB222BAA1300ADD2A2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0A9341CB2256480600AC48FF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A9341D02256480600AC48FF /* NotificationCenter.framework in Frameworks */,
-				3ECFB66A6A84649C57CE4DE2 /* Pods_DateToday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,8 +325,6 @@
 				0A4C9C902522190B0067955A /* AliyunEmasServices-Info.plist */,
 				0AD20459224BC0A50064F4E8 /* resource */,
 				0A38B8E8222BAA1100ADD2A2 /* DateInfo */,
-				0A38B901222BAA1300ADD2A2 /* DateInfoTests */,
-				0A9341D12256480600AC48FF /* DateToday */,
 				0A38B8E7222BAA1100ADD2A2 /* Products */,
 				519CAAB705064059A57297F9 /* Pods */,
 				5AEB786F129D16462C99B2A2 /* Frameworks */,
@@ -399,9 +334,7 @@
 		0A38B8E7222BAA1100ADD2A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A38B8E6222BAA1100ADD2A2 /* 七日.app */,
-				0A38B8FE222BAA1300ADD2A2 /* DateInfoTests.xctest */,
-				0A9341CE2256480600AC48FF /* DateToday.appex */,
+				0A38B8E6222BAA1100ADD2A2 /* 小七.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -410,7 +343,6 @@
 			isa = PBXGroup;
 			children = (
 				0A4C9CB4252219B70067955A /* Feed */,
-				0A4C9C8C252211360067955A /* 七日.entitlements */,
 				0A4C997C25218FF80067955A /* Wallpaper */,
 				0A74A7B62257AC55000E96AB /* Marco */,
 				0A8A9395224F5DFC0007A1C3 /* LaunchImage */,
@@ -429,20 +361,10 @@
 				0A38B8ED222BAA1100ADD2A2 /* RootViewController.m */,
 				0A38B8F2222BAA1200ADD2A2 /* Assets.xcassets */,
 				0A38B8F4222BAA1200ADD2A2 /* LaunchScreen.storyboard */,
-				0A38B8F7222BAA1200ADD2A2 /* Info.plist */,
 				0A38B8F8222BAA1200ADD2A2 /* main.m */,
 				0AFB36072233BC68001DD940 /* Header.pch */,
 			);
 			path = DateInfo;
-			sourceTree = "<group>";
-		};
-		0A38B901222BAA1300ADD2A2 /* DateInfoTests */ = {
-			isa = PBXGroup;
-			children = (
-				0A38B902222BAA1300ADD2A2 /* DateInfoTests.m */,
-				0A38B904222BAA1300ADD2A2 /* Info.plist */,
-			);
-			path = DateInfoTests;
 			sourceTree = "<group>";
 		};
 		0A4C997C25218FF80067955A /* Wallpaper */ = {
@@ -653,16 +575,16 @@
 		0A8A677C2233EA8F001D270B /* DateTool */ = {
 			isa = PBXGroup;
 			children = (
+				0A4C9D10252300F90067955A /* NSDate+Extension.h */,
+				0A4C9D0C252300F80067955A /* NSDate+Extension.m */,
+				0A4C9D0E252300F80067955A /* NSDate+Reporting.h */,
+				0A4C9D0D252300F80067955A /* NSDate+Reporting.m */,
 				0A8A67802233EB11001D270B /* NSDate+CupertinoYankee.h */,
 				0A8A67832233EB11001D270B /* NSDate+CupertinoYankee.m */,
-				0A8A67872233EB12001D270B /* NSDate+Extension.h */,
-				0A8A67812233EB11001D270B /* NSDate+Extension.m */,
 				0A8A67842233EB11001D270B /* NSDate+Formatter.h */,
 				0A8A677E2233EB11001D270B /* NSDate+Formatter.m */,
 				0A8A677F2233EB11001D270B /* NSDate+InternetDateTime.h */,
 				0A8A67882233EB12001D270B /* NSDate+InternetDateTime.m */,
-				0A8A67822233EB11001D270B /* NSDate+Reporting.h */,
-				0A8A67852233EB11001D270B /* NSDate+Reporting.m */,
 				0A8A67862233EB11001D270B /* NSDate+Utilities.h */,
 				0A8A677D2233EB10001D270B /* NSDate+Utilities.m */,
 			);
@@ -736,23 +658,6 @@
 				0A8A93B0225077530007A1C3 /* StarsOverlay.swift */,
 			);
 			path = LaunchImage;
-			sourceTree = "<group>";
-		};
-		0A9341D12256480600AC48FF /* DateToday */ = {
-			isa = PBXGroup;
-			children = (
-				0A9341ED2256540500AC48FF /* DateToday.entitlements */,
-				0A9341EA2256511A00AC48FF /* NSDate+Reporting.h */,
-				0A9341EB2256511A00AC48FF /* NSDate+Reporting.m */,
-				0A9341E6225650E100AC48FF /* NSDate+Extension.h */,
-				0A9341E7225650E100AC48FF /* NSDate+Extension.m */,
-				0A9341D22256480600AC48FF /* TodayViewController.h */,
-				0A9341D32256480600AC48FF /* TodayViewController.m */,
-				0A9341E222564A2900AC48FF /* Image.xcassets */,
-				0A9341E0225648B000AC48FF /* MainInterface.storyboard */,
-				0A9341D82256480600AC48FF /* Info.plist */,
-			);
-			path = DateToday;
 			sourceTree = "<group>";
 		};
 		0ACCD7C02247AE2B00CC7E0D /* LunarFormatter */ = {
@@ -921,48 +826,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				0A9341DA2256480600AC48FF /* PBXTargetDependency */,
 			);
 			name = DateInfo;
 			productName = DateInfo;
-			productReference = 0A38B8E6222BAA1100ADD2A2 /* 七日.app */;
+			productReference = 0A38B8E6222BAA1100ADD2A2 /* 小七.app */;
 			productType = "com.apple.product-type.application";
-		};
-		0A38B8FD222BAA1300ADD2A2 /* DateInfoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0A38B90A222BAA1300ADD2A2 /* Build configuration list for PBXNativeTarget "DateInfoTests" */;
-			buildPhases = (
-				0A38B8FA222BAA1300ADD2A2 /* Sources */,
-				0A38B8FB222BAA1300ADD2A2 /* Frameworks */,
-				0A38B8FC222BAA1300ADD2A2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0A38B900222BAA1300ADD2A2 /* PBXTargetDependency */,
-			);
-			name = DateInfoTests;
-			productName = DateInfoTests;
-			productReference = 0A38B8FE222BAA1300ADD2A2 /* DateInfoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0A9341CD2256480600AC48FF /* DateToday */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0A9341DE2256480600AC48FF /* Build configuration list for PBXNativeTarget "DateToday" */;
-			buildPhases = (
-				5572F76A59A5E087D6C61778 /* [CP] Check Pods Manifest.lock */,
-				0A9341CA2256480600AC48FF /* Sources */,
-				0A9341CB2256480600AC48FF /* Frameworks */,
-				0A9341CC2256480600AC48FF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DateToday;
-			productName = DateToday;
-			productReference = 0A9341CE2256480600AC48FF /* DateToday.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -970,24 +838,12 @@
 		0A38B8DE222BAA1100ADD2A2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = MRJ;
 				TargetAttributes = {
 					0A38B8E5222BAA1100ADD2A2 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
-							};
-						};
-					};
-					0A38B8FD222BAA1300ADD2A2 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 0A38B8E5222BAA1100ADD2A2;
-					};
-					0A9341CD2256480600AC48FF = {
-						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -1010,8 +866,6 @@
 			projectRoot = "";
 			targets = (
 				0A38B8E5222BAA1100ADD2A2 /* DateInfo */,
-				0A38B8FD222BAA1300ADD2A2 /* DateInfoTests */,
-				0A9341CD2256480600AC48FF /* DateToday */,
 			);
 		};
 /* End PBXProject section */
@@ -1050,47 +904,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A38B8FC222BAA1300ADD2A2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0A9341CC2256480600AC48FF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A9341E1225648B000AC48FF /* MainInterface.storyboard in Resources */,
-				0A9341E322564A2900AC48FF /* Image.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5572F76A59A5E087D6C61778 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DateToday-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AE7F1346CF4C424CA15D1DB8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1157,11 +973,11 @@
 				0A4C9A72252190580067955A /* StoryMakeStickerColorFootSingleViewController.m in Sources */,
 				0A4C9A7A252190580067955A /* StoryMakeFooterFilterCell.m in Sources */,
 				0A38B8EE222BAA1100ADD2A2 /* RootViewController.m in Sources */,
+				0A4C9D12252300F90067955A /* NSDate+Reporting.m in Sources */,
 				0A4C9A70252190580067955A /* StoryMakeStickerColorFootCollectionViewCell.m in Sources */,
 				0A4C9A7F252190580067955A /* LSDrawView.m in Sources */,
 				0A4C9AD9252190580067955A /* WallPaperHeaderView.m in Sources */,
 				0A4C9A6E252190580067955A /* StoryMakeImageEditorViewController.m in Sources */,
-				0A8A678D2233EB12001D270B /* NSDate+Reporting.m in Sources */,
 				0A05AFA424E6B1BE008E3275 /* XMDataManager.mm in Sources */,
 				0A5218CB224E523100256157 /* ShouWenzhanViewController.m in Sources */,
 				0AFB36032230172F001DD940 /* LanguageManger.m in Sources */,
@@ -1204,7 +1020,6 @@
 				0A4C9A91252190580067955A /* USToast.m in Sources */,
 				0A8A93B422508A7A0007A1C3 /* BaseViewController.m in Sources */,
 				0A4C9ADA252190580067955A /* MainViewController.m in Sources */,
-				0A8A678B2233EB12001D270B /* NSDate+Extension.m in Sources */,
 				0ACCD7CE2247B41100CC7E0D /* ParallaxHeaderView.m in Sources */,
 				0AFB36022230172F001DD940 /* FileManager.m in Sources */,
 				0A38B8EB222BAA1100ADD2A2 /* AppDelegate.m in Sources */,
@@ -1212,6 +1027,7 @@
 				0A4C9AD7252190580067955A /* XNavigationController.m in Sources */,
 				0A4C9A71252190580067955A /* StoryMakeStickerLabelView.m in Sources */,
 				0A4C9A79252190580067955A /* StoryMakeFilterFooterView.m in Sources */,
+				0A4C9D11252300F90067955A /* NSDate+Extension.m in Sources */,
 				0AD2044D22491DAD0064F4E8 /* RijiYearViewController.m in Sources */,
 				0AD204342247BE780064F4E8 /* TSMessage.m in Sources */,
 				0ACCD7CF2247B41100CC7E0D /* UIImage+ImageEffects.m in Sources */,
@@ -1227,40 +1043,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A38B8FA222BAA1300ADD2A2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A38B903222BAA1300ADD2A2 /* DateInfoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0A9341CA2256480600AC48FF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A9341E5225650C200AC48FF /* NSDate+Extension.m in Sources */,
-				0A9341E9225650FF00AC48FF /* NSDate+Reporting.m in Sources */,
-				0A9341D42256480600AC48FF /* TodayViewController.m in Sources */,
-				0A9341EC2256511A00AC48FF /* NSDate+Reporting.m in Sources */,
-				0A9341E8225650E100AC48FF /* NSDate+Extension.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0A38B900222BAA1300ADD2A2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0A38B8E5222BAA1100ADD2A2 /* DateInfo */;
-			targetProxy = 0A38B8FF222BAA1300ADD2A2 /* PBXContainerItemProxy */;
-		};
-		0A9341DA2256480600AC48FF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0A9341CD2256480600AC48FF /* DateToday */;
-			targetProxy = 0A9341D92256480600AC48FF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0A38B8F4222BAA1200ADD2A2 /* LaunchScreen.storyboard */ = {
@@ -1300,6 +1083,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1325,7 +1109,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1359,6 +1143,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1378,10 +1163,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1392,7 +1178,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "DateInfo/七日.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "DateInfo/小七.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1.3;
 				DEVELOPMENT_TEAM = 38DZ5BWSLA;
@@ -1419,14 +1205,14 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYWebImage/YYWebImage.framework/Headers\"",
 				);
 				INFOPLIST_FILE = DateInfo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrj.xiaoqi;
-				PRODUCT_NAME = "七日";
+				PRODUCT_NAME = "小七";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DateInfo/LaunchImage/DateInfo-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "DateInfo-Swift.h";
@@ -1443,106 +1229,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "DateInfo/七日.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "DateInfo/小七.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1.3;
 				DEVELOPMENT_TEAM = 38DZ5BWSLA;
 				GCC_PREFIX_HEADER = /Users/mrj/Desktop/Project/DateInfo/DateInfo/Header.pch;
 				INFOPLIST_FILE = DateInfo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrj.xiaoqi;
-				PRODUCT_NAME = "七日";
+				PRODUCT_NAME = "小七";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DateInfo/LaunchImage/DateInfo-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "DateInfo-Swift.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)";
-			};
-			name = Release;
-		};
-		0A38B90B222BAA1300ADD2A2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K8NGS85AAV;
-				INFOPLIST_FILE = DateInfoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = MRJ.DateInfoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DateInfo.app/DateInfo";
-			};
-			name = Debug;
-		};
-		0A38B90C222BAA1300ADD2A2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K8NGS85AAV;
-				INFOPLIST_FILE = DateInfoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = MRJ.DateInfoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DateInfo.app/DateInfo";
-			};
-			name = Release;
-		};
-		0A9341DC2256480600AC48FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B56D4DFF79CAC75F19AF577 /* Pods-DateToday.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38DZ5BWSLA;
-				INFOPLIST_FILE = DateToday/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mrj.xiaoqi.w;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		0A9341DD2256480600AC48FF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F19D27B618991C611C796EA /* Pods-DateToday.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38DZ5BWSLA;
-				INFOPLIST_FILE = DateToday/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mrj.xiaoqi.w;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1563,24 +1269,6 @@
 			buildConfigurations = (
 				0A38B908222BAA1300ADD2A2 /* Debug */,
 				0A38B909222BAA1300ADD2A2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0A38B90A222BAA1300ADD2A2 /* Build configuration list for PBXNativeTarget "DateInfoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0A38B90B222BAA1300ADD2A2 /* Debug */,
-				0A38B90C222BAA1300ADD2A2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0A9341DE2256480600AC48FF /* Build configuration list for PBXNativeTarget "DateToday" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0A9341DC2256480600AC48FF /* Debug */,
-				0A9341DD2256480600AC48FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

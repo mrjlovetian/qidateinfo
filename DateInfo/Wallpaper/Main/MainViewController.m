@@ -30,12 +30,13 @@
     [super viewDidLoad];
     self.view.lee_theme.LeeAddBackgroundColor(@"main", MAINCOLOR);
     // Do any additional setup after loading the view.
-    self.title = @"XWallPaper";
+    self.title = @"墙纸";
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 
        // Set the label text.
     hud.label.text = NSLocalizedString(@"加载中...", @"请求");
+    [hud showAnimated:YES];
     [HXHttpNetwork httpRequestDataByGet:@"https://claritywallpaper.com/clarity/api/special/queryByCatalogAllPlus?catalogIds=ff8080816a525a11016a53ac8b441a80" params:nil success:^(id responseObject) {
         NSArray *arr = [NSArray yy_modelArrayWithClass:WallCatageModel.class json:responseObject[@"data"]];
         self.dataSource = [arr reverseObjectEnumerator].allObjects;
